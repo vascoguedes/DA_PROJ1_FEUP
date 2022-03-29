@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/DA_PROJ1_FEUP.dir/src/menu.cpp.o  -o DA_PROJ1_FEUP 

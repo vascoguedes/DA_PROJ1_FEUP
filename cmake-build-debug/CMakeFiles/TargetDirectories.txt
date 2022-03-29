@@ -1,0 +1,3 @@
+/mnt/c/Users/arooz/Desktop/DA/Trab1/DA_PROJ1_FEUP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/arooz/Desktop/DA/Trab1/DA_PROJ1_FEUP/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/arooz/Desktop/DA/Trab1/DA_PROJ1_FEUP/cmake-build-debug/CMakeFiles/DA_PROJ1_FEUP.dir
