@@ -1,6 +1,7 @@
 #include "../include/Menu.h"
 
 #include <sstream>
+#include "iostream"
 
 using namespace std;
 
@@ -39,5 +40,29 @@ std::string Menu::readStr() {
 Menu *Menu::invalidInput() {
     cout << "Invalid input option!" << endl;
     return this;
+}
+
+MainMenu::MainMenu(App &app): Menu(app){}
+
+void MainMenu::display(){
+    cout << endl;
+    cout << "Main Menu:" << endl;
+    cout << "1 - Scenary 1" << endl;
+    cout << "2 - Scenary 2" << endl;
+    cout << "3 - Scenary 3" << endl;
+    cout << "4 - Options Menu" << endl;
+    cout << "0 - Exit" << endl;
+    cout << endl;
+}
+
+Menu *MainMenu::nextMenu() {
+    switch (readInt()) {
+        case 1: return new MainMenu(app);
+        case 2: return new MainMenu(app);
+        case 3: return new MainMenu(app);
+        case 4: return new MainMenu(app);
+        case 0: return nullptr;
+        default: return invalidInput();
+    }
 }
 

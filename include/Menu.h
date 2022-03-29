@@ -47,4 +47,11 @@ public:
     Menu *invalidInput();
 };
 
+class MainMenu: public Menu{
+public:
+    explicit MainMenu(App &app);
+    void display() override;
+    Menu *nextMenu() override;
+};
+
 #endif //DA_PROJ1_FEUP_MENU_H

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/App.h
+
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/Menu.h
+string
+-
+App.h
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/App.h
+
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/Menu.cpp
+../include/Menu.h
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/Menu.h
+sstream
+-
+iostream
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/iostream
+
