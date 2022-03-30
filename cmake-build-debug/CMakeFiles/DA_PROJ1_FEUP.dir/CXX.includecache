@@ -6,19 +6,39 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/App.h
+/mnt/c/Users/arooz/Desktop/DA/Trab1/DA_PROJ1_FEUP/include/App.h
 
-C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/Menu.h
+/mnt/c/Users/arooz/Desktop/DA/Trab1/DA_PROJ1_FEUP/include/AppStarter.h
+App.h
+/mnt/c/Users/arooz/Desktop/DA/Trab1/DA_PROJ1_FEUP/include/App.h
+Menu.h
+/mnt/c/Users/arooz/Desktop/DA/Trab1/DA_PROJ1_FEUP/include/Menu.h
+stack
+-
+
+/mnt/c/Users/arooz/Desktop/DA/Trab1/DA_PROJ1_FEUP/include/Courier.h
+
+/mnt/c/Users/arooz/Desktop/DA/Trab1/DA_PROJ1_FEUP/include/FileReader.h
+iostream
+-
+vector
+-
+Courier.h
+/mnt/c/Users/arooz/Desktop/DA/Trab1/DA_PROJ1_FEUP/include/Courier.h
+
+/mnt/c/Users/arooz/Desktop/DA/Trab1/DA_PROJ1_FEUP/include/Menu.h
 string
 -
 App.h
-C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/App.h
+/mnt/c/Users/arooz/Desktop/DA/Trab1/DA_PROJ1_FEUP/include/App.h
 
-C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/Menu.cpp
-../include/Menu.h
-C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/Menu.h
-sstream
+/mnt/c/Users/arooz/Desktop/DA/Trab1/DA_PROJ1_FEUP/main.cpp
+vector
 -
-iostream
-C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/iostream
+include/AppStarter.h
+/mnt/c/Users/arooz/Desktop/DA/Trab1/DA_PROJ1_FEUP/include/AppStarter.h
+include/Courier.h
+/mnt/c/Users/arooz/Desktop/DA/Trab1/DA_PROJ1_FEUP/include/Courier.h
+include/FileReader.h
+/mnt/c/Users/arooz/Desktop/DA/Trab1/DA_PROJ1_FEUP/include/FileReader.h
 
