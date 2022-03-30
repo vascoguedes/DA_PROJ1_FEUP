@@ -78,22 +78,9 @@ CMakeFiles/DA_PROJ1_FEUP.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DA_PROJ1_FEUP.dir/main.cpp.s"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\main.cpp" -o CMakeFiles\DA_PROJ1_FEUP.dir\main.cpp.s
 
-CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.obj: CMakeFiles/DA_PROJ1_FEUP.dir/flags.make
-CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.obj: ../src/AppStarter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DA_PROJ1_FEUP.dir\src\AppStarter.cpp.obj -c "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\AppStarter.cpp"
-
-CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\AppStarter.cpp" > CMakeFiles\DA_PROJ1_FEUP.dir\src\AppStarter.cpp.i
-
-CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\AppStarter.cpp" -o CMakeFiles\DA_PROJ1_FEUP.dir\src\AppStarter.cpp.s
-
 CMakeFiles/DA_PROJ1_FEUP.dir/src/App.cpp.obj: CMakeFiles/DA_PROJ1_FEUP.dir/flags.make
 CMakeFiles/DA_PROJ1_FEUP.dir/src/App.cpp.obj: ../src/App.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DA_PROJ1_FEUP.dir/src/App.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DA_PROJ1_FEUP.dir/src/App.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DA_PROJ1_FEUP.dir\src\App.cpp.obj -c "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\App.cpp"
 
 CMakeFiles/DA_PROJ1_FEUP.dir/src/App.cpp.i: cmake_force
@@ -104,9 +91,48 @@ CMakeFiles/DA_PROJ1_FEUP.dir/src/App.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DA_PROJ1_FEUP.dir/src/App.cpp.s"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\App.cpp" -o CMakeFiles\DA_PROJ1_FEUP.dir\src\App.cpp.s
 
+CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.obj: CMakeFiles/DA_PROJ1_FEUP.dir/flags.make
+CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.obj: ../src/AppStarter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DA_PROJ1_FEUP.dir\src\AppStarter.cpp.obj -c "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\AppStarter.cpp"
+
+CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\AppStarter.cpp" > CMakeFiles\DA_PROJ1_FEUP.dir\src\AppStarter.cpp.i
+
+CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\AppStarter.cpp" -o CMakeFiles\DA_PROJ1_FEUP.dir\src\AppStarter.cpp.s
+
+CMakeFiles/DA_PROJ1_FEUP.dir/src/Courier.cpp.obj: CMakeFiles/DA_PROJ1_FEUP.dir/flags.make
+CMakeFiles/DA_PROJ1_FEUP.dir/src/Courier.cpp.obj: ../src/Courier.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DA_PROJ1_FEUP.dir/src/Courier.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DA_PROJ1_FEUP.dir\src\Courier.cpp.obj -c "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\Courier.cpp"
+
+CMakeFiles/DA_PROJ1_FEUP.dir/src/Courier.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DA_PROJ1_FEUP.dir/src/Courier.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\Courier.cpp" > CMakeFiles\DA_PROJ1_FEUP.dir\src\Courier.cpp.i
+
+CMakeFiles/DA_PROJ1_FEUP.dir/src/Courier.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DA_PROJ1_FEUP.dir/src/Courier.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\Courier.cpp" -o CMakeFiles\DA_PROJ1_FEUP.dir\src\Courier.cpp.s
+
+CMakeFiles/DA_PROJ1_FEUP.dir/src/FileReader.cpp.obj: CMakeFiles/DA_PROJ1_FEUP.dir/flags.make
+CMakeFiles/DA_PROJ1_FEUP.dir/src/FileReader.cpp.obj: ../src/FileReader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DA_PROJ1_FEUP.dir/src/FileReader.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DA_PROJ1_FEUP.dir\src\FileReader.cpp.obj -c "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\FileReader.cpp"
+
+CMakeFiles/DA_PROJ1_FEUP.dir/src/FileReader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DA_PROJ1_FEUP.dir/src/FileReader.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\FileReader.cpp" > CMakeFiles\DA_PROJ1_FEUP.dir\src\FileReader.cpp.i
+
+CMakeFiles/DA_PROJ1_FEUP.dir/src/FileReader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DA_PROJ1_FEUP.dir/src/FileReader.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\FileReader.cpp" -o CMakeFiles\DA_PROJ1_FEUP.dir\src\FileReader.cpp.s
+
 CMakeFiles/DA_PROJ1_FEUP.dir/src/Menu.cpp.obj: CMakeFiles/DA_PROJ1_FEUP.dir/flags.make
 CMakeFiles/DA_PROJ1_FEUP.dir/src/Menu.cpp.obj: ../src/Menu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DA_PROJ1_FEUP.dir/src/Menu.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DA_PROJ1_FEUP.dir/src/Menu.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DA_PROJ1_FEUP.dir\src\Menu.cpp.obj -c "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\Menu.cpp"
 
 CMakeFiles/DA_PROJ1_FEUP.dir/src/Menu.cpp.i: cmake_force
@@ -117,25 +143,44 @@ CMakeFiles/DA_PROJ1_FEUP.dir/src/Menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DA_PROJ1_FEUP.dir/src/Menu.cpp.s"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\Menu.cpp" -o CMakeFiles\DA_PROJ1_FEUP.dir\src\Menu.cpp.s
 
+CMakeFiles/DA_PROJ1_FEUP.dir/src/Package.cpp.obj: CMakeFiles/DA_PROJ1_FEUP.dir/flags.make
+CMakeFiles/DA_PROJ1_FEUP.dir/src/Package.cpp.obj: ../src/Package.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DA_PROJ1_FEUP.dir/src/Package.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DA_PROJ1_FEUP.dir\src\Package.cpp.obj -c "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\Package.cpp"
+
+CMakeFiles/DA_PROJ1_FEUP.dir/src/Package.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DA_PROJ1_FEUP.dir/src/Package.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\Package.cpp" > CMakeFiles\DA_PROJ1_FEUP.dir\src\Package.cpp.i
+
+CMakeFiles/DA_PROJ1_FEUP.dir/src/Package.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DA_PROJ1_FEUP.dir/src/Package.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\src\Package.cpp" -o CMakeFiles\DA_PROJ1_FEUP.dir\src\Package.cpp.s
+
 # Object files for target DA_PROJ1_FEUP
 DA_PROJ1_FEUP_OBJECTS = \
 "CMakeFiles/DA_PROJ1_FEUP.dir/main.cpp.obj" \
-"CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.obj" \
 "CMakeFiles/DA_PROJ1_FEUP.dir/src/App.cpp.obj" \
-"CMakeFiles/DA_PROJ1_FEUP.dir/src/Menu.cpp.obj"
+"CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.obj" \
+"CMakeFiles/DA_PROJ1_FEUP.dir/src/Courier.cpp.obj" \
+"CMakeFiles/DA_PROJ1_FEUP.dir/src/FileReader.cpp.obj" \
+"CMakeFiles/DA_PROJ1_FEUP.dir/src/Menu.cpp.obj" \
+"CMakeFiles/DA_PROJ1_FEUP.dir/src/Package.cpp.obj"
 
 # External object files for target DA_PROJ1_FEUP
 DA_PROJ1_FEUP_EXTERNAL_OBJECTS =
 
 DA_PROJ1_FEUP.exe: CMakeFiles/DA_PROJ1_FEUP.dir/main.cpp.obj
-DA_PROJ1_FEUP.exe: CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.obj
 DA_PROJ1_FEUP.exe: CMakeFiles/DA_PROJ1_FEUP.dir/src/App.cpp.obj
+DA_PROJ1_FEUP.exe: CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.obj
+DA_PROJ1_FEUP.exe: CMakeFiles/DA_PROJ1_FEUP.dir/src/Courier.cpp.obj
+DA_PROJ1_FEUP.exe: CMakeFiles/DA_PROJ1_FEUP.dir/src/FileReader.cpp.obj
 DA_PROJ1_FEUP.exe: CMakeFiles/DA_PROJ1_FEUP.dir/src/Menu.cpp.obj
+DA_PROJ1_FEUP.exe: CMakeFiles/DA_PROJ1_FEUP.dir/src/Package.cpp.obj
 DA_PROJ1_FEUP.exe: CMakeFiles/DA_PROJ1_FEUP.dir/build.make
 DA_PROJ1_FEUP.exe: CMakeFiles/DA_PROJ1_FEUP.dir/linklibs.rsp
 DA_PROJ1_FEUP.exe: CMakeFiles/DA_PROJ1_FEUP.dir/objects1.rsp
 DA_PROJ1_FEUP.exe: CMakeFiles/DA_PROJ1_FEUP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable DA_PROJ1_FEUP.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\User\Documents\C C++\DA_PROJ1_FEUP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable DA_PROJ1_FEUP.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\DA_PROJ1_FEUP.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

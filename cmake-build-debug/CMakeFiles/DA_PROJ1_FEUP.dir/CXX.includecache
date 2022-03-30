@@ -16,19 +16,65 @@ C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/Menu.h
 stack
 -
 
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/Courier.h
+
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/FileReader.h
+iostream
+-
+vector
+-
+Courier.h
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/Courier.h
+
 C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/Menu.h
 string
 -
 App.h
 C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/App.h
 
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/Package.h
+
 C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/main.cpp
+vector
+-
 include/AppStarter.h
 C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/AppStarter.h
+include/Courier.h
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/Courier.h
+include/FileReader.h
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/FileReader.h
+
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/App.cpp
+../include/App.h
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/App.h
+iostream
+-
+iomanip
+-
+cmath
+-
 
 C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/AppStarter.cpp
 ../include/AppStarter.h
 C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/AppStarter.h
+
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/Courier.cpp
+../include/Courier.h
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/Courier.h
+
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/FileReader.cpp
+../include/FileReader.h
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/FileReader.h
+iostream
+-
+fstream
+-
+vector
+-
+cstring
+-
+sstream
+-
 
 C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/Menu.cpp
 ../include/Menu.h
@@ -37,4 +83,8 @@ sstream
 -
 iostream
 C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/iostream
+
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/Package.cpp
+../include/Package.h
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/Package.h
 

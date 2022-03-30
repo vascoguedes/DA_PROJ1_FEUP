@@ -4,6 +4,8 @@
 CMakeFiles/DA_PROJ1_FEUP.dir/main.cpp.obj: \
  ../include/App.h \
  ../include/AppStarter.h \
+ ../include/Courier.h \
+ ../include/FileReader.h \
  ../include/Menu.h \
  ../main.cpp
 CMakeFiles/DA_PROJ1_FEUP.dir/src/App.cpp.obj: \
@@ -14,7 +16,17 @@ CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.obj: \
  ../include/AppStarter.h \
  ../include/Menu.h \
  ../src/AppStarter.cpp
+CMakeFiles/DA_PROJ1_FEUP.dir/src/Courier.cpp.obj: \
+ ../include/Courier.h \
+ ../src/Courier.cpp
+CMakeFiles/DA_PROJ1_FEUP.dir/src/FileReader.cpp.obj: \
+ ../include/Courier.h \
+ ../include/FileReader.h \
+ ../src/FileReader.cpp
 CMakeFiles/DA_PROJ1_FEUP.dir/src/Menu.cpp.obj: \
  ../include/App.h \
  ../include/Menu.h \
  ../src/Menu.cpp
+CMakeFiles/DA_PROJ1_FEUP.dir/src/Package.cpp.obj: \
+ ../include/Package.h \
+ ../src/Package.cpp

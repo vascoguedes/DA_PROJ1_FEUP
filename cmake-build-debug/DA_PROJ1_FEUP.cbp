@@ -88,7 +88,16 @@
 		<Unit filename="C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/AppStarter.h">
 			<Option target="DA_PROJ1_FEUP"/>
 		</Unit>
+		<Unit filename="C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/Courier.h">
+			<Option target="DA_PROJ1_FEUP"/>
+		</Unit>
+		<Unit filename="C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/FileReader.h">
+			<Option target="DA_PROJ1_FEUP"/>
+		</Unit>
 		<Unit filename="C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/Menu.h">
+			<Option target="DA_PROJ1_FEUP"/>
+		</Unit>
+		<Unit filename="C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/Package.h">
 			<Option target="DA_PROJ1_FEUP"/>
 		</Unit>
 		<Unit filename="C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/main.cpp">
@@ -100,7 +109,16 @@
 		<Unit filename="C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/AppStarter.cpp">
 			<Option target="DA_PROJ1_FEUP"/>
 		</Unit>
+		<Unit filename="C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/Courier.cpp">
+			<Option target="DA_PROJ1_FEUP"/>
+		</Unit>
+		<Unit filename="C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/FileReader.cpp">
+			<Option target="DA_PROJ1_FEUP"/>
+		</Unit>
 		<Unit filename="C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/Menu.cpp">
+			<Option target="DA_PROJ1_FEUP"/>
+		</Unit>
+		<Unit filename="C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/Package.cpp">
 			<Option target="DA_PROJ1_FEUP"/>
 		</Unit>
 		<Unit filename="C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/CMakeLists.txt">

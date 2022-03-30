@@ -4,6 +4,19 @@ project(DA_PROJ1_FEUP)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(DA_PROJ1_FEUP
-        include/AppStarter.h main.cpp src/AppStarter.cpp include/App.h src/App.cpp include/Menu.h src/Menu.cpp)
+        main.cpp
+        include/App.h
+        include/AppStarter.h
+        include/Courier.h
+        include/FileReader.h
+        include/Menu.h
+        include/Package.h
+        src/App.cpp
+        src/AppStarter.cpp
+        src/Courier.cpp
+        src/FileReader.cpp
+        src/Menu.cpp
+        src/Package.cpp
+        )
 
 target_link_libraries(DA_PROJ1_FEUP)

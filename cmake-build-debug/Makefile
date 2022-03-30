@@ -200,6 +200,54 @@ src/AppStarter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_PROJ1_FEUP.dir\build.make CMakeFiles/DA_PROJ1_FEUP.dir/src/AppStarter.cpp.s
 .PHONY : src/AppStarter.cpp.s
 
+src/Courier.obj: src/Courier.cpp.obj
+.PHONY : src/Courier.obj
+
+# target to build an object file
+src/Courier.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_PROJ1_FEUP.dir\build.make CMakeFiles/DA_PROJ1_FEUP.dir/src/Courier.cpp.obj
+.PHONY : src/Courier.cpp.obj
+
+src/Courier.i: src/Courier.cpp.i
+.PHONY : src/Courier.i
+
+# target to preprocess a source file
+src/Courier.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_PROJ1_FEUP.dir\build.make CMakeFiles/DA_PROJ1_FEUP.dir/src/Courier.cpp.i
+.PHONY : src/Courier.cpp.i
+
+src/Courier.s: src/Courier.cpp.s
+.PHONY : src/Courier.s
+
+# target to generate assembly for a file
+src/Courier.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_PROJ1_FEUP.dir\build.make CMakeFiles/DA_PROJ1_FEUP.dir/src/Courier.cpp.s
+.PHONY : src/Courier.cpp.s
+
+src/FileReader.obj: src/FileReader.cpp.obj
+.PHONY : src/FileReader.obj
+
+# target to build an object file
+src/FileReader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_PROJ1_FEUP.dir\build.make CMakeFiles/DA_PROJ1_FEUP.dir/src/FileReader.cpp.obj
+.PHONY : src/FileReader.cpp.obj
+
+src/FileReader.i: src/FileReader.cpp.i
+.PHONY : src/FileReader.i
+
+# target to preprocess a source file
+src/FileReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_PROJ1_FEUP.dir\build.make CMakeFiles/DA_PROJ1_FEUP.dir/src/FileReader.cpp.i
+.PHONY : src/FileReader.cpp.i
+
+src/FileReader.s: src/FileReader.cpp.s
+.PHONY : src/FileReader.s
+
+# target to generate assembly for a file
+src/FileReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_PROJ1_FEUP.dir\build.make CMakeFiles/DA_PROJ1_FEUP.dir/src/FileReader.cpp.s
+.PHONY : src/FileReader.cpp.s
+
 src/Menu.obj: src/Menu.cpp.obj
 .PHONY : src/Menu.obj
 
@@ -224,6 +272,30 @@ src/Menu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_PROJ1_FEUP.dir\build.make CMakeFiles/DA_PROJ1_FEUP.dir/src/Menu.cpp.s
 .PHONY : src/Menu.cpp.s
 
+src/Package.obj: src/Package.cpp.obj
+.PHONY : src/Package.obj
+
+# target to build an object file
+src/Package.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_PROJ1_FEUP.dir\build.make CMakeFiles/DA_PROJ1_FEUP.dir/src/Package.cpp.obj
+.PHONY : src/Package.cpp.obj
+
+src/Package.i: src/Package.cpp.i
+.PHONY : src/Package.i
+
+# target to preprocess a source file
+src/Package.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_PROJ1_FEUP.dir\build.make CMakeFiles/DA_PROJ1_FEUP.dir/src/Package.cpp.i
+.PHONY : src/Package.cpp.i
+
+src/Package.s: src/Package.cpp.s
+.PHONY : src/Package.s
+
+# target to generate assembly for a file
+src/Package.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_PROJ1_FEUP.dir\build.make CMakeFiles/DA_PROJ1_FEUP.dir/src/Package.cpp.s
+.PHONY : src/Package.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -242,9 +314,18 @@ help:
 	@echo ... src/AppStarter.obj
 	@echo ... src/AppStarter.i
 	@echo ... src/AppStarter.s
+	@echo ... src/Courier.obj
+	@echo ... src/Courier.i
+	@echo ... src/Courier.s
+	@echo ... src/FileReader.obj
+	@echo ... src/FileReader.i
+	@echo ... src/FileReader.s
 	@echo ... src/Menu.obj
 	@echo ... src/Menu.i
 	@echo ... src/Menu.s
+	@echo ... src/Package.obj
+	@echo ... src/Package.i
+	@echo ... src/Package.s
 .PHONY : help
 
 
