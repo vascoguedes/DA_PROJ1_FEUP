@@ -54,4 +54,32 @@ public:
     Menu *nextMenu() override;
 };
 
+class OptionsMenu: public Menu{
+public:
+    explicit OptionsMenu(App &app);
+    void display() override;
+    Menu *nextMenu() override;
+};
+
+class Scenery1: public Menu{
+public:
+    explicit Scenery1(App &app);
+    void display() override;
+    Menu *nextMenu() override;
+};
+
+class Scenery2: public Menu{
+public:
+    explicit Scenery2(App &app);
+    void display() override;
+    Menu *nextMenu() override;
+};
+
+class Scenery3: public Menu{
+public:
+    explicit Scenery3(App &app);
+    void display() override;
+    Menu *nextMenu() override;
+};
+
 #endif //DA_PROJ1_FEUP_MENU_H

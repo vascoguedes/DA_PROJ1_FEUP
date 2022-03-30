@@ -8,11 +8,27 @@
 
 C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/App.h
 
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/AppStarter.h
+App.h
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/App.h
+Menu.h
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/Menu.h
+stack
+-
+
 C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/Menu.h
 string
 -
 App.h
 C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/App.h
+
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/main.cpp
+include/AppStarter.h
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/AppStarter.h
+
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/AppStarter.cpp
+../include/AppStarter.h
+C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/include/AppStarter.h
 
 C:/Users/User/Documents/C C++/DA_PROJ1_FEUP/src/Menu.cpp
 ../include/Menu.h
