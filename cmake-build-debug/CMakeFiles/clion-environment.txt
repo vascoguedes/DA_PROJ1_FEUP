@@ -1,3 +1,4 @@
-ToolSet: Ubuntu 20.04.1 LTS (local)Options: 
+ToolSet: w64 9.0 (local)@C:\msys64\mingw64
+Options: 
 
 Options:
