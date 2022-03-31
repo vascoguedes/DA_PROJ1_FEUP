@@ -6,6 +6,7 @@ using namespace std;
 Package::Package(unsigned int volume, unsigned int weight, unsigned int reward, unsigned int duration) : volume(volume),
     weight(weight), reward(reward), duration(duration){}
 
+Package::~Package() = default;
 
 unsigned int Package::getVolume() {
     return this->volume;
