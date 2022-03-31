@@ -1,4 +1,5 @@
 #include "../include/FileReader.h"
+#include "../include/Package.h"
 
 #include <iostream>
 #include <fstream>
@@ -45,9 +46,6 @@ vector<Courier> *getCourierFromFiles(string f1) {
     vector<string> ret;
     if(!fileExists(f1)) return nullptr;
     ret = fileReader(f1);
-
-    char* small_string;
-
     for(auto line : ret) {
         stringstream ss(line);
         unsigned maxVolume, maxWeight, cost;
@@ -56,8 +54,24 @@ vector<Courier> *getCourierFromFiles(string f1) {
         ss >> cost;
         couriers->push_back({maxVolume, maxWeight, cost});
     }
-
     return couriers;
+}
+
+vector<Package> *getPackageFromFiles(string f1) {
+    vector<Package> * package = new vector<Package>;
+    vector<string> ret;
+    if(!fileExists(f1)) return nullptr;
+    ret = fileReader(f1);
+    for(auto line : ret) {
+        stringstream ss(line);
+        unsigned volume, weight, reward, duration;
+        ss >> volume;
+        ss >> weight;
+        ss >> reward;
+        ss >> duration;
+        package->push_back({volume, weight, reward, duration});
+    }
+    return package;
 }
 
 
