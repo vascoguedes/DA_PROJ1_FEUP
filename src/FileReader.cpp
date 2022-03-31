@@ -52,7 +52,7 @@ vector<Courier> *getCourierFromFiles(string f1) {
         ss >> maxVolume;
         ss >> maxWeight;
         ss >> cost;
-        couriers->push_back({maxVolume, maxWeight, cost});
+        couriers->push_back(Courier(maxVolume, maxWeight, cost));
     }
     return couriers;
 }
@@ -69,7 +69,7 @@ vector<Package> *getPackageFromFiles(string f1) {
         ss >> weight;
         ss >> reward;
         ss >> duration;
-        package->push_back({volume, weight, reward, duration});
+        package->push_back(Package(volume, weight, reward, duration));
     }
     return package;
 }
