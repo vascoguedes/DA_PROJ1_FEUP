@@ -8,19 +8,19 @@ Package::Package(unsigned int volume, unsigned int weight, unsigned int reward, 
 
 Package::~Package() = default;
 
-unsigned int Package::getVolume() {
+unsigned int Package::getVolume() const {
     return this->volume;
 }
 
-unsigned int Package::getWeight() {
+unsigned int Package::getWeight() const {
     return this->weight;
 }
 
-unsigned int Package::getReward() {
+unsigned int Package::getReward() const {
     return this->reward;
 }
 
-unsigned int Package::getDuration() {
+unsigned int Package::getDuration() const {
     return this->duration;
 }
 

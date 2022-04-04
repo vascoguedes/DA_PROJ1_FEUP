@@ -14,10 +14,10 @@ class Package {
 public:
     Package(unsigned volume, unsigned weight, unsigned reward, unsigned duration);
     ~Package();
-    unsigned getVolume();
-    unsigned getWeight();
-    unsigned getReward();
-    unsigned getDuration();
+    unsigned getVolume() const;
+    unsigned getWeight() const;
+    unsigned getReward() const;
+    unsigned getDuration() const;
 };
 
 

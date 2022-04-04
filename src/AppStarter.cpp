@@ -5,7 +5,7 @@ AppStarter::AppStarter() {
 }
 
 void AppStarter::start() {
-    //ler database
+    app.loadData();
     while (!menuStack.empty()) {
         menuStack.top()->display();
         Menu *nextMenu = menuStack.top()->nextMenu();

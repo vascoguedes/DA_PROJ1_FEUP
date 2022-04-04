@@ -8,10 +8,13 @@ using namespace std;
 #include "Courier.h"
 #include "Package.h"
 
-vector<string> fileReader(string filename);
+class FileReader {
 
-vector<Courier> *getCourierFromFiles(string f1);
+public:
+    vector<string> fileReader(string filename);
+    vector<Courier> *getCourierFromFiles(string f1);
+    vector<Package> *getPackageFromFiles(string f1);
 
-vector<Package> *getPackageFromFiles(string f1);
+};
 
 #endif //DA_PROJ1_FEUP_FILEREADER_H

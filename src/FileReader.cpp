@@ -1,5 +1,4 @@
 #include "../include/FileReader.h"
-#include "../include/Package.h"
 
 #include <iostream>
 #include <fstream>
@@ -9,7 +8,7 @@
 
 using namespace std;
 
-vector<string> fileReader(string filename){
+vector<string> FileReader::fileReader(string filename){
     ifstream my_file;
     string line;
 
@@ -41,7 +40,7 @@ bool fileExists(string f_name) {
 
 
 
-vector<Courier> *getCourierFromFiles(string f1) {
+vector<Courier> *FileReader::getCourierFromFiles(string f1) {
     vector<Courier> * couriers = new vector<Courier>;
     vector<string> ret;
     if(!fileExists(f1)) return nullptr;
@@ -57,7 +56,7 @@ vector<Courier> *getCourierFromFiles(string f1) {
     return couriers;
 }
 
-vector<Package> *getPackageFromFiles(string f1) {
+vector<Package> *FileReader::getPackageFromFiles(string f1) {
     vector<Package> * package = new vector<Package>;
     vector<string> ret;
     if(!fileExists(f1)) return nullptr;
