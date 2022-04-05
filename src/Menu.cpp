@@ -126,7 +126,8 @@ void Scenery2::display() {
     cout << endl;
     cout << "Options Menu:" << endl;
     cout << "1 - Execute" << endl;
-    cout << "2 - Show Data" << endl;
+    cout << "2 - Show Couriers" << endl;
+    cout << "3 - Show Packages" << endl;
     cout << "0 - Exit" << endl;
     cout << endl;
 }
@@ -134,9 +135,15 @@ void Scenery2::display() {
 Menu *Scenery2::nextMenu() {
     switch (readInt()) {
         case 1: {
+            cout << app.scenery2() << endl;
             return this;
         }
-        case 2:{
+        case 2: {
+            app.printCouriers();
+            return this;
+        }
+        case 3: {
+            app.printPackages();
             return this;
         }
         case 0: return nullptr;
@@ -160,6 +167,7 @@ void Scenery3::display() {
 Menu *Scenery3::nextMenu() {
     switch (readInt()) {
         case 1: {
+            cout << app.scenery3() << endl;
             return this;
         }
         case 2:{

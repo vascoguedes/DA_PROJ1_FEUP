@@ -17,6 +17,6 @@ add_executable(DA_PROJ1_FEUP
         src/FileReader.cpp
         src/Menu.cpp
         src/Package.cpp
-        )
+        src/Shipping.cpp include/Shipping.h)
 
 target_link_libraries(DA_PROJ1_FEUP)
