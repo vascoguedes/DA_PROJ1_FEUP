@@ -67,19 +67,25 @@ int App::scenery2() {
     int couriers_size = 0;
     for(const auto& package: packages) {
         int i = 0;
-        int min_vol = 1;
+        int verifier = 1;
         auto shipping = shipments.begin();
 
         for(;shipping != shipments.end(); shipping++) {
             i++;
             int rem_vol = (int)shipping->getMaxVolume();
             rem_vol -= (int)shipping->getCurrentVolume();
-            int package_vol = (int)package.getVolume();
-            if(rem_vol >= package_vol) {
-                min_vol = 0;
+            rem_vol -= (int)package.getVolume();
+
+            int rem_wei = (int)shipping->getMaxWeight();
+            rem_wei -= (int)shipping->getCurrentWeight();
+            rem_wei -= (int)package.getWeight();
+
+            if(rem_vol >= 0 && rem_wei >= 0) {
+                verifier = 0;
+                break;
             }
         }
-        if(min_vol) {
+        if(verifier) {
             if(couriers_size > couriers.size()) continue;
             shipments.emplace_back(Shipping(courier->getMaxVolume(), courier->getMaxWeight(), courier->getCost()));
             courier++;
@@ -103,7 +109,6 @@ int App::scenery2() {
 int App::sortProfits() {
     int i = 0;
     int profits = 0;
-    cout << shipments.size() << endl;
     vector<int> positions;
     for(const auto &itr : shipments) {
         if(itr.getProfit() < 0) {
@@ -116,6 +121,7 @@ int App::sortProfits() {
     for(const auto &itr : positions) {
         shipments.erase(shipments.begin() + itr);
     }
+
     return profits;
 }
 
