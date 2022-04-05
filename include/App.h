@@ -18,16 +18,17 @@ public:
     void printPackages();
     void printShipments();
     /**
-     * Sorts the Couriers ascending, resulting of the following equation:
+     * Sorts the Couriers descending, resulting of the following equation:
      * Sqrt(maxVolume^2 + maxWeight^2)
      */
-    void sortCouriers();
+    void sortCouriers(bool descending);
     /**
-     * Sorts the Packages descending, resulting of the following equation:
+     * Sorts the Packages ascending, resulting of the following equation:
      * Sqrt(Volume^2 + Weight^2)
      */
-    void sortPackages();
+    void sortPackages(bool ascending);
     int scenery2();
+    void unloadShipments();
     int sortProfits();
     int scenery3();
 };

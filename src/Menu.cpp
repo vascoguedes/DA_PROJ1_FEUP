@@ -128,6 +128,10 @@ void Scenery2::display() {
     cout << "1 - Execute" << endl;
     cout << "2 - Show Couriers" << endl;
     cout << "3 - Show Packages" << endl;
+    cout << "4 - Normal Packages" << endl;
+    cout << "5 - Reverse Packages" << endl;
+    cout << "6 - Show shipments" << endl;
+    cout << "7 - Unload shipments" << endl;
     cout << "0 - Exit" << endl;
     cout << endl;
 }
@@ -144,6 +148,22 @@ Menu *Scenery2::nextMenu() {
         }
         case 3: {
             app.printPackages();
+            return this;
+        }
+        case 4: {
+            app.sortPackages(true);
+            return this;
+        }
+        case 5: {
+            app.sortPackages(false);
+            return this;
+        }
+        case 6: {
+            app.printShipments();
+            return this;
+        }
+        case 7: {
+            app.unloadShipments();
             return this;
         }
         case 0: return nullptr;

@@ -15,38 +15,50 @@ void App::loadData(){
     for(Package package : *fileReader.getPackageFromFiles(filepath + "encomendas.txt")){
         packages.push_back(package);
     }
-    sortCouriers();
-    sortPackages();
+    sortCouriers(true);
+    sortPackages(true);
 }
 
 /* Auxiliary function for sortCouriers() */
 bool comparatorCourier( Courier& i1, Courier& i2) {
-
     long weight_v1, weight_v2;
-
     weight_v1 = sqrt(pow(i1.getMaxVolume(), 2) + pow(i1.getMaxWeight(), 2));
     weight_v2 = sqrt(pow(i2.getMaxVolume(), 2) + pow(i2.getMaxWeight(), 2));
-
     return weight_v1 > weight_v2;
 }
+bool reverseComparatorCourier( Courier& i1, Courier& i2) {
+    long weight_v1, weight_v2;
+    weight_v1 = sqrt(pow(i1.getMaxVolume(), 2) + pow(i1.getMaxWeight(), 2));
+    weight_v2 = sqrt(pow(i2.getMaxVolume(), 2) + pow(i2.getMaxWeight(), 2));
+    return weight_v1 < weight_v2;
+}
 
-void App::sortCouriers() {
-    sort(couriers.begin(), couriers.end(), &comparatorCourier);
+void App::sortCouriers(bool descending) {
+    if(descending)
+        sort(couriers.begin(), couriers.end(), &comparatorCourier);
+    else
+        sort(couriers.begin(), couriers.end(), &reverseComparatorCourier);
 }
 
 /* Auxiliary function for sortPackages() */
 bool comparatorPackage( Package& i1, Package& i2) {
-
     long weight_v1, weight_v2;
-
     weight_v1 = sqrt(pow(i1.getVolume(), 2) + pow(i1.getWeight(), 2));
     weight_v2 = sqrt(pow(i2.getVolume(), 2) + pow(i2.getWeight(), 2));
-
     return weight_v1 < weight_v2;
 }
+bool reverseComparatorPackage( Package& i1, Package& i2) {
+    long weight_v1, weight_v2;
+    weight_v1 = sqrt(pow(i1.getVolume(), 2) + pow(i1.getWeight(), 2));
+    weight_v2 = sqrt(pow(i2.getVolume(), 2) + pow(i2.getWeight(), 2));
+    return weight_v1 > weight_v2;
+}
 
-void App::sortPackages() {
-    sort(packages.begin(), packages.end(), &comparatorPackage);
+void App::sortPackages(bool ascending) {
+    if(ascending)
+        sort(packages.begin(), packages.end(), &comparatorPackage);
+    else
+        sort(packages.begin(), packages.end(), &reverseComparatorPackage);
 }
 
 void App::printCouriers() {
@@ -111,26 +123,27 @@ int App::sortProfits() {
     int profits = 0;
     vector<int> positions;
     for(const auto &itr : shipments) {
-        if(itr.getProfit() < 0) {
+        if(itr.getProfit() < 0)
             positions.push_back(i);
-        }
         else
             profits+=itr.getProfit();
         i++;
     }
-    for(const auto &itr : positions) {
-        shipments.erase(shipments.begin() + itr);
-    }
+    for(auto itr = positions.rbegin(); itr != positions.rend(); itr++)
+        shipments.erase(shipments.begin() + *itr);
 
     return profits;
 }
 
+void App::unloadShipments() {
+    shipments.clear();
+}
+
 void App::printShipments() {
     for(const auto& itr : shipments) {
-        //if(itr.getShippingSize() == 0) continue;
-        cout << itr.getShippingSize()<<endl;
-        cout << itr.getCurrentVolume() << "<" << itr.getMaxVolume() << " || ";
-        cout << itr.getCurrentWeight() << "<" << itr.getMaxWeight() << " || ";
+        //cout << itr.getShippingSize()<<endl;
+        //cout << itr.getCurrentVolume() << "<" << itr.getMaxVolume() << " || ";
+        //cout << itr.getCurrentWeight() << "<" << itr.getMaxWeight() << " || ";
         cout << itr.getProfit() << endl;
     }
 }
