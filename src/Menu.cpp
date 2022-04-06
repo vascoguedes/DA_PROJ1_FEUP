@@ -139,7 +139,7 @@ void Scenery2::display() {
 Menu *Scenery2::nextMenu() {
     switch (readInt()) {
         case 1: {
-            cout << app.scenery2() << endl;
+            cout << "Profit from the shipment: " << app.scenery2() << endl;
             return this;
         }
         case 2: {
