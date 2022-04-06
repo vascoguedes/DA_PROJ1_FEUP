@@ -131,7 +131,6 @@ void Scenery2::display() {
     cout << "4 - Normal Packages" << endl;
     cout << "5 - Reverse Packages" << endl;
     cout << "6 - Show shipments" << endl;
-    cout << "7 - Unload shipments" << endl;
     cout << "0 - Exit" << endl;
     cout << endl;
 }
@@ -160,10 +159,6 @@ Menu *Scenery2::nextMenu() {
         }
         case 6: {
             app.printShipments();
-            return this;
-        }
-        case 7: {
-            app.unloadShipments();
             return this;
         }
         case 0: return nullptr;

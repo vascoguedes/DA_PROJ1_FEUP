@@ -73,8 +73,12 @@ void App::printPackages() {
     }
 }
 
+/******* SCENERY 2 FUNCTIONS ******/
+
 int App::scenery2() {
     /* NOT YET DONE */
+    unloadShipments();
+
     auto courier = couriers.begin();
     int couriers_size = 0;
     for(const auto& package: packages) {
@@ -140,13 +144,18 @@ void App::unloadShipments() {
 }
 
 void App::printShipments() {
+    int package_size = 0;
     for(const auto& itr : shipments) {
-        //cout << itr.getShippingSize()<<endl;
-        //cout << itr.getCurrentVolume() << "<" << itr.getMaxVolume() << " || ";
-        //cout << itr.getCurrentWeight() << "<" << itr.getMaxWeight() << " || ";
+        package_size += itr.getShippingSize();
+        cout << itr.getShippingSize()<<endl;
+        cout << itr.getCurrentVolume() << "<" << itr.getMaxVolume() << " || ";
+        cout << itr.getCurrentWeight() << "<" << itr.getMaxWeight() << " || ";
         cout << itr.getProfit() << endl;
     }
+    cout << endl << package_size << endl;
 }
+
+/***********************************/
 
 int App::scenery3(){
     vector<Package> auxVec;
@@ -169,5 +178,14 @@ int App::scenery3(){
     }
     return(int)(((8 * 3600) - timeLeft) / expressPackages.size());
 }
+
+
+
+
+void App::scenery2_v2() {
+    
+
+}
+
 
 
