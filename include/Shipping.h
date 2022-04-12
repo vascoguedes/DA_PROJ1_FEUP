@@ -31,8 +31,12 @@ public:
     void setCurrentWeight(unsigned weight);
     void setProfit(int value);
     bool isFull() const;
+    bool canFit(const Package& Package) const;
 
-    void pushPackage(const Package& packag);
+    void pushPackage(Package& package);
+    void removePackage(Package& aPackage);
+    vector<Package>& getPackages();
+    void cleanPackage();
 };
 
 #endif //DA_PROJ1_FEUP_SHIPPING_H

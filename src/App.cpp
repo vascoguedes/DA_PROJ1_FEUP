@@ -5,6 +5,8 @@
 #include <iomanip>
 #include <cmath>
 #include <algorithm>
+#include <chrono>
+#include <thread>
 
 App::App() = default;
 
@@ -73,6 +75,62 @@ void App::printPackages() {
     }
 }
 
+/******* SCENERY 1 FUNCTIONS ******/
+
+pair<int, int> App::scenery1() {
+
+    for (Package &aPackage: packages) {
+        aPackage.setAssignedValue(false);
+    }
+
+    int count = 1, numCouriers = 0, numPackages = 0;
+    std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
+
+    for (Courier &courier: couriers) {
+        cout << "NOVO HOME " << count << endl;
+        courier.getShipping().cleanPackage();
+        vector<Package> aux = backtrackingBestFit(courier.getShipping(), packages);
+        cout << "acabou, size: " << aux.size()  << endl;
+        if (!aux.empty()){
+            numCouriers++;
+            numPackages += aux.size();
+        }
+        for (const Package & aPackage: aux) {
+            for (Package & aPackage1: packages) {
+                if (!aPackage1.getAssignedValue() && aPackage.getWeight() == aPackage1.getWeight() && aPackage.getVolume() == aPackage1.getVolume()) {
+                    aPackage1.setAssignedValue(true);
+                    break;
+                }
+            }
+        }
+        count++;
+    }
+
+    std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+    std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::seconds>(end - begin).count() << "[s]" << std::endl;
+    return make_pair(numCouriers, numPackages);
+}
+
+vector<Package> App::backtrackingBestFit(Shipping shipping, vector<Package> package_all) {
+    if (shipping.isFull()) return shipping.getPackages();
+    vector<Package> result = shipping.getPackages();
+
+    for (Package &package: package_all) {
+        if (shipping.canFit(package) && !package.getAssignedValue()) {
+            shipping.pushPackage(package);
+
+            vector<Package> aux = backtrackingBestFit(shipping, package_all);
+
+            if (aux.size() > result.size()) { result = aux;
+                if (result.size() == package_all.size()) return result;}
+
+            shipping.removePackage(package);
+        }
+    }
+
+    return result;
+}
+
 /******* SCENERY 2 FUNCTIONS ******/
 
 int App::scenery2() {
@@ -81,7 +139,7 @@ int App::scenery2() {
 
     auto courier = couriers.begin();
     int couriers_size = 0;
-    for(const auto& package: packages) {
+    for(auto& package: packages) {
         int i = 0;
         int verifier = 1;
         auto shipping = shipments.begin();

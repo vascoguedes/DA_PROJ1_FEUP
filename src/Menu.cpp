@@ -108,9 +108,12 @@ void Scenery1::display() {
 Menu *Scenery1::nextMenu() {
     switch (readInt()) {
         case 1: {
+            pair<int, int> result = app.scenery1();
+            cout << result.first << " " << result.second << endl;
             return this;
         }
         case 2:{
+            cout << "case 2" << endl;
             return this;
         }
         case 0: return nullptr;

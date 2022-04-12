@@ -5,11 +5,13 @@
 #ifndef DA_PROJ1_FEUP_COURIER_H
 #define DA_PROJ1_FEUP_COURIER_H
 
+#include "Shipping.h"
 
 class Courier {
     unsigned maxVolume;
     unsigned maxWeight;
     unsigned cost;
+    Shipping shipping;
 public:
     /**
      * Class constructor with 3 unsigned objects
@@ -38,6 +40,8 @@ public:
      * @return cost parameter
      */
     unsigned getCost();
+
+    Shipping& getShipping();
 };
 
 

@@ -11,6 +11,7 @@ class Package {
     unsigned weight;
     unsigned reward;
     unsigned duration;
+    bool assigned;
 public:
     Package(unsigned volume, unsigned weight, unsigned reward, unsigned duration);
     ~Package();
@@ -18,6 +19,10 @@ public:
     unsigned getWeight() const;
     unsigned getReward() const;
     unsigned getDuration() const;
+    bool getAssignedValue() const;
+    void setAssignedValue(bool value);
+
+    bool operator==(const Package& p) const;
 };
 
 

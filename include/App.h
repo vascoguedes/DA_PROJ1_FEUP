@@ -3,6 +3,7 @@
 
 #include "FileReader.h"
 #include "Shipping.h"
+#include "map"
 
 class App{
 private:
@@ -46,6 +47,18 @@ public:
      * @param ascending defines sorting order
      */
     void sortPackages(bool ascending);
+
+    /**
+     * TODO
+     * @return TODO
+     */
+    pair<int, int> scenery1();
+
+    /**
+     * TODO
+     * @return TODO
+     */
+    vector<Package> backtrackingBestFit(Shipping shipping, vector<Package> packages_all);
 
     /**
      * Sorts with a Best-Fit algorithm a shipment vector that contains the packages in each courier

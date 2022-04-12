@@ -1,5 +1,5 @@
 #include "../include/Package.h"
-
+#include "iostream"
 using namespace std;
 
 
@@ -22,5 +22,17 @@ unsigned int Package::getReward() const {
 
 unsigned int Package::getDuration() const {
     return this->duration;
+}
+
+bool Package::getAssignedValue() const {
+    return assigned;
+}
+
+void Package::setAssignedValue(bool value) {
+    assigned = value;
+}
+
+bool Package::operator==(const Package &p) const {
+    return volume == p.getVolume() && weight == p.getWeight() && reward == p.getReward() && duration == p.getDuration() && assigned == p.getAssignedValue();
 }
 
