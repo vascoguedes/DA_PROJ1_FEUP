@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <utility>
 #include "../include/Shipping.h"
 
 Shipping::Shipping(unsigned int maxVolume, unsigned int maxWeight, unsigned int cost) {
@@ -87,3 +88,6 @@ void Shipping::cleanPackage() {
     setCurrentWeight(-currentWeight);
 }
 
+bool Shipping::aTenthFree() {
+    return (maxWeight + maxVolume) * 0 < (maxWeight + maxVolume - currentWeight - currentVolume);
+}

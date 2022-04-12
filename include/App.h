@@ -61,6 +61,12 @@ public:
     vector<Package> backtrackingBestFit(Shipping shipping, vector<Package> packages_all);
 
     /**
+     * TODO
+     * @return TODO
+     */
+    vector<Package> smallerFit(Shipping shipping, vector<Package> packages_all);
+
+    /**
      * Sorts with a Best-Fit algorithm a shipment vector that contains the packages in each courier
      * @return Profit of the shipment
      */

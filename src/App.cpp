@@ -89,8 +89,11 @@ pair<int, int> App::scenery1() {
     for (Courier &courier: couriers) {
         cout << "NOVO HOME " << count << endl;
         courier.getShipping().cleanPackage();
-        vector<Package> aux = backtrackingBestFit(courier.getShipping(), packages);
+        vector<Package> aux = smallerFit(courier.getShipping(), packages);//backtrackingBestFit(courier.getShipping(), packages);
         cout << "acabou, size: " << aux.size()  << endl;
+
+        std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+        std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::seconds>(end - begin).count() << "[s]" << std::endl;
         if (!aux.empty()){
             numCouriers++;
             numPackages += aux.size();
@@ -129,6 +132,22 @@ vector<Package> App::backtrackingBestFit(Shipping shipping, vector<Package> pack
     }
 
     return result;
+}
+
+vector<Package> App::smallerFit(Shipping shipping, vector<Package> packages_all) {
+
+    for (Package &package: packages_all) {
+        if (shipping.canFit(package) && !package.getAssignedValue() && shipping.aTenthFree()) {
+            shipping.pushPackage(package);
+        }
+    }
+
+    vector<Package> aux = backtrackingBestFit(shipping, packages_all);
+
+    cout << "PESO FINAL: " << shipping.getCurrentWeight() << " / " << shipping.getMaxWeight() << endl;
+    cout << "VOLUME FINAL: " << shipping.getCurrentVolume() << " / " << shipping.getMaxVolume() << endl;
+
+    return aux;
 }
 
 /******* SCENERY 2 FUNCTIONS ******/
@@ -244,6 +263,5 @@ void App::scenery2_v2() {
     
 
 }
-
 
 

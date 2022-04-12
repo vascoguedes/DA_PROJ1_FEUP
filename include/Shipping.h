@@ -37,6 +37,7 @@ public:
     void removePackage(Package& aPackage);
     vector<Package>& getPackages();
     void cleanPackage();
+    bool aTenthFree();
 };
 
 #endif //DA_PROJ1_FEUP_SHIPPING_H
