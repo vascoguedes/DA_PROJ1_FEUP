@@ -29,19 +29,21 @@ public:
      * Returns Courier maximum volume supported
      * @return maxVolume parameter
      */
-    unsigned getMaxVolume();
+    unsigned getMaxVolume() const;
     /**
      * Returns Courier maximum weight supported
      * @return maxWeight parameter
      */
-    unsigned getMaxWeight();
+    unsigned getMaxWeight() const;
     /**
      * Returns Courier cost to ship
      * @return cost parameter
      */
-    unsigned getCost();
+    unsigned getCost() const;
 
-    Shipping& getShipping();
+    Shipping getShipping() const;
+
+    friend std::ostream& operator<<(std::ostream& os, const Courier &o);
 };
 
 

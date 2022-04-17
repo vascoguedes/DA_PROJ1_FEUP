@@ -12,6 +12,7 @@ private:
     vector<Courier> couriers;
     vector<Package> packages;
     vector<Shipping> shipments;
+    vector<Package> expressPackages;
 public:
     /**
      * Default Constructor
@@ -33,6 +34,12 @@ public:
      * Prints to the console the vector of Shipments
      */
     void printShipments();
+
+    void writeShipments();
+
+    void writeExpressShipments();
+
+    void printExpressShipments();
 
     /**
      * Sorts the Couriers descending, resulting of the following equation:

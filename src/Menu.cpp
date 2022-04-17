@@ -101,6 +101,7 @@ void Scenery1::display() {
     cout << "Options Menu:" << endl;
     cout << "1 - Execute" << endl;
     cout << "2 - Show Data" << endl;
+    cout << "3 - Export Data" << endl;
     cout << "0 - Exit" << endl;
     cout << endl;
 }
@@ -114,6 +115,12 @@ Menu *Scenery1::nextMenu() {
         }
         case 2:{
             cout << "case 2" << endl;
+            return this;
+        }
+        case 3:{
+            cout << "Exporting data..." << endl;
+            app.writeShipments();
+            cout << "Data exported successfully" << endl;
             return this;
         }
         case 0: return nullptr;
@@ -134,6 +141,7 @@ void Scenery2::display() {
     cout << "4 - Normal Packages" << endl;
     cout << "5 - Reverse Packages" << endl;
     cout << "6 - Show shipments" << endl;
+    cout << "7 - Export Data" << endl;
     cout << "0 - Exit" << endl;
     cout << endl;
 }
@@ -164,6 +172,12 @@ Menu *Scenery2::nextMenu() {
             app.printShipments();
             return this;
         }
+        case 7: {
+            cout << "Exporting data..." << endl;
+            app.writeShipments();
+            cout << "Data exported successfully" << endl;
+            return this;
+        }
         case 0: return nullptr;
         default: return invalidInput();
     }
@@ -178,6 +192,7 @@ void Scenery3::display() {
     cout << "Options Menu:" << endl;
     cout << "1 - Execute" << endl;
     cout << "2 - Show Data" << endl;
+    cout << "3 - Export Data" << endl;
     cout << "0 - Exit" << endl;
     cout << endl;
 }
@@ -185,10 +200,17 @@ void Scenery3::display() {
 Menu *Scenery3::nextMenu() {
     switch (readInt()) {
         case 1: {
-            cout << app.scenery3() << endl;
+            cout << "Delivery mean time: " << app.scenery3() << endl;
             return this;
         }
         case 2:{
+            app.printExpressShipments();
+            return this;
+        }
+        case 3:{
+            cout << "Exporting data..." << endl;
+            app.writeExpressShipments();
+            cout << "Data exported successfully" << endl;
             return this;
         }
         case 0: return nullptr;

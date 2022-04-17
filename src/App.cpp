@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <chrono>
 #include <thread>
+#include <fstream>
 
 App::App() = default;
 
@@ -72,6 +73,60 @@ void App::printCouriers() {
 void App::printPackages() {
     for(auto line : packages) {
         cout << line.getWeight() <<" " <<  line.getVolume() << " " << line.getReward() << " " << line.getDuration() << endl;
+    }
+}
+
+void App::writeShipments() {
+    fstream file;
+    file.open(filepath + "shippments.txt", ofstream::out | ofstream::trunc);
+    if (!file.is_open()) {
+        cerr << "Unable to open file";
+        exit(1);
+    }
+    for(const Courier &courier : couriers){
+        file << "Courier:" << courier;
+        file << "Package:\n";
+        for(const Package &package : courier.getShipping().getPackages()){
+            file<< "->" << package;
+        }
+    }
+    file.close();
+}
+
+void App::writeExpressShipments() {
+    fstream file;
+    file.open(filepath + "expressShippments.txt", ofstream::out | ofstream::trunc);
+    if (!file.is_open()) {
+        cerr << "Unable to open file";
+        exit(1);
+    }
+    int count = 0;
+    int daysPast = 0;
+    file << "Express Packages:\n";
+    file << "Day " << daysPast + 1 << ":\n";
+    for(const Package &package : expressPackages){
+        if(daysPast != package.getDaysPast()) {
+            daysPast++;
+            file << "Day " << daysPast + 1 << ":\n";
+        }
+        count++;
+        file << count << "º: " << package << "\n";
+    }
+    file.close();
+}
+
+void App::printExpressShipments() {
+    cout << "Express Packages:\n";
+    int count = 0;
+    int daysPast = 0;
+    cout << "Day " << daysPast + 1 << ":" << endl;
+    for(const Package &package : expressPackages){
+        if(daysPast != package.getDaysPast()) {
+            daysPast++;
+            cout << "Day " << daysPast + 1 << ":" << endl;
+        }
+        count++;
+        cout << count << "\370: " << package << endl;
     }
 }
 
@@ -235,25 +290,29 @@ void App::printShipments() {
 /***********************************/
 
 int App::scenery3(){
-    vector<Package> auxVec;
-    vector<Package> expressPackages;
-    for(Package package : packages){
-        auxVec.push_back(package);
-    }
-    sort(auxVec.begin(), auxVec.end(), [](const Package &lhs, const Package &rhs) {
-        return lhs.getDuration() < rhs.getDuration();
+    sort(packages.begin(), packages.end(), [](const Package &lhs, const Package &rhs) {
+        if(lhs.getDaysPast() == rhs.getDaysPast())
+            return lhs.getDuration() < rhs.getDuration();
+        return lhs.getDaysPast() < rhs.getDaysPast();
     });
 
     int timeLeft = 8 * 3600;
 
-    for(Package package : auxVec){
-        if(package.getDuration() <= timeLeft) {
-            expressPackages.push_back(package);
-            timeLeft -= package.getDuration();
+    unsigned int count = 0;
+    for(vector<Package>::iterator it = packages.begin(); it < packages.end(); it++){
+        if((*it).getDuration() <= timeLeft) {
+            expressPackages.push_back((*it));
+            timeLeft -= (*it).getDuration();
+            packages.erase(it);
+            count++;
+            it--;
         }
-        else break;
+        else {
+            (*it).increaseDaysPast();
+        }
     }
-    return(int)(((8 * 3600) - timeLeft) / expressPackages.size());
+
+    return(int)(((8 * 3600) - timeLeft) / count);
 }
 
 

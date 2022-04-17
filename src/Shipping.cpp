@@ -52,18 +52,18 @@ bool Shipping::isFull() const {
 }
 
 unsigned Shipping::getShippingSize() const{
-    return package.size();
+    return packages.size();
 }
 
 void Shipping::pushPackage( Package &packag) {
     packag.setAssignedValue(true);
-    package.push_back(packag);
+    packages.push_back(packag);
     setCurrentVolume(packag.getVolume());
     setCurrentWeight(packag.getWeight());
 }
 
-vector<Package>& Shipping::getPackages() {
-    return package;
+vector<Package> Shipping::getPackages() const {
+    return packages;
 }
 
 bool Shipping::canFit(const Package& package1) const {
@@ -71,9 +71,9 @@ bool Shipping::canFit(const Package& package1) const {
 }
 
 void Shipping::removePackage(Package &aPackage) {
-    for (int i = 0; i < package.size(); ++i) {
-        if (package[i].getVolume() == aPackage.getVolume() && package[i].getWeight() == aPackage.getWeight() && package[i].getReward() == aPackage.getReward() && package[i].getDuration() == aPackage.getDuration() && package[i].getAssignedValue() == aPackage.getAssignedValue()) {
-            package.erase(package.begin() + i);
+    for (int i = 0; i < packages.size(); ++i) {
+        if (packages[i].getVolume() == aPackage.getVolume() && packages[i].getWeight() == aPackage.getWeight() && packages[i].getReward() == aPackage.getReward() && packages[i].getDuration() == aPackage.getDuration() && packages[i].getAssignedValue() == aPackage.getAssignedValue()) {
+            packages.erase(packages.begin() + i);
             break;
         }
     }
@@ -83,7 +83,7 @@ void Shipping::removePackage(Package &aPackage) {
 }
 
 void Shipping::cleanPackage() {
-    package = {};
+    packages = {};
     setCurrentVolume(-currentVolume);
     setCurrentWeight(-currentWeight);
 }

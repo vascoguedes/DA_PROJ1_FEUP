@@ -32,7 +32,20 @@ void Package::setAssignedValue(bool value) {
     assigned = value;
 }
 
+unsigned int Package::getDaysPast() const {
+    return this->daysPast;
+}
+
+void Package::increaseDaysPast() {
+    daysPast++;
+}
+
 bool Package::operator==(const Package &p) const {
     return volume == p.getVolume() && weight == p.getWeight() && reward == p.getReward() && duration == p.getDuration() && assigned == p.getAssignedValue();
+}
+
+ostream &operator<<(ostream &os, const Package &o) {
+    os << o.getVolume() << " " << o.getWeight() << " " << o.getReward() << " " << o.getDuration();
+    return os;
 }
 

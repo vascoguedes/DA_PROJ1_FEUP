@@ -1,0 +1,100 @@
+Carrinha:391 395 13796
+Encomendas:
+Carrinha:398 378 15048
+Encomendas:
+Carrinha:394 379 13241
+Encomendas:
+Carrinha:393 377 16543
+Encomendas:
+Carrinha:394 351 15473
+Encomendas:
+Carrinha:366 375 15556
+Encomendas:
+Carrinha:370 366 13618
+Encomendas:
+Carrinha:328 398 13956
+Encomendas:
+Carrinha:397 321 13931
+Encomendas:
+Carrinha:335 383 16287
+Encomendas:
+Carrinha:335 381 15531
+Encomendas:
+Carrinha:395 315 16790
+Encomendas:
+Carrinha:310 387 14105
+Encomendas:
+Carrinha:360 331 15444
+Encomendas:
+Carrinha:382 304 14967
+Encomendas:
+Carrinha:309 377 15136
+Encomendas:
+Carrinha:277 399 14862
+Encomendas:
+Carrinha:308 371 13865
+Encomendas:
+Carrinha:336 345 14342
+Encomendas:
+Carrinha:355 322 13718
+Encomendas:
+Carrinha:368 308 16575
+Encomendas:
+Carrinha:278 386 16833
+Encomendas:
+Carrinha:365 301 13406
+Encomendas:
+Carrinha:388 268 14521
+Encomendas:
+Carrinha:262 389 15106
+Encomendas:
+Carrinha:378 272 15057
+Encomendas:
+Carrinha:262 384 15363
+Encomendas:
+Carrinha:253 386 13481
+Encomendas:
+Carrinha:385 254 14819
+Encomendas:
+Carrinha:344 306 14015
+Encomendas:
+Carrinha:376 262 16090
+Encomendas:
+Carrinha:325 316 13378
+Encomendas:
+Carrinha:288 346 13476
+Encomendas:
+Carrinha:365 259 16982
+Encomendas:
+Carrinha:287 342 15977
+Encomendas:
+Carrinha:343 277 15226
+Encomendas:
+Carrinha:259 354 13356
+Encomendas:
+Carrinha:268 346 14777
+Encomendas:
+Carrinha:292 316 16581
+Encomendas:
+Carrinha:335 265 15168
+Encomendas:
+Carrinha:287 304 15787
+Encomendas:
+Carrinha:292 289 14548
+Encomendas:
+Carrinha:259 310 16154
+Encomendas:
+Carrinha:281 287 14581
+Encomendas:
+Carrinha:296 271 13742
+Encomendas:
+Carrinha:258 289 14932
+Encomendas:
+Carrinha:256 289 14860
+Encomendas:
+Carrinha:285 258 13044
+Encomendas:
+Carrinha:265 274 14952
+Encomendas:
+Carrinha:255 275 13025
+Encomendas:

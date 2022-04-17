@@ -15,7 +15,7 @@ class Shipping {
     unsigned currentVolume;
     unsigned maxWeight;
     unsigned currentWeight;
-    vector <Package> package;
+    vector <Package> packages;
     int profit;
     bool is_full;
 
@@ -35,7 +35,7 @@ public:
 
     void pushPackage(Package& package);
     void removePackage(Package& aPackage);
-    vector<Package>& getPackages();
+    vector<Package> getPackages() const;
     void cleanPackage();
     bool aTenthFree();
 };
