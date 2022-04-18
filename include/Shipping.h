@@ -29,6 +29,7 @@ public:
     unsigned getCurrentWeight() const;
     unsigned getShippingSize() const;
     int getProfit() const;
+
     void setCurrentVolume(unsigned volume);
     void setCurrentWeight(unsigned weight);
     void setProfit(int value);
@@ -39,8 +40,7 @@ public:
     void removePackage(Package& aPackage);
     vector<Package> getPackages() const;
     vector<unsigned> getPackagesID() const;
-    void cleanPackage();
-    bool aTenthFree();
+    void clearPackages();
 };
 
 #endif //DA_PROJ1_FEUP_SHIPPING_H

@@ -77,7 +77,7 @@ bool Shipping::canFit(const Package& package1) const {
 
 void Shipping::removePackage(Package &aPackage) {
     for (int i = 0; i < packages.size(); ++i) {
-        if (packages[i].getVolume() == aPackage.getVolume() && packages[i].getWeight() == aPackage.getWeight() && packages[i].getReward() == aPackage.getReward() && packages[i].getDuration() == aPackage.getDuration() && packages[i].getAssignedValue() == aPackage.getAssignedValue()) {
+        if (packages[i].getID() == aPackage.getID()) {
             packages.erase(packages.begin() + i);
             break;
         }
@@ -87,15 +87,12 @@ void Shipping::removePackage(Package &aPackage) {
     setCurrentWeight(-aPackage.getWeight());
 }
 
-void Shipping::cleanPackage() {
+void Shipping::clearPackages() {
     packages = {};
     setCurrentVolume(-currentVolume);
     setCurrentWeight(-currentWeight);
 }
 
-bool Shipping::aTenthFree() {
-    return (maxWeight + maxVolume) * 0 < (maxWeight + maxVolume - currentWeight - currentVolume);
-}
 
 vector<unsigned> Shipping::getPackagesID() const {
     vector<unsigned> ret;

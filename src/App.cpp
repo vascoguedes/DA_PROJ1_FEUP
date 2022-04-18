@@ -22,24 +22,8 @@ void App::loadData(){
     sortPackages(true);
 }
 
-/* Auxiliary function for sortCouriers() */
-bool comparatorCourier( Courier& i1, Courier& i2) {
-    long weight_v1, weight_v2;
-    weight_v1 = sqrt(pow(i1.getMaxVolume(), 2) + pow(i1.getMaxWeight(), 2));
-    weight_v2 = sqrt(pow(i2.getMaxVolume(), 2) + pow(i2.getMaxWeight(), 2));
-    return weight_v1 > weight_v2;
-}
-bool reverseComparatorCourier( Courier& i1, Courier& i2) {
-    long weight_v1, weight_v2;
-    weight_v1 = sqrt(pow(i1.getMaxVolume(), 2) + pow(i1.getMaxWeight(), 2));
-    weight_v2 = sqrt(pow(i2.getMaxVolume(), 2) + pow(i2.getMaxWeight(), 2));
-    return weight_v1 < weight_v2;
-}
-
 void App::sortCouriers(int sort_algorithm) {
-
     int courier_max_volume = 0, courier_max_weight = 0, courier_max_cost = 0; // Auxiliar parameters
-
     for(auto& courier : couriers) {
         if(courier.getCost() > courier_max_cost)
             courier_max_cost = courier.getCost();
@@ -48,13 +32,22 @@ void App::sortCouriers(int sort_algorithm) {
         if(courier.getMaxVolume() > courier_max_volume)
             courier_max_volume = courier.getMaxVolume();
     }
-
     switch (sort_algorithm) {
         case 1:
-            sort(couriers.begin(), couriers.end(), &comparatorCourier);
+            sort(couriers.begin(), couriers.end(), []( Courier& i1, Courier& i2) {
+                long weight_v1, weight_v2;
+                weight_v1 = sqrt(pow(i1.getMaxVolume(), 2) + pow(i1.getMaxWeight(), 2));
+                weight_v2 = sqrt(pow(i2.getMaxVolume(), 2) + pow(i2.getMaxWeight(), 2));
+                return weight_v1 > weight_v2;
+            });
             break;
         case 2:
-            sort(couriers.begin(), couriers.end(), &reverseComparatorCourier);
+            sort(couriers.begin(), couriers.end(), []( Courier& i1, Courier& i2) {
+                long weight_v1, weight_v2;
+                weight_v1 = sqrt(pow(i1.getMaxVolume(), 2) + pow(i1.getMaxWeight(), 2));
+                weight_v2 = sqrt(pow(i2.getMaxVolume(), 2) + pow(i2.getMaxWeight(), 2));
+                return weight_v1 < weight_v2;
+            });
             break;
         case 3:
             sort(couriers.begin(), couriers.end(), [&courier_max_cost, &courier_max_volume, &courier_max_weight](Courier& i1, Courier& i2) {
@@ -71,22 +64,13 @@ void App::sortCouriers(int sort_algorithm) {
             });
             break;
         default:
-            sort(couriers.begin(), couriers.end(), &comparatorCourier);
+            sort(couriers.begin(), couriers.end(), []( Courier& i1, Courier& i2) {
+                long weight_v1, weight_v2;
+                weight_v1 = sqrt(pow(i1.getMaxVolume(), 2) + pow(i1.getMaxWeight(), 2));
+                weight_v2 = sqrt(pow(i2.getMaxVolume(), 2) + pow(i2.getMaxWeight(), 2));
+                return weight_v1 > weight_v2;
+            });
     }
-}
-
-/* Auxiliary function for sortPackages() */
-bool comparatorPackage( Package& i1, Package& i2) {
-    long weight_v1, weight_v2;
-    weight_v1 = sqrt(pow(i1.getVolume(), 2) + pow(i1.getWeight(), 2));
-    weight_v2 = sqrt(pow(i2.getVolume(), 2) + pow(i2.getWeight(), 2));
-    return weight_v1 < weight_v2;
-}
-bool reverseComparatorPackage( Package& i1, Package& i2) {
-    long weight_v1, weight_v2;
-    weight_v1 = sqrt(pow(i1.getVolume(), 2) + pow(i1.getWeight(), 2));
-    weight_v2 = sqrt(pow(i2.getVolume(), 2) + pow(i2.getWeight(), 2));
-    return weight_v1 > weight_v2;
 }
 
 void App::sortPackages(int sort_algorithm) {
@@ -101,10 +85,20 @@ void App::sortPackages(int sort_algorithm) {
     }
     switch (sort_algorithm) {
         case 1:
-            sort(packages.begin(), packages.end(), &comparatorPackage);
+            sort(packages.begin(), packages.end(), []( Package& i1, Package& i2) {
+                long weight_v1, weight_v2;
+                weight_v1 = sqrt(pow(i1.getVolume(), 2) + pow(i1.getWeight(), 2));
+                weight_v2 = sqrt(pow(i2.getVolume(), 2) + pow(i2.getWeight(), 2));
+                return weight_v1 < weight_v2;
+            });
             break;
         case 2:
-            sort(packages.begin(), packages.end(), &reverseComparatorPackage);
+            sort(packages.begin(), packages.end(), []( Package& i1, Package& i2) {
+                long weight_v1, weight_v2;
+                weight_v1 = sqrt(pow(i1.getVolume(), 2) + pow(i1.getWeight(), 2));
+                weight_v2 = sqrt(pow(i2.getVolume(), 2) + pow(i2.getWeight(), 2));
+                return weight_v1 > weight_v2;
+            });
             break;
         case 3:
             sort(packages.begin(), packages.end(), [&packages_max_reward, &packages_max_volume, &packages_max_weight]( Package& i1, Package& i2){
@@ -118,7 +112,12 @@ void App::sortPackages(int sort_algorithm) {
             });
             break;
         default:
-            sort(packages.begin(), packages.end(), &comparatorPackage);
+            sort(packages.begin(), packages.end(), []( Package& i1, Package& i2) {
+                long weight_v1, weight_v2;
+                weight_v1 = sqrt(pow(i1.getVolume(), 2) + pow(i1.getWeight(), 2));
+                weight_v2 = sqrt(pow(i2.getVolume(), 2) + pow(i2.getWeight(), 2));
+                return weight_v1 < weight_v2;
+            });
     }
 }
 
@@ -136,7 +135,7 @@ void App::printPackages() {
 
 void App::writeShipments() {
     fstream file;
-    file.open(filepath + "shippments.txt", ofstream::out | ofstream::trunc);
+    file.open(filepath + "shipments.txt", ofstream::out | ofstream::trunc);
     if (!file.is_open()) {
         cerr << "Unable to open file";
         exit(1);
@@ -188,9 +187,31 @@ void App::printExpressShipments() {
     }
 }
 
+void App::unloadShipments() {
+    for(auto courier : couriers) {
+        courier.getShipping().clearPackages();
+    }
+    shipments.clear();
+}
+
+void App::printShipments(int scenery) {
+    int package_size = 0;
+    for(const auto& itr : shipments) {
+        package_size += itr.getShippingSize();
+        cout << "Courier ID: " << itr.getID() << endl;
+        cout << "Shipped packages: " << itr.getShippingSize() << endl;
+        cout << itr.getCurrentVolume() << " / " << itr.getMaxVolume() << " || ";
+        cout << itr.getCurrentWeight() << " / " << itr.getMaxWeight();
+        if(scenery == 2) cout << " || "<< itr.getProfit();
+        cout << endl;
+    }
+    cout << endl << "Amount of shipped packages:" << package_size << endl;
+    cout << "Amount of couriers used:" << shipments.size() << endl;
+}
+
 /******* SCENERY 1 FUNCTIONS *******/
 
-vector<int> knapSack_v1( Courier& courier, vector<Package> packages) {
+vector<int> knapSackScenery1( Courier& courier, vector<Package> packages) {
     int max_wei = (int)courier.getMaxWeight();
     int max_vol = (int)courier.getMaxVolume();
 
@@ -234,7 +255,7 @@ int App::scenery1() {
     vector<Package> aux_packages = packages;
 
     for(auto courier: couriers) {
-        auto sort = knapSack_v1(courier, aux_packages);
+        auto sort = knapSackScenery1(courier, aux_packages);
 
         if(sort.empty()) continue;
         shipments.emplace_back(Shipping(courier.getID(), courier.getMaxVolume(), courier.getMaxWeight(), 0));
@@ -384,25 +405,6 @@ int App::sortProfits() {
     }
 
     return profits;
-}
-
-void App::unloadShipments() {
-    shipments.clear();
-}
-
-void App::printShipments(int scenery) {
-    int package_size = 0;
-    for(const auto& itr : shipments) {
-        package_size += itr.getShippingSize();
-        cout << "Courier ID: " << itr.getID() << endl;
-        cout << "Shipped packages: " << itr.getShippingSize() << endl;
-        cout << itr.getCurrentVolume() << " / " << itr.getMaxVolume() << " || ";
-        cout << itr.getCurrentWeight() << " / " << itr.getMaxWeight();
-        if(scenery == 2) cout << " || "<< itr.getProfit();
-        cout << endl;
-    }
-    cout << endl << "Amount of shipped packages:" << package_size << endl;
-    cout << "Amount of couriers used:" << shipments.size() << endl;
 }
 
 /***********************************/
