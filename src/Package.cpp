@@ -3,10 +3,14 @@
 using namespace std;
 
 
-Package::Package(unsigned int volume, unsigned int weight, unsigned int reward, unsigned int duration) : volume(volume),
+Package::Package(unsigned int id, unsigned int volume, unsigned int weight, unsigned int reward, unsigned int duration) : id(id), volume(volume),
     weight(weight), reward(reward), duration(duration){}
 
 Package::~Package() = default;
+
+unsigned int Package::getID() const {
+    return this->id;
+}
 
 unsigned int Package::getVolume() const {
     return this->volume;

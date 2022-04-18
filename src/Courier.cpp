@@ -3,9 +3,13 @@
 #include "../include/Courier.h"
 using namespace std;
 
-Courier::Courier(unsigned int maxVolume, unsigned int maxWeight, unsigned int cost) : maxVolume(maxVolume), maxWeight(maxWeight), cost(cost), shipping(Shipping(maxVolume, maxWeight, cost)) {}
+Courier::Courier(unsigned int id, unsigned int maxVolume, unsigned int maxWeight, unsigned int cost) : id(id), maxVolume(maxVolume), maxWeight(maxWeight), cost(cost), shipping(Shipping(maxVolume, maxWeight, cost)) {}
 
 Courier::~Courier() = default;
+
+unsigned int Courier::getID() const {
+    return this->id;
+}
 
 unsigned int Courier::getMaxVolume() const {
     return this->maxVolume;

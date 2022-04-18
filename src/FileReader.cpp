@@ -45,13 +45,15 @@ vector<Courier> *FileReader::getCourierFromFiles(string f1) {
     vector<string> ret;
     if(!fileExists(f1)) return nullptr;
     ret = fileReader(f1);
+    unsigned id = 0;
     for(auto line : ret) {
         stringstream ss(line);
         unsigned maxVolume, maxWeight, cost;
         ss >> maxVolume;
         ss >> maxWeight;
         ss >> cost;
-        couriers->push_back(Courier(maxVolume, maxWeight, cost));
+        couriers->push_back(Courier(id,maxVolume, maxWeight, cost));
+        id++;
     }
     return couriers;
 }
@@ -61,6 +63,7 @@ vector<Package> *FileReader::getPackageFromFiles(string f1) {
     vector<string> ret;
     if(!fileExists(f1)) return nullptr;
     ret = fileReader(f1);
+    unsigned id = 0;
     for(auto line : ret) {
         stringstream ss(line);
         unsigned volume, weight, reward, duration;
@@ -68,7 +71,9 @@ vector<Package> *FileReader::getPackageFromFiles(string f1) {
         ss >> weight;
         ss >> reward;
         ss >> duration;
-        package->push_back(Package(volume, weight, reward, duration));
+        package->push_back(Package(id, volume, weight, reward, duration));
+        id++;
+
     }
     return package;
 }

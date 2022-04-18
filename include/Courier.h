@@ -8,6 +8,7 @@
 #include "Shipping.h"
 
 class Courier {
+    unsigned id;
     unsigned maxVolume;
     unsigned maxWeight;
     unsigned cost;
@@ -19,12 +20,19 @@ public:
      * @param maxWeight Courier maximum weight supported
      * @param cost Courier cost to transport
      */
-    Courier(unsigned maxVolume, unsigned maxWeight, unsigned cost);
+    Courier(unsigned id, unsigned maxVolume, unsigned maxWeight, unsigned cost);
 
     /**
      * Class destructor to clear the object in memory
      */
     ~Courier();
+
+    /**
+     * Returns Courier id
+     * @return id parameter
+     */
+    unsigned getID() const;
+
     /**
      * Returns Courier maximum volume supported
      * @return maxVolume parameter

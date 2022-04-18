@@ -9,6 +9,7 @@
 #include <ostream>
 
 class Package {
+    unsigned id;
     unsigned volume;
     unsigned weight;
     unsigned reward;
@@ -17,8 +18,9 @@ class Package {
     unsigned daysPast = 0;
 
 public:
-    Package(unsigned volume, unsigned weight, unsigned reward, unsigned duration);
+    Package(unsigned id, unsigned volume, unsigned weight, unsigned reward, unsigned duration);
     ~Package();
+    unsigned getID() const;
     unsigned getVolume() const;
     unsigned getWeight() const;
     unsigned getReward() const;

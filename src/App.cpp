@@ -297,12 +297,16 @@ int App::scenery3(){
     });
 
     int timeLeft = 8 * 3600;
+    int sum = 0;
+    int total_sum=0;
 
     unsigned int count = 0;
     for(vector<Package>::iterator it = packages.begin(); it < packages.end(); it++){
         if((*it).getDuration() <= timeLeft) {
             expressPackages.push_back((*it));
             timeLeft -= (*it).getDuration();
+            sum += (*it).getDuration();
+            total_sum +=sum;
             packages.erase(it);
             count++;
             it--;
@@ -312,15 +316,8 @@ int App::scenery3(){
         }
     }
 
-    return(int)(((8 * 3600) - timeLeft) / count);
+    return(int)((total_sum) / count);
 }
 
-
-
-
-void App::scenery2_v2() {
-    
-
-}
 
 
