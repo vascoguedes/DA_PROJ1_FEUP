@@ -72,11 +72,23 @@ public:
     vector<Package> smallerFit(Shipping shipping, vector<Package> packages_all);
 
     /**
-     * Sorts with a Best-Fit algorithm a shipment vector that contains the packages in each courier
+     * Sorts with a Knapsack or Best-Fit algorithm a shipment vector that contains the packages in each courier
+     * @param knapsack If true, Knapsack algorithm will be used. If false, Best-Fit will be used
      * @return Profit of the shipment
      */
-    int scenery2();
-    void scenery2_v2();
+    int scenery2(bool knapsack);
+
+    /**
+     * TODO
+     * @return TODO
+     */
+    void knapSackAlgorithm();
+
+    /**
+     * TODO
+     * @return TODO
+     */
+    void bestFitAlgorithm();
 
     /**
      * Clears Shipment vector

@@ -135,13 +135,12 @@ Scenery2::Scenery2(App &app) : Menu(app) {
 void Scenery2::display() {
     cout << endl;
     cout << "Options Menu:" << endl;
-    cout << "1 - Execute" << endl;
-    cout << "2 - Show Couriers" << endl;
-    cout << "3 - Show Packages" << endl;
-    cout << "4 - Normal Packages" << endl;
-    cout << "5 - Reverse Packages" << endl;
-    cout << "6 - Show shipments" << endl;
-    cout << "7 - Export Data" << endl;
+    cout << "1 - Execute with Knapsack Algorithm (slowest but better results)" << endl;
+    cout << "2 - Execute with BestFit Algorithm (fastest but worse results)" << endl;
+    cout << "3 - Show Couriers" << endl;
+    cout << "4 - Show Packages" << endl;
+    cout << "5 - Show shipments" << endl;
+    cout << "6 - Export Data" << endl;
     cout << "0 - Exit" << endl;
     cout << endl;
 }
@@ -149,30 +148,28 @@ void Scenery2::display() {
 Menu *Scenery2::nextMenu() {
     switch (readInt()) {
         case 1: {
-            cout << "Profit from the shipment: " << app.scenery2() << endl;
+            int res =app.scenery2(1);
+            cout << "Profit from the shipment: " << res << endl;
             return this;
         }
         case 2: {
-            app.printCouriers();
+            int res =app.scenery2(0);
+            cout << "Profit from the shipment: " << res << endl;
             return this;
         }
         case 3: {
-            app.printPackages();
+            app.printCouriers();
             return this;
         }
         case 4: {
-            app.sortPackages(true);
+            app.printPackages();
             return this;
         }
         case 5: {
-            app.sortPackages(false);
-            return this;
-        }
-        case 6: {
             app.printShipments();
             return this;
         }
-        case 7: {
+        case 6: {
             cout << "Exporting data..." << endl;
             app.writeShipments();
             cout << "Data exported successfully" << endl;

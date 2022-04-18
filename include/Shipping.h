@@ -11,6 +11,7 @@ using namespace std;
  * This class englobes what each Courier is shipping
  */
 class Shipping {
+    unsigned id;
     unsigned maxVolume;
     unsigned currentVolume;
     unsigned maxWeight;
@@ -20,7 +21,8 @@ class Shipping {
     bool is_full;
 
 public:
-    Shipping(unsigned maxVolume, unsigned maxWeight, unsigned cost);
+    Shipping(unsigned id, unsigned maxVolume, unsigned maxWeight, unsigned cost);
+    unsigned getID() const;
     unsigned getMaxVolume() const;
     unsigned getCurrentVolume() const;
     unsigned getMaxWeight() const;
@@ -36,6 +38,7 @@ public:
     void pushPackage(Package& package);
     void removePackage(Package& aPackage);
     vector<Package> getPackages() const;
+    vector<unsigned> getPackagesID() const;
     void cleanPackage();
     bool aTenthFree();
 };

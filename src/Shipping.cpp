@@ -1,9 +1,8 @@
 
-#include <iostream>
-#include <utility>
 #include "../include/Shipping.h"
 
-Shipping::Shipping(unsigned int maxVolume, unsigned int maxWeight, unsigned int cost) {
+Shipping::Shipping(unsigned int id, unsigned int maxVolume, unsigned int maxWeight, unsigned int cost) {
+    this->id = id;
     this->maxWeight = maxWeight;
     this->maxVolume = maxVolume;
     currentWeight = 0;
@@ -11,6 +10,10 @@ Shipping::Shipping(unsigned int maxVolume, unsigned int maxWeight, unsigned int 
     profit = 0;
     profit -=(int)cost;
     is_full = false;
+}
+
+unsigned Shipping::getID() const {
+    return id;
 }
 
 unsigned Shipping::getMaxVolume() const {
@@ -60,6 +63,8 @@ void Shipping::pushPackage( Package &packag) {
     packages.push_back(packag);
     setCurrentVolume(packag.getVolume());
     setCurrentWeight(packag.getWeight());
+    setProfit((int)packag.getReward());
+
 }
 
 vector<Package> Shipping::getPackages() const {
@@ -90,4 +95,12 @@ void Shipping::cleanPackage() {
 
 bool Shipping::aTenthFree() {
     return (maxWeight + maxVolume) * 0 < (maxWeight + maxVolume - currentWeight - currentVolume);
+}
+
+vector<unsigned> Shipping::getPackagesID() const {
+    vector<unsigned> ret;
+    for(const auto& pack: packages) {
+        ret.push_back(pack.getID());
+    }
+    return ret;
 }
