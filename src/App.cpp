@@ -36,11 +36,43 @@ bool reverseComparatorCourier( Courier& i1, Courier& i2) {
     return weight_v1 < weight_v2;
 }
 
-void App::sortCouriers(bool descending) {
-    if(descending)
-        sort(couriers.begin(), couriers.end(), &comparatorCourier);
-    else
-        sort(couriers.begin(), couriers.end(), &reverseComparatorCourier);
+void App::sortCouriers(int sort_algorithm) {
+
+    int courier_max_volume = 0, courier_max_weight = 0, courier_max_cost = 0; // Auxiliar parameters
+
+    for(auto& courier : couriers) {
+        if(courier.getCost() > courier_max_cost)
+            courier_max_cost = courier.getCost();
+        if(courier.getMaxWeight() > courier_max_weight)
+            courier_max_weight = courier.getMaxWeight();
+        if(courier.getMaxVolume() > courier_max_volume)
+            courier_max_volume = courier.getMaxVolume();
+    }
+
+    switch (sort_algorithm) {
+        case 1:
+            sort(couriers.begin(), couriers.end(), &comparatorCourier);
+            break;
+        case 2:
+            sort(couriers.begin(), couriers.end(), &reverseComparatorCourier);
+            break;
+        case 3:
+            sort(couriers.begin(), couriers.end(), [&courier_max_cost, &courier_max_volume, &courier_max_weight](Courier& i1, Courier& i2) {
+                double weight_v1, weight_v2;
+                weight_v1 = sqrt(pow(100*i1.getMaxVolume(), 2) + pow(100*i1.getMaxWeight(), 2));
+                weight_v1 /= sqrt(pow(courier_max_volume, 2) + pow(courier_max_weight, 2));
+                weight_v1 -= (double)(100*i1.getCost())/courier_max_cost;
+
+                weight_v2 = sqrt(pow(100*i2.getMaxVolume(), 2) + pow(100*i2.getMaxWeight(), 2));
+                weight_v2 /= sqrt(pow(courier_max_volume, 2) + pow(courier_max_weight, 2));
+                weight_v2 -= (double)(100*i2.getCost())/courier_max_cost;
+
+                return weight_v1 > weight_v2;
+            });
+            break;
+        default:
+            sort(couriers.begin(), couriers.end(), &comparatorCourier);
+    }
 }
 
 /* Auxiliary function for sortPackages() */
@@ -57,11 +89,37 @@ bool reverseComparatorPackage( Package& i1, Package& i2) {
     return weight_v1 > weight_v2;
 }
 
-void App::sortPackages(bool ascending) {
-    if(ascending)
-        sort(packages.begin(), packages.end(), &comparatorPackage);
-    else
-        sort(packages.begin(), packages.end(), &reverseComparatorPackage);
+void App::sortPackages(int sort_algorithm) {
+    int packages_max_reward = 0, packages_max_weight = 0, packages_max_volume = 0;
+    for(const auto& package : packages) {
+        if(package.getReward() > packages_max_reward)
+            packages_max_reward = package.getReward();
+        if(package.getWeight() > packages_max_weight)
+            packages_max_weight = package.getWeight();
+        if(package.getVolume() > packages_max_volume)
+            packages_max_volume = package.getVolume();
+    }
+    switch (sort_algorithm) {
+        case 1:
+            sort(packages.begin(), packages.end(), &comparatorPackage);
+            break;
+        case 2:
+            sort(packages.begin(), packages.end(), &reverseComparatorPackage);
+            break;
+        case 3:
+            sort(packages.begin(), packages.end(), [this, &packages_max_reward, &packages_max_volume, &packages_max_weight]( Package& i1, Package& i2){
+                double weight_v1, weight_v2;
+                weight_v1 = sqrt(pow(i1.getVolume()*100 / packages_max_volume, 2) + pow(i1.getWeight()*100 /packages_max_weight, 2));
+                weight_v1 -= (double)(100*i1.getReward())/packages_max_reward;
+
+                weight_v2 = sqrt(pow(i2.getVolume()*100 / packages_max_volume, 2) + pow(i2.getWeight()*100 /packages_max_weight, 2));
+                weight_v2 -= (double)(100*i2.getReward())/packages_max_reward;
+                return weight_v1 < weight_v2;
+            });
+            break;
+        default:
+            sort(packages.begin(), packages.end(), &comparatorPackage);
+    }
 }
 
 void App::printCouriers() {
@@ -130,7 +188,7 @@ void App::printExpressShipments() {
     }
 }
 
-/******* SCENERY 1 FUNCTIONS ******/
+/******* SCENERY 1 FUNCTIONS *******/
 
 pair<int, int> App::scenery1() {
 
@@ -205,7 +263,9 @@ vector<Package> App::smallerFit(Shipping shipping, vector<Package> packages_all)
     return aux;
 }
 
-/******* SCENERY 2 FUNCTIONS ******/
+/***********************************/
+
+/******* SCENERY 2 FUNCTIONS *******/
 
 int App::scenery2() {
     /* NOT YET DONE */
@@ -289,6 +349,8 @@ void App::printShipments() {
 
 /***********************************/
 
+/******* SCENERY 3 FUNCTIONS *******/
+
 int App::scenery3(){
     sort(packages.begin(), packages.end(), [](const Package &lhs, const Package &rhs) {
         if(lhs.getDaysPast() == rhs.getDaysPast())
@@ -318,6 +380,8 @@ int App::scenery3(){
 
     return(int)((total_sum) / count);
 }
+
+/***********************************/
 
 
 

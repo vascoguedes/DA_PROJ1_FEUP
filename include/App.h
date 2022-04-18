@@ -42,18 +42,16 @@ public:
     void printExpressShipments();
 
     /**
-     * Sorts the Couriers descending, resulting of the following equation:
-     * Sqrt(maxVolume^2 + maxWeight^2)
-     * @param descending defines sorting order
+     * Sorts the Couriers acording to a certain algorithm
+     * @param sort_algorithm defines sorting algorithm
      */
-    void sortCouriers(bool descending);
+    void sortCouriers(int sort_algorithm);
 
     /**
-     * Sorts the Packages ascending, resulting of the following equation:
-     * Sqrt(Volume^2 + Weight^2)
-     * @param ascending defines sorting order
+     * Sorts the Couriers acording to a certain algorithm
+     * @param sort_algorithm defines sorting algorithm
      */
-    void sortPackages(bool ascending);
+    void sortPackages(int sort_algorithm);
 
     /**
      * TODO
