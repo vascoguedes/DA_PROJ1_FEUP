@@ -32,8 +32,9 @@ public:
 
     /**
      * Prints to the console the vector of Shipments
+     * @param scenery chooses the scenery to print
      */
-    void printShipments();
+    void printShipments(int scenery);
 
     void writeShipments();
 
@@ -54,22 +55,10 @@ public:
     void sortPackages(int sort_algorithm);
 
     /**
-     * TODO
-     * @return TODO
+     * Sorts with a Knapsack algorithm a shipment vector that contains the packages in each courier
+     * @return Amount of Couriers used for all packages
      */
-    pair<int, int> scenery1();
-
-    /**
-     * TODO
-     * @return TODO
-     */
-    vector<Package> backtrackingBestFit(Shipping shipping, vector<Package> packages_all);
-
-    /**
-     * TODO
-     * @return TODO
-     */
-    vector<Package> smallerFit(Shipping shipping, vector<Package> packages_all);
+    int scenery1();
 
     /**
      * Sorts with a Knapsack or Best-Fit algorithm a shipment vector that contains the packages in each courier

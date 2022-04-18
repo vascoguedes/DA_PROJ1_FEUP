@@ -100,8 +100,10 @@ void Scenery1::display() {
     cout << endl;
     cout << "Options Menu:" << endl;
     cout << "1 - Execute" << endl;
-    cout << "2 - Show Data" << endl;
-    cout << "3 - Export Data" << endl;
+    cout << "2 - Show Couriers" << endl;
+    cout << "3 - Show Packages" << endl;
+    cout << "4 - Show shipments" << endl;
+    cout << "5 - Export Data" << endl;
     cout << "0 - Exit" << endl;
     cout << endl;
 }
@@ -109,15 +111,22 @@ void Scenery1::display() {
 Menu *Scenery1::nextMenu() {
     switch (readInt()) {
         case 1: {
-            pair<int, int> result = app.scenery1();
-            cout << result.first << " " << result.second << endl;
+            cout << "Couriers needed: " << app.scenery1() <<endl;
             return this;
         }
-        case 2:{
-            cout << "case 2" << endl;
+        case 2: {
+            app.printCouriers();
             return this;
         }
-        case 3:{
+        case 3: {
+            app.printPackages();
+            return this;
+        }
+        case 4: {
+            app.printShipments(1);
+            return this;
+        }
+        case 5:{
             cout << "Exporting data..." << endl;
             app.writeShipments();
             cout << "Data exported successfully" << endl;
@@ -166,7 +175,7 @@ Menu *Scenery2::nextMenu() {
             return this;
         }
         case 5: {
-            app.printShipments();
+            app.printShipments(2);
             return this;
         }
         case 6: {

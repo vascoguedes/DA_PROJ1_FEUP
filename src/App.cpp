@@ -190,77 +190,64 @@ void App::printExpressShipments() {
 
 /******* SCENERY 1 FUNCTIONS *******/
 
-pair<int, int> App::scenery1() {
+vector<int> knapSack_v1( Courier& courier, vector<Package> packages) {
+    int max_wei = (int)courier.getMaxWeight();
+    int max_vol = (int)courier.getMaxVolume();
 
-    for (Package &aPackage: packages) {
-        aPackage.setAssignedValue(false);
-    }
+    vector<vector<vector<int> > > dp = vector<vector<vector <int>>>(packages.size()+1, vector<vector<int>>(courier.getMaxWeight()+1, vector<int>(courier.getMaxVolume()+1, 0)));
 
-    int count = 1, numCouriers = 0, numPackages = 0;
-    std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
-
-    for (Courier &courier: couriers) {
-        cout << "NOVO HOME " << count << endl;
-        courier.getShipping().cleanPackage();
-        vector<Package> aux = smallerFit(courier.getShipping(), packages);//backtrackingBestFit(courier.getShipping(), packages);
-        cout << "acabou, size: " << aux.size()  << endl;
-
-        std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-        std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::seconds>(end - begin).count() << "[s]" << std::endl;
-        if (!aux.empty()){
-            numCouriers++;
-            numPackages += aux.size();
-        }
-        for (const Package & aPackage: aux) {
-            for (Package & aPackage1: packages) {
-                if (!aPackage1.getAssignedValue() && aPackage.getWeight() == aPackage1.getWeight() && aPackage.getVolume() == aPackage1.getVolume()) {
-                    aPackage1.setAssignedValue(true);
-                    break;
+    for(int i = 1; i < packages.size(); i++) {
+        int wei = (int)(packages.begin() + i-1)->getWeight(), rew = 1, vol =(int)(packages.begin() + i-1)->getVolume();
+        for(int j = 0; j <= max_wei; j++) {
+            for(int k = 0; k <=max_vol; k++) {
+                dp[i][j][k] = dp[i - 1][j][k];
+                if (j >= wei && k >= vol && dp[i][j][k] < (dp[i - 1][j - wei][k - vol] + rew)) {
+                    dp[i][j][k] = dp[i - 1][j - wei][k - vol] + rew;
                 }
             }
         }
-        count++;
     }
-
-    std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-    std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::seconds>(end - begin).count() << "[s]" << std::endl;
-    return make_pair(numCouriers, numPackages);
+    int sum_wei = 0, sum_vol = 0;
+    int n = (int)packages.size();
+    vector<int> ret;
+    while(n>0) {
+        if(dp[n][max_wei][max_vol] != dp[n-1][max_wei][max_vol]) {
+            max_wei -= (int)(packages.begin() + (n-1))->getWeight();
+            max_vol -= (int)(packages.begin() + (n-1))->getVolume();
+            sum_wei += (int)(packages.begin() + (n-1))->getWeight();
+            sum_vol += (int)(packages.begin() + (n-1))->getVolume();
+            ret.push_back(n-1);
+        }
+        n--;
+    }
+    return ret;
 }
 
-vector<Package> App::backtrackingBestFit(Shipping shipping, vector<Package> package_all) {
-    if (shipping.isFull()) return shipping.getPackages();
-    vector<Package> result = shipping.getPackages();
+int App::scenery1() {
+    for (Package &aPackage: packages) {
+        aPackage.setAssignedValue(false);
+    }
+    unloadShipments();
+    sortCouriers(1);
+    sortPackages(2);
 
-    for (Package &package: package_all) {
-        if (shipping.canFit(package) && !package.getAssignedValue()) {
-            shipping.pushPackage(package);
+    vector<Package> aux_packages = packages;
 
-            vector<Package> aux = backtrackingBestFit(shipping, package_all);
+    for(auto courier: couriers) {
+        auto sort = knapSack_v1(courier, aux_packages);
 
-            if (aux.size() > result.size()) { result = aux;
-                if (result.size() == package_all.size()) return result;}
+        if(sort.empty()) continue;
+        shipments.emplace_back(Shipping(courier.getID(), courier.getMaxVolume(), courier.getMaxWeight(), 0));
 
-            shipping.removePackage(package);
-        }
+        for(auto each: sort)
+            shipments.back().pushPackage(aux_packages.at(each));
+
+        for(auto each: sort)
+            aux_packages.erase(aux_packages.begin() + each);
+
     }
 
-    return result;
-}
-
-vector<Package> App::smallerFit(Shipping shipping, vector<Package> packages_all) {
-
-    for (Package &package: packages_all) {
-        if (shipping.canFit(package) && !package.getAssignedValue() && shipping.aTenthFree()) {
-            shipping.pushPackage(package);
-        }
-    }
-
-    vector<Package> aux = backtrackingBestFit(shipping, packages_all);
-
-    cout << "PESO FINAL: " << shipping.getCurrentWeight() << " / " << shipping.getMaxWeight() << endl;
-    cout << "VOLUME FINAL: " << shipping.getCurrentVolume() << " / " << shipping.getMaxVolume() << endl;
-
-    return aux;
+    return shipments.size();
 }
 
 /***********************************/
@@ -357,6 +344,9 @@ void App::knapSackAlgorithm() {
 }
 
 int App::scenery2(bool knapsack_algorithm) {
+    for (Package &aPackage: packages) {
+        aPackage.setAssignedValue(false);
+    }
     // Best fit Algorithm
     unloadShipments();
     sortPackages(3);
@@ -400,16 +390,19 @@ void App::unloadShipments() {
     shipments.clear();
 }
 
-void App::printShipments() {
+void App::printShipments(int scenery) {
     int package_size = 0;
     for(const auto& itr : shipments) {
         package_size += itr.getShippingSize();
-        cout << itr.getShippingSize()<<endl;
-        cout << itr.getCurrentVolume() << "<" << itr.getMaxVolume() << " || ";
-        cout << itr.getCurrentWeight() << "<" << itr.getMaxWeight() << " || ";
-        cout << itr.getProfit() << endl;
+        cout << "Courier ID: " << itr.getID() << endl;
+        cout << "Shipped packages: " << itr.getShippingSize() << endl;
+        cout << itr.getCurrentVolume() << " / " << itr.getMaxVolume() << " || ";
+        cout << itr.getCurrentWeight() << " / " << itr.getMaxWeight();
+        if(scenery == 2) cout << " || "<< itr.getProfit();
+        cout << endl;
     }
-    cout << endl << package_size << endl;
+    cout << endl << "Amount of shipped packages:" << package_size << endl;
+    cout << "Amount of couriers used:" << shipments.size() << endl;
 }
 
 /***********************************/
