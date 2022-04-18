@@ -16,6 +16,7 @@ class Shipping {
     unsigned currentVolume;
     unsigned maxWeight;
     unsigned currentWeight;
+    unsigned cost;
     vector <Package> packages;
     int profit;
     bool is_full;
@@ -23,6 +24,7 @@ class Shipping {
 public:
     Shipping(unsigned id, unsigned maxVolume, unsigned maxWeight, unsigned cost);
     unsigned getID() const;
+    unsigned getCost() const;
     unsigned getMaxVolume() const;
     unsigned getCurrentVolume() const;
     unsigned getMaxWeight() const;
@@ -41,6 +43,9 @@ public:
     vector<Package> getPackages() const;
     vector<unsigned> getPackagesID() const;
     void clearPackages();
+
+    friend std::ostream& operator<<(std::ostream& os, const Shipping &o);
+
 };
 
 #endif //DA_PROJ1_FEUP_SHIPPING_H

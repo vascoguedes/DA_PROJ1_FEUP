@@ -7,6 +7,7 @@ Shipping::Shipping(unsigned int id, unsigned int maxVolume, unsigned int maxWeig
     this->maxVolume = maxVolume;
     currentWeight = 0;
     currentVolume = 0;
+    this->cost = cost;
     profit = 0;
     profit -=(int)cost;
     is_full = false;
@@ -34,6 +35,10 @@ unsigned Shipping::getCurrentWeight() const {
 
 int Shipping::getProfit() const {
     return profit;
+}
+
+unsigned Shipping::getCost() const {
+    return cost;
 }
 
 void Shipping::setCurrentVolume(unsigned int volume) {
@@ -100,4 +105,10 @@ vector<unsigned> Shipping::getPackagesID() const {
         ret.push_back(pack.getID());
     }
     return ret;
+}
+
+
+ostream &operator<<(ostream &os, const Shipping &o) {
+    os <<"  ID: " << o.getID() <<" Volume: "<<o.getCurrentVolume()<<"/"<<o.getMaxVolume() <<" Weight: "<<o.getCurrentWeight() << "/" << o.getMaxWeight();
+    return os;
 }

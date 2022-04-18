@@ -12,7 +12,6 @@ class Courier {
     unsigned maxVolume;
     unsigned maxWeight;
     unsigned cost;
-    Shipping shipping;
 public:
     /**
      * Class constructor with 3 unsigned objects
@@ -48,8 +47,6 @@ public:
      * @return cost parameter
      */
     unsigned getCost() const;
-
-    Shipping getShipping() const;
 
     friend std::ostream& operator<<(std::ostream& os, const Courier &o);
 };

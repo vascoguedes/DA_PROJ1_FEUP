@@ -2,9 +2,11 @@
 #include "iostream"
 using namespace std;
 
+unsigned Package::ID=0;
 
-Package::Package(unsigned int id, unsigned int volume, unsigned int weight, unsigned int reward, unsigned int duration) : id(id), volume(volume),
+Package::Package(unsigned int volume, unsigned int weight, unsigned int reward, unsigned int duration) : id(ID++), volume(volume),
     weight(weight), reward(reward), duration(duration){}
+
 
 Package::~Package() = default;
 
@@ -49,7 +51,7 @@ bool Package::operator==(const Package &p) const {
 }
 
 ostream &operator<<(ostream &os, const Package &o) {
-    os << o.getVolume() << " " << o.getWeight() << " " << o.getReward() << " " << o.getDuration();
+    os << "ID: " << o.getID() << " Volume: " <<  o.getVolume() << " Weight: " << o.getWeight();
     return os;
 }
 

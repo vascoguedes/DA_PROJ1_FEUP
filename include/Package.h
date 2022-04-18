@@ -10,6 +10,7 @@
 
 class Package {
     unsigned id;
+    static unsigned ID;
     unsigned volume;
     unsigned weight;
     unsigned reward;
@@ -18,7 +19,7 @@ class Package {
     unsigned daysPast = 0;
 
 public:
-    Package(unsigned id, unsigned volume, unsigned weight, unsigned reward, unsigned duration);
+    Package(unsigned volume, unsigned weight, unsigned reward, unsigned duration);
     ~Package();
     unsigned getID() const;
     unsigned getVolume() const;
@@ -33,6 +34,5 @@ public:
     bool operator==(const Package& p) const;
     friend std::ostream& operator<<(std::ostream& os, const Package &o);
 };
-
 
 #endif //DA_PROJ1_FEUP_PACKAGE_H

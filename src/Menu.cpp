@@ -128,7 +128,7 @@ Menu *Scenery1::nextMenu() {
         }
         case 5:{
             cout << "Exporting data..." << endl;
-            app.writeShipments();
+            app.writeShipments(1);
             cout << "Data exported successfully" << endl;
             return this;
         }
@@ -180,7 +180,7 @@ Menu *Scenery2::nextMenu() {
         }
         case 6: {
             cout << "Exporting data..." << endl;
-            app.writeShipments();
+            app.writeShipments(2);
             cout << "Data exported successfully" << endl;
             return this;
         }

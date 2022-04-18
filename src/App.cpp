@@ -1,12 +1,7 @@
 #include "../include/App.h"
-#include "../include/Shipping.h"
-
 #include <iostream>
-#include <iomanip>
 #include <cmath>
 #include <algorithm>
-#include <chrono>
-#include <thread>
 #include <fstream>
 
 App::App() = default;
@@ -133,26 +128,48 @@ void App::printPackages() {
     }
 }
 
-void App::writeShipments() {
-    fstream file;
-    file.open(filepath + "shipments.txt", ofstream::out | ofstream::trunc);
-    if (!file.is_open()) {
-        cerr << "Unable to open file";
-        exit(1);
-    }
-    for(const Courier &courier : couriers){
-        file << "Courier:" << courier;
-        file << "Package:\n";
-        for(const Package &package : courier.getShipping().getPackages()){
-            file<< "->" << package;
+void App::writeShipments(int scenery) {
+
+    if(scenery == 1) {
+        fstream file;
+        file.open(filepath + "export/shipmentsScenery1.txt", ofstream::out | ofstream::trunc);
+        if (!file.is_open()) {
+            cerr << "Unable to open file";
+            exit(1);
         }
+        for(auto shipping : shipments){
+            file << "Courier:" << shipping << " Carried packages: " << shipping.getShippingSize() << "\n";
+            file << "Packages:\n";
+            for(const Package &package : shipping.getPackages()){
+                file<< "->" << package << "\n";
+            }
+            file << "\n";
+        }
+        file.close();
     }
-    file.close();
+    if(scenery == 2) {
+        fstream file;
+        file.open(filepath + "export/shipmentsScenery2.txt", ofstream::out | ofstream::trunc);
+        if (!file.is_open()) {
+            cerr << "Unable to open file";
+            exit(1);
+        }
+        for(auto shipping : shipments){
+            file << "Courier:" << shipping << " Cost: " << shipping.getCost() << " Profit: " <<shipping.getProfit() << "\n";
+            file << "Packages:\n";
+            for(const Package &package : shipping.getPackages()){
+                file<< "->" << package << " Reward: "<< package.getReward() << "\n";
+            }
+            file << "\n";
+        }
+        file.close();
+    }
+
 }
 
 void App::writeExpressShipments() {
     fstream file;
-    file.open(filepath + "expressShippments.txt", ofstream::out | ofstream::trunc);
+    file.open(filepath + "export/expressShipments.txt", ofstream::out | ofstream::trunc);
     if (!file.is_open()) {
         cerr << "Unable to open file";
         exit(1);
@@ -167,7 +184,7 @@ void App::writeExpressShipments() {
             file << "Day " << daysPast + 1 << ":\n";
         }
         count++;
-        file << count << "º: " << package << "\n";
+        file << count << "º: " << package << " Duration: " << package.getDuration() << "\n";
     }
     file.close();
 }
@@ -188,9 +205,6 @@ void App::printExpressShipments() {
 }
 
 void App::unloadShipments() {
-    for(auto courier : couriers) {
-        courier.getShipping().clearPackages();
-    }
     shipments.clear();
 }
 
@@ -258,14 +272,13 @@ int App::scenery1() {
         auto sort = knapSackScenery1(courier, aux_packages);
 
         if(sort.empty()) continue;
-        shipments.emplace_back(Shipping(courier.getID(), courier.getMaxVolume(), courier.getMaxWeight(), 0));
+        shipments.emplace_back(Shipping(courier.getID(), courier.getMaxVolume(), courier.getMaxWeight(), courier.getCost()));
 
         for(auto each: sort)
             shipments.back().pushPackage(aux_packages.at(each));
 
         for(auto each: sort)
             aux_packages.erase(aux_packages.begin() + each);
-
     }
 
     return shipments.size();

@@ -36,7 +36,7 @@ public:
      */
     void printShipments(int scenery);
 
-    void writeShipments();
+    void writeShipments(int scenery);
 
     void writeExpressShipments();
 

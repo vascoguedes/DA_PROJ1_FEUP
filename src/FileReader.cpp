@@ -63,7 +63,7 @@ vector<Package> *FileReader::getPackageFromFiles(string f1) {
     vector<string> ret;
     if(!fileExists(f1)) return nullptr;
     ret = fileReader(f1);
-    unsigned id = 0;
+    //unsigned id = 0;
     for(auto line : ret) {
         stringstream ss(line);
         unsigned volume, weight, reward, duration;
@@ -71,8 +71,7 @@ vector<Package> *FileReader::getPackageFromFiles(string f1) {
         ss >> weight;
         ss >> reward;
         ss >> duration;
-        package->push_back(Package(id, volume, weight, reward, duration));
-        id++;
+        package->push_back(Package(volume, weight, reward, duration));
 
     }
     return package;
