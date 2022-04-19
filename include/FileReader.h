@@ -11,8 +11,23 @@ using namespace std;
 class FileReader {
 
 public:
+
+    /**
+     * @brief Class constructor with 3 unsigned objects
+     * @param filename Name of the file to be read
+     */
     vector<string> fileReader(string filename);
+
+    /**
+     * @brief Reads couriers from file to vector couriers
+     * @param filename Name of the file to be read
+     */
     vector<Courier> *getCourierFromFiles(string f1);
+
+    /**
+     * @brief Reads packages from file to vector packages
+     * @param filename Name of the file to be read
+     */
     vector<Package> *getPackageFromFiles(string f1);
 
 };

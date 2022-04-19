@@ -13,8 +13,10 @@ class Courier {
     unsigned maxWeight;
     unsigned cost;
 public:
+
     /**
-     * Class constructor with 3 unsigned objects
+     * @brief Class constructor with 4 unsigned parameters
+     * @param id Shipping id
      * @param maxVolume Courier maximum volume supported
      * @param maxWeight Courier maximum weight supported
      * @param cost Courier cost to transport
@@ -22,32 +24,40 @@ public:
     Courier(unsigned id, unsigned maxVolume, unsigned maxWeight, unsigned cost);
 
     /**
-     * Class destructor to clear the object in memory
+     * @brief Class destructor to clear the object in memory
      */
     ~Courier();
 
     /**
-     * Returns Courier id
+     * @brief Returns Courier id
      * @return id parameter
      */
     unsigned getID() const;
 
     /**
-     * Returns Courier maximum volume supported
+     * @brief Returns Courier maximum volume supported
      * @return maxVolume parameter
      */
     unsigned getMaxVolume() const;
+
     /**
-     * Returns Courier maximum weight supported
+     * @brief Returns Courier maximum weight supported
      * @return maxWeight parameter
      */
     unsigned getMaxWeight() const;
+
     /**
-     * Returns Courier cost to ship
+     * @brief Returns Courier cost to ship
      * @return cost parameter
      */
     unsigned getCost() const;
 
+    /**
+     * Operator to print Courier object in the correct format
+     * @param os stream where Courier will be printed
+     * @param p Courier object passed by reference
+     * @return ostream with Courier printed
+     */
     friend std::ostream& operator<<(std::ostream& os, const Courier &o);
 };
 
