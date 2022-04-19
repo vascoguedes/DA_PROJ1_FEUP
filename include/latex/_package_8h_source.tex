@@ -1,0 +1,43 @@
+\hypertarget{_package_8h_source}{}\doxysection{Package.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by arooz on 30/03/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef DA\_PROJ1\_FEUP\_PACKAGE\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define DA\_PROJ1\_FEUP\_PACKAGE\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <ostream>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_package}{Package}} \{}
+\DoxyCodeLine{12     \textcolor{keywordtype}{unsigned} id;}
+\DoxyCodeLine{13     \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} ID;}
+\DoxyCodeLine{14     \textcolor{keywordtype}{unsigned} volume;}
+\DoxyCodeLine{15     \textcolor{keywordtype}{unsigned} weight;}
+\DoxyCodeLine{16     \textcolor{keywordtype}{unsigned} reward;}
+\DoxyCodeLine{17     \textcolor{keywordtype}{unsigned} duration;}
+\DoxyCodeLine{18     \textcolor{keywordtype}{bool} assigned;}
+\DoxyCodeLine{19     \textcolor{keywordtype}{unsigned} daysPast = 0;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_package}{Package}}(\textcolor{keywordtype}{unsigned} volume, \textcolor{keywordtype}{unsigned} weight, \textcolor{keywordtype}{unsigned} reward, \textcolor{keywordtype}{unsigned} duration);}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_package}{\string~Package}}();}
+\DoxyCodeLine{24     \textcolor{keywordtype}{unsigned} getID() \textcolor{keyword}{const};}
+\DoxyCodeLine{25     \textcolor{keywordtype}{unsigned} getVolume() \textcolor{keyword}{const};}
+\DoxyCodeLine{26     \textcolor{keywordtype}{unsigned} getWeight() \textcolor{keyword}{const};}
+\DoxyCodeLine{27     \textcolor{keywordtype}{unsigned} getReward() \textcolor{keyword}{const};}
+\DoxyCodeLine{28     \textcolor{keywordtype}{unsigned} getDuration() \textcolor{keyword}{const};}
+\DoxyCodeLine{29     \textcolor{keywordtype}{bool} getAssignedValue() \textcolor{keyword}{const};}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} setAssignedValue(\textcolor{keywordtype}{bool} value);}
+\DoxyCodeLine{31     \textcolor{keywordtype}{unsigned} getDaysPast() \textcolor{keyword}{const};}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} increaseDaysPast();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{bool} operator==(\textcolor{keyword}{const} \mbox{\hyperlink{class_package}{Package}}\& p) \textcolor{keyword}{const};}
+\DoxyCodeLine{35     \textcolor{keyword}{friend} std::ostream\& operator<<(std::ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{class_package}{Package}} \&o);}
+\DoxyCodeLine{36 \};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_PROJ1\_FEUP\_PACKAGE\_H}}
+
+\end{DoxyCode}

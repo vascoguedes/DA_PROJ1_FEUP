@@ -1,0 +1,56 @@
+\hypertarget{_app_8h_source}{}\doxysection{App.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef DA\_PROJ1\_FEUP\_APP\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define DA\_PROJ1\_FEUP\_APP\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}FileReader.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Shipping.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}map"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_app}{App}}\{}
+\DoxyCodeLine{9 \textcolor{keyword}{private}:}
+\DoxyCodeLine{10     \mbox{\hyperlink{class_file_reader}{FileReader}} fileReader;}
+\DoxyCodeLine{11     \textcolor{keywordtype}{string} filepath = \textcolor{stringliteral}{"{}../dataFiles/"{}};}
+\DoxyCodeLine{12     vector<Courier> couriers;}
+\DoxyCodeLine{13     vector<Package> packages;}
+\DoxyCodeLine{14     vector<Shipping> shipments;}
+\DoxyCodeLine{15     vector<Package> expressPackages;}
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_app_acb8cbf3e285b91d0170ffe87df5989c5}{App}}();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} loadData();}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_app_a2fefa23db02bbff3527ebb9dc8dd703c}{printCouriers}}();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_app_af1fabaa1859926ce2e041b980d0d4864}{printPackages}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_app_a6644b793f7014d429eab174e2439e126}{printShipments}}(\textcolor{keywordtype}{int} scenery);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} writeShipments(\textcolor{keywordtype}{int} scenery);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} writeExpressShipments();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} printExpressShipments();}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_app_a994be738b2ccde1e6c72bfdf53e4e5fe}{sortCouriers}}(\textcolor{keywordtype}{int} sort\_algorithm);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_app_ad90462255287b8d75bfdf1c02f517e56}{sortPackages}}(\textcolor{keywordtype}{int} sort\_algorithm);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{61     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_app_a1b6a008f28255e0253b9fb8d47379c10}{scenery1}}();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_app_a7e83987d3d9da66833351571c075123a}{scenery2}}(\textcolor{keywordtype}{bool} knapsack);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{74     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_app_af6b1aacacd653e00bd4c0094296f2ac4}{knapSackAlgorithm}}();}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{80     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_app_a952f3c8977f4a06fa87b9c97cafce57b}{bestFitAlgorithm}}();}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{85     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_app_ad452ed2b9ec12c9a75d9e8c9313cb8f8}{unloadShipments}}();}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{91     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_app_a776a890af585de4996ec0d8369335e4a}{sortProfits}}();}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{97     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_app_a04340f0838c1818d89b1ce66ca9e4ead}{scenery3}}();}
+\DoxyCodeLine{98 \};}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_PROJ1\_FEUP\_APP\_H}}
+
+\end{DoxyCode}

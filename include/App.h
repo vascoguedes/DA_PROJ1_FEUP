@@ -14,12 +14,17 @@ private:
     vector<Shipping> shipments;
     vector<Package> expressPackages;
 public:
+
     /**
      * Default Constructor
      */
     App();
 
+    /**
+     * Loads all storage files data into the program
+     */
     void loadData();
+
     /**
      * Prints to the console the vector of Couriers
      */
@@ -43,13 +48,13 @@ public:
     void printExpressShipments();
 
     /**
-     * Sorts the Couriers acording to a certain algorithm
+     * Sorts the Couriers according to a certain algorithm
      * @param sort_algorithm defines sorting algorithm
      */
     void sortCouriers(int sort_algorithm);
 
     /**
-     * Sorts the Couriers acording to a certain algorithm
+     * Sorts the Couriers according to a certain algorithm
      * @param sort_algorithm defines sorting algorithm
      */
     void sortPackages(int sort_algorithm);
