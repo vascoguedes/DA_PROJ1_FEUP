@@ -210,12 +210,12 @@ Menu *Scenery3::nextMenu() {
             return this;
         }
         case 2:{
-            app.printExpressShipments();
+            app.printShipments(3);
             return this;
         }
         case 3:{
             cout << "Exporting data..." << endl;
-            app.writeExpressShipments();
+            app.writeShipments(3);
             cout << "Data exported successfully" << endl;
             return this;
         }
