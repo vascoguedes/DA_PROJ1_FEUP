@@ -358,6 +358,10 @@ int App::scenery1() {
     }
 
     packages = aux_packages;
+    
+    for (Package & aPackage: packages) {
+        aPackage.increaseDaysPast();
+    }
 
     return shipments.size();
 }
@@ -495,6 +499,10 @@ int App::scenery2(bool knapsack_algorithm) {
                         packages.erase(it);
                         it--;
                     }
+    }
+    
+    for (Package & aPackage: packages) {
+        aPackage.increaseDaysPast();
     }
 
     return sortProfits();
