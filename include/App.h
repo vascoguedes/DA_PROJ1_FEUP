@@ -49,7 +49,7 @@ public:
     void sortCouriers(int sort_algorithm);
 
     /**
-     * @brief Sorts the Couriers acording to a certain algorithm
+     * @brief Sorts the Packages acording to a certain algorithm
      * @param sort_algorithm defines sorting algorithm
      */
     void sortPackages(int sort_algorithm);
