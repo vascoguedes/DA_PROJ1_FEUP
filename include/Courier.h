@@ -14,7 +14,7 @@ class Courier {
     unsigned cost;
 public:
     /**
-     * Class constructor with 3 unsigned objects
+     * @brief Class constructor with 3 unsigned objects
      * @param maxVolume Courier maximum volume supported
      * @param maxWeight Courier maximum weight supported
      * @param cost Courier cost to transport
@@ -22,7 +22,7 @@ public:
     Courier(unsigned id, unsigned maxVolume, unsigned maxWeight, unsigned cost);
 
     /**
-     * Class destructor to clear the object in memory
+     * @brief Class destructor to clear the object in memory
      */
     ~Courier();
 
