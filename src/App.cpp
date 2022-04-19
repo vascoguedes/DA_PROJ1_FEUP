@@ -176,7 +176,7 @@ void App::printCouriers() {
 }
 
 void App::printPackages() {
-    for(auto line : packages) {
+    for(const auto& line : packages) {
         cout << line.getWeight() <<" " <<  line.getVolume() << " " << line.getReward() << " " << line.getDuration() << endl;
     }
 }
@@ -190,7 +190,8 @@ void App::writeShipments(int scenery) {
             cerr << "Unable to open file";
             exit(1);
         }
-        for(auto shipping : shipments){
+        file << "Shipment size: " << shipments.size() << "\n";
+        for(const auto& shipping : shipments){
             file << "Courier:" << shipping << " Carried packages: " << shipping.getShippingSize() << "\n";
             file << "Packages:\n";
             for(const Package &package : shipping.getPackages()){
@@ -202,8 +203,8 @@ void App::writeShipments(int scenery) {
     }
     else if(scenery == 2) {
         int shipped = 0;
-        for(auto shipping : shipments) {
-            shipped+=shipping.getPackagesID().size();
+        for(const auto& shipping : shipments) {
+            shipped+=(int)shipping.getPackagesID().size();
         }
         fstream file;
         file.open(filepath + "export/shipmentsScenery2.txt", ofstream::out | ofstream::trunc);
@@ -211,7 +212,8 @@ void App::writeShipments(int scenery) {
             cerr << "Unable to open file";
             exit(1);
         }
-        for(auto shipping : shipments){
+        file << "Shipment size: " << shipments.size() << "\n";
+        for(const auto& shipping : shipments){
             file << "Efficiency: " << 100*shipped/packages.size() << "%" << "\n";
             file << "Courier:" << shipping << " Cost: " << shipping.getCost() << " Profit: " <<shipping.getProfit() << "\n";
             file << "Packages:\n";
@@ -222,53 +224,37 @@ void App::writeShipments(int scenery) {
         }
         file.close();
     }
+    else if(scenery == 3) {
+        fstream file;
+        file.open(filepath + "export/expressShipments.txt", ofstream::out | ofstream::trunc);
+        if (!file.is_open()) {
+            cerr << "Unable to open file";
+            exit(1);
+        }
+        int count = 0, aux_count = 0, pack_size = 0;
+        int daysPast = 0;
+        file << "Express Packages:\n";
+        file << "Day " << daysPast + 1 << ":\n";
+        for(const Package &package : expressPackages){
+            if(daysPast != package.getDaysPast()) {
+                daysPast++;
+                file << "Efficiency: " << 100*aux_count/(expressPackages.size()- pack_size)<< "%"<< "\n\n";
+                file << "Day " << daysPast + 1 << ":\n";
+                pack_size +=aux_count;
+                aux_count = 0;
+            }
+            count++;
+            aux_count++;
+            file << count << "º: " << package << " Duration: " << package.getDuration() << "\n";
+        }
+        file << "Efficiency: " << 100*aux_count/(expressPackages.size()- pack_size)<< "%"<< "\n";
+
+        file.close();
+    }
     else {
         cout << "Something went wrong..." << endl;
     }
 
-}
-
-void App::writeExpressShipments() {
-    fstream file;
-    file.open(filepath + "export/expressShipments.txt", ofstream::out | ofstream::trunc);
-    if (!file.is_open()) {
-        cerr << "Unable to open file";
-        exit(1);
-    }
-    int count = 0, aux_count = 0, pack_size = 0;
-    int daysPast = 0;
-    file << "Express Packages:\n";
-    file << "Day " << daysPast + 1 << ":\n";
-    for(const Package &package : expressPackages){
-        if(daysPast != package.getDaysPast()) {
-            daysPast++;
-            file << "Efficiency: " << 100*aux_count/(expressPackages.size()- pack_size)<< "%"<< "\n\n";
-            file << "Day " << daysPast + 1 << ":\n";
-            pack_size +=aux_count;
-            aux_count = 0;
-        }
-        count++;
-        aux_count++;
-        file << count << "º: " << package << " Duration: " << package.getDuration() << "\n";
-    }
-    file << "Efficiency: " << 100*aux_count/(expressPackages.size()- pack_size)<< "%"<< "\n";
-
-    file.close();
-}
-
-void App::printExpressShipments() {
-    cout << "Express Packages:\n";
-    int count = 0;
-    int daysPast = 0;
-    cout << "Day " << daysPast + 1 << ":" << endl;
-    for(const Package &package : expressPackages){
-        if(daysPast != package.getDaysPast()) {
-            daysPast++;
-            cout << "Day " << daysPast + 1 << ":" << endl;
-        }
-        count++;
-        cout << count << "\370: " << package << endl;
-    }
 }
 
 void App::unloadShipments() {
@@ -276,18 +262,37 @@ void App::unloadShipments() {
 }
 
 void App::printShipments(int scenery) {
-    int package_size = 0;
-    for(const auto& itr : shipments) {
-        package_size += itr.getShippingSize();
-        cout << "Courier ID: " << itr.getID() << endl;
-        cout << "Shipped packages: " << itr.getShippingSize() << endl;
-        cout << itr.getCurrentVolume() << " / " << itr.getMaxVolume() << " || ";
-        cout << itr.getCurrentWeight() << " / " << itr.getMaxWeight();
-        if(scenery == 2) cout << " || "<< itr.getProfit();
-        cout << endl;
+    if(scenery == 0 || scenery == 1) {
+        int package_size = 0;
+        for(const auto& itr : shipments) {
+            package_size += itr.getShippingSize();
+            cout << "Courier ID: " << itr.getID() << endl;
+            cout << "Shipped packages: " << itr.getShippingSize() << endl;
+            cout << itr.getCurrentVolume() << " / " << itr.getMaxVolume() << " || ";
+            cout << itr.getCurrentWeight() << " / " << itr.getMaxWeight();
+            if(scenery == 2) cout << " || "<< itr.getProfit();
+            cout << endl;
+        }
+        cout << endl << "Amount of shipped packages:" << package_size << endl;
+        cout << "Amount of couriers used:" << shipments.size() << endl;
     }
-    cout << endl << "Amount of shipped packages:" << package_size << endl;
-    cout << "Amount of couriers used:" << shipments.size() << endl;
+    else if(scenery == 3) {
+        cout << "Express Packages:\n";
+        int count = 0;
+        int daysPast = 0;
+        cout << "Day " << daysPast + 1 << ":" << endl;
+        for(const Package &package : expressPackages){
+            if(daysPast != package.getDaysPast()) {
+                daysPast++;
+                cout << "Day " << daysPast + 1 << ":" << endl;
+            }
+            count++;
+            cout << count << "\370: " << package << endl;
+        }
+    }
+    else {
+        cout << "Scenary " << scenery << " is not implemented." << endl;
+    }
 }
 
 /******* SCENERY 1 FUNCTIONS *******/

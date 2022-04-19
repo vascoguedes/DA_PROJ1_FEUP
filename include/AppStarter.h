@@ -10,11 +10,12 @@ class AppStarter {
     std::stack<Menu*> menuStack;
 public:
     /**
-     * Default class constructor that pushes the main menu to the menuStack
+     * @brief Default class constructor that pushes the main menu to the menuStack
      */
     AppStarter();
+
     /**
-     * Starts the application loop and call the App methods to load graphs data and set the default maximum walk distance
+     * @brief Starts the application loop and call the App methods to load graphs data and set the default maximum walk distance
      */
     void start();
 };
