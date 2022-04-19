@@ -7,11 +7,23 @@
 App::App() = default;
 
 void App::loadData(){
+
     for(Courier courier : *fileReader.getCourierFromFiles(filepath + "carrinhas.txt")){
         couriers.push_back(courier);
     }
     for(Package package : *fileReader.getPackageFromFiles(filepath + "encomendas.txt")){
         packages.push_back(package);
+    }
+}
+
+void App::loadPackages(const string& fileName) {
+
+    try {
+        for(Package package : *fileReader.getPackageFromFiles(filepath + fileName)){
+            packages.push_back(package);
+        }
+    } catch (const std::exception& e) {
+
     }
 }
 
@@ -340,6 +352,8 @@ int App::scenery1() {
             aux_packages.erase(aux_packages.begin() + each);
     }
 
+    packages = aux_packages;
+
     return shipments.size();
 }
 
@@ -434,6 +448,7 @@ void App::knapSackAlgorithm() {
         else
             shipments.erase(shipments.end());
     }
+    packages = aux_packages;
 }
 
 int App::scenery2(bool knapsack_algorithm) {
@@ -466,6 +481,15 @@ int App::scenery2(bool knapsack_algorithm) {
         sortPackages(best_pack_sorter);
         unloadShipments();
         bestFitAlgorithm();
+
+
+        for (const Shipping& shipping: shipments)
+            for (const Package& aPackage: shipping.getPackages())
+                for (auto it = packages.begin(); it < packages.end(); it++)
+                    if (aPackage == *it) {
+                        packages.erase(it);
+                        it--;
+                    }
     }
 
     return sortProfits();

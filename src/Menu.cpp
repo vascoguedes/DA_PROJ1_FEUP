@@ -50,7 +50,7 @@ void MainMenu::display(){
     cout << "1 - Scenery 1" << endl;
     cout << "2 - Scenery 2" << endl;
     cout << "3 - Scenery 3" << endl;
-    cout << "4 - Options Menu" << endl;
+    cout << "4 - Insert Packages" << endl;
     cout << "0 - Exit" << endl;
     cout << endl;
 }
@@ -60,7 +60,10 @@ Menu *MainMenu::nextMenu() {
         case 1: return new Scenery1(app);
         case 2: return new Scenery2(app);
         case 3: return new Scenery3(app);
-        case 4: return new OptionsMenu(app);
+        case 4:
+            cout << "Insert file name" << endl;
+            app.loadPackages(readStr());
+            return this;
         case 0: return nullptr;
         default: return invalidInput();
     }
@@ -91,6 +94,7 @@ Menu *OptionsMenu::nextMenu() {
         default: return invalidInput();
     }
 }
+
 
 Scenery1::Scenery1(App &app) : Menu(app) {
 

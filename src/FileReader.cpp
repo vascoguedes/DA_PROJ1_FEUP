@@ -34,7 +34,7 @@ bool fileExists(string f_name) {
     }
     else {
         cout << "File does not exists" << endl;
-        return false;
+        throw invalid_argument( "file does not exist" );
     }
 }
 

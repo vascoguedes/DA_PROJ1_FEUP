@@ -15,13 +15,16 @@ private:
     vector<Package> expressPackages;
 public:
     /**
-     * Default Constructor
+     * @brief Default Constructor
      */
     App();
 
     void loadData();
+
+    void loadPackages(const string& fileName);
     /**
-     * Prints to the console the vector of Couriers
+     *
+     * @brief Prints to the console the vector of Couriers
      */
     void printCouriers();
 
