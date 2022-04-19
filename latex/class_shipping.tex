@@ -7,73 +7,336 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_shipping_ac2450294d87fee98e6455ef337fa3ca0}\label{class_shipping_ac2450294d87fee98e6455ef337fa3ca0}} 
-{\bfseries Shipping} (unsigned id, unsigned max\+Volume, unsigned max\+Weight, unsigned cost)
-\item 
-\mbox{\Hypertarget{class_shipping_a4d3b7d1ae1ab0fc1ae94f4238b586d83}\label{class_shipping_a4d3b7d1ae1ab0fc1ae94f4238b586d83}} 
-unsigned {\bfseries get\+ID} () const
-\item 
-\mbox{\Hypertarget{class_shipping_ac0f7af1796259c9fcc16f92b8e3c0011}\label{class_shipping_ac0f7af1796259c9fcc16f92b8e3c0011}} 
-unsigned {\bfseries get\+Cost} () const
-\item 
-\mbox{\Hypertarget{class_shipping_ab4e198f003e3bc39a7631ce9fc19b431}\label{class_shipping_ab4e198f003e3bc39a7631ce9fc19b431}} 
-unsigned {\bfseries get\+Max\+Volume} () const
-\item 
-\mbox{\Hypertarget{class_shipping_ac81e137c43c6d7b2ceacafcfc8f3048a}\label{class_shipping_ac81e137c43c6d7b2ceacafcfc8f3048a}} 
-unsigned {\bfseries get\+Current\+Volume} () const
-\item 
-\mbox{\Hypertarget{class_shipping_a45ac2cd2616121da939fd14ab233cf13}\label{class_shipping_a45ac2cd2616121da939fd14ab233cf13}} 
-unsigned {\bfseries get\+Max\+Weight} () const
-\item 
-\mbox{\Hypertarget{class_shipping_a16e20ae74b6805433779e455666f32b0}\label{class_shipping_a16e20ae74b6805433779e455666f32b0}} 
-unsigned {\bfseries get\+Current\+Weight} () const
-\item 
-\mbox{\Hypertarget{class_shipping_aaf166f9cca2a60544f8f7051f087a8c1}\label{class_shipping_aaf166f9cca2a60544f8f7051f087a8c1}} 
-unsigned {\bfseries get\+Shipping\+Size} () const
-\item 
-\mbox{\Hypertarget{class_shipping_a63a5ab1dd01029685147b1c6e794376a}\label{class_shipping_a63a5ab1dd01029685147b1c6e794376a}} 
-int {\bfseries get\+Profit} () const
-\item 
-\mbox{\Hypertarget{class_shipping_a10ee1ac6203d455a119a0edee5cc2c5e}\label{class_shipping_a10ee1ac6203d455a119a0edee5cc2c5e}} 
-void {\bfseries set\+Current\+Volume} (unsigned volume)
-\item 
-\mbox{\Hypertarget{class_shipping_a8bd86c0ce5defa6b5171668116328a04}\label{class_shipping_a8bd86c0ce5defa6b5171668116328a04}} 
-void {\bfseries set\+Current\+Weight} (unsigned weight)
-\item 
-\mbox{\Hypertarget{class_shipping_a1db15cfd122a8fafda7d0a3bd1e75664}\label{class_shipping_a1db15cfd122a8fafda7d0a3bd1e75664}} 
-void {\bfseries set\+Profit} (int value)
-\item 
-\mbox{\Hypertarget{class_shipping_aafb97690cc2bbd71b1d9b3d9dd805134}\label{class_shipping_aafb97690cc2bbd71b1d9b3d9dd805134}} 
-bool {\bfseries is\+Full} () const
-\item 
-\mbox{\Hypertarget{class_shipping_a73dea7c673b910c4bbd3f918166f0ed2}\label{class_shipping_a73dea7c673b910c4bbd3f918166f0ed2}} 
-bool {\bfseries can\+Fit} (const \mbox{\hyperlink{class_package}{Package}} \&\mbox{\hyperlink{class_package}{Package}}) const
-\item 
-\mbox{\Hypertarget{class_shipping_a7022e6d75bdae36885b363924769eefa}\label{class_shipping_a7022e6d75bdae36885b363924769eefa}} 
-void {\bfseries push\+Package} (\mbox{\hyperlink{class_package}{Package}} \&package)
-\item 
-\mbox{\Hypertarget{class_shipping_aece6115fbd5ab9a00d87447380c9a1aa}\label{class_shipping_aece6115fbd5ab9a00d87447380c9a1aa}} 
-void {\bfseries remove\+Package} (\mbox{\hyperlink{class_package}{Package}} \&a\+Package)
-\item 
-\mbox{\Hypertarget{class_shipping_a03a713d473c5f4cf3a622c0092eda1c1}\label{class_shipping_a03a713d473c5f4cf3a622c0092eda1c1}} 
-vector$<$ \mbox{\hyperlink{class_package}{Package}} $>$ {\bfseries get\+Packages} () const
-\item 
-\mbox{\Hypertarget{class_shipping_a21af4afa67c52810224f73e07c04c307}\label{class_shipping_a21af4afa67c52810224f73e07c04c307}} 
-vector$<$ unsigned $>$ {\bfseries get\+Packages\+ID} () const
-\item 
+\mbox{\hyperlink{class_shipping_ac2450294d87fee98e6455ef337fa3ca0}{Shipping}} (unsigned id, unsigned max\+Volume, unsigned max\+Weight, unsigned cost)
+\begin{DoxyCompactList}\small\item\em Class constructor with 4 unsigned parameters. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_shipping_a4d3b7d1ae1ab0fc1ae94f4238b586d83}{get\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Returns \mbox{\hyperlink{class_shipping}{Shipping}} id. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_shipping_ac0f7af1796259c9fcc16f92b8e3c0011}{get\+Cost}} () const
+\begin{DoxyCompactList}\small\item\em Returns \mbox{\hyperlink{class_shipping}{Shipping}} cost to ship. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_shipping_ab4e198f003e3bc39a7631ce9fc19b431}{get\+Max\+Volume}} () const
+\begin{DoxyCompactList}\small\item\em Returns \mbox{\hyperlink{class_shipping}{Shipping}} maximum weight supported. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_shipping_ac81e137c43c6d7b2ceacafcfc8f3048a}{get\+Current\+Volume}} () const
+\begin{DoxyCompactList}\small\item\em Returns \mbox{\hyperlink{class_shipping}{Shipping}} current volume supported. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_shipping_a45ac2cd2616121da939fd14ab233cf13}{get\+Max\+Weight}} () const
+\begin{DoxyCompactList}\small\item\em Returns \mbox{\hyperlink{class_shipping}{Shipping}} maximum volume supported. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_shipping_a16e20ae74b6805433779e455666f32b0}{get\+Current\+Weight}} () const
+\begin{DoxyCompactList}\small\item\em Returns \mbox{\hyperlink{class_shipping}{Shipping}} current weight supported. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_shipping_aaf166f9cca2a60544f8f7051f087a8c1}{get\+Shipping\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Returns \mbox{\hyperlink{class_shipping}{Shipping}} size. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_shipping_a63a5ab1dd01029685147b1c6e794376a}{get\+Profit}} () const
+\begin{DoxyCompactList}\small\item\em Returns \mbox{\hyperlink{class_shipping}{Shipping}} profit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shipping_a10ee1ac6203d455a119a0edee5cc2c5e}{set\+Current\+Volume}} (unsigned volume)
+\begin{DoxyCompactList}\small\item\em Sets \mbox{\hyperlink{class_shipping}{Shipping}} current\+Volume. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shipping_a8bd86c0ce5defa6b5171668116328a04}{set\+Current\+Weight}} (unsigned weight)
+\begin{DoxyCompactList}\small\item\em Sets \mbox{\hyperlink{class_shipping}{Shipping}} current\+Weight. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shipping_a1db15cfd122a8fafda7d0a3bd1e75664}{set\+Profit}} (int value)
+\begin{DoxyCompactList}\small\item\em Sets \mbox{\hyperlink{class_shipping}{Shipping}} profit. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shipping_aafb97690cc2bbd71b1d9b3d9dd805134}{is\+Full}} () const
+\begin{DoxyCompactList}\small\item\em Tells if \mbox{\hyperlink{class_shipping}{Shipping}} is full. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shipping_ad9d72a93b957c20ad75f388815483c7d}{can\+Fit}} (const \mbox{\hyperlink{class_package}{Package}} \&package) const
+\begin{DoxyCompactList}\small\item\em Tells if package can fit in \mbox{\hyperlink{class_shipping}{Shipping}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shipping_a7022e6d75bdae36885b363924769eefa}{push\+Package}} (\mbox{\hyperlink{class_package}{Package}} \&package)
+\begin{DoxyCompactList}\small\item\em Adds a package to packages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shipping_aece6115fbd5ab9a00d87447380c9a1aa}{remove\+Package}} (\mbox{\hyperlink{class_package}{Package}} \&a\+Package)
+\begin{DoxyCompactList}\small\item\em Removes a package from packages. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_package}{Package}} $>$ \mbox{\hyperlink{class_shipping_a03a713d473c5f4cf3a622c0092eda1c1}{get\+Packages}} () const
+\begin{DoxyCompactList}\small\item\em Returns \mbox{\hyperlink{class_shipping}{Shipping}} packages. \end{DoxyCompactList}\item 
+vector$<$ unsigned $>$ \mbox{\hyperlink{class_shipping_a21af4afa67c52810224f73e07c04c307}{get\+Packages\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Returns \mbox{\hyperlink{class_shipping}{Shipping}} packages ids. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_shipping_a0e6a2327898fec4916f296ea6e98f008}\label{class_shipping_a0e6a2327898fec4916f296ea6e98f008}} 
 void {\bfseries clear\+Packages} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_shipping_ac842299810d5c9cea19e6a0f69c52721}\label{class_shipping_ac842299810d5c9cea19e6a0f69c52721}} 
-std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{class_shipping}{Shipping}} \&o)
+std\+::ostream \& \mbox{\hyperlink{class_shipping_ac842299810d5c9cea19e6a0f69c52721}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_shipping}{Shipping}} \&o)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 This class englobes what each \mbox{\hyperlink{class_courier}{Courier}} is shipping 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_shipping_ac2450294d87fee98e6455ef337fa3ca0}\label{class_shipping_ac2450294d87fee98e6455ef337fa3ca0}} 
+\index{Shipping@{Shipping}!Shipping@{Shipping}}
+\index{Shipping@{Shipping}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{Shipping()}{Shipping()}}
+{\footnotesize\ttfamily Shipping\+::\+Shipping (\begin{DoxyParamCaption}\item[{unsigned}]{id,  }\item[{unsigned}]{max\+Volume,  }\item[{unsigned}]{max\+Weight,  }\item[{unsigned}]{cost }\end{DoxyParamCaption})}
+
+
+
+Class constructor with 4 unsigned parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \mbox{\hyperlink{class_shipping}{Shipping}} id \\
+\hline
+{\em max\+Volume} & \mbox{\hyperlink{class_shipping}{Shipping}} maximum volume supported \\
+\hline
+{\em max\+Weight} & \mbox{\hyperlink{class_shipping}{Shipping}} maximum weight supported \\
+\hline
+{\em cost} & \mbox{\hyperlink{class_shipping}{Shipping}} cost to transport \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_shipping_ad9d72a93b957c20ad75f388815483c7d}\label{class_shipping_ad9d72a93b957c20ad75f388815483c7d}} 
+\index{Shipping@{Shipping}!canFit@{canFit}}
+\index{canFit@{canFit}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{canFit()}{canFit()}}
+{\footnotesize\ttfamily bool Shipping\+::can\+Fit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_package}{Package}} \&}]{package }\end{DoxyParamCaption}) const}
+
+
+
+Tells if package can fit in \mbox{\hyperlink{class_shipping}{Shipping}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em package} & \mbox{\hyperlink{class_package}{Package}} object passed by reference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it fits or false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shipping_ac0f7af1796259c9fcc16f92b8e3c0011}\label{class_shipping_ac0f7af1796259c9fcc16f92b8e3c0011}} 
+\index{Shipping@{Shipping}!getCost@{getCost}}
+\index{getCost@{getCost}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily unsigned Shipping\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns \mbox{\hyperlink{class_shipping}{Shipping}} cost to ship. 
+
+\begin{DoxyReturn}{Returns}
+cost parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shipping_ac81e137c43c6d7b2ceacafcfc8f3048a}\label{class_shipping_ac81e137c43c6d7b2ceacafcfc8f3048a}} 
+\index{Shipping@{Shipping}!getCurrentVolume@{getCurrentVolume}}
+\index{getCurrentVolume@{getCurrentVolume}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{getCurrentVolume()}{getCurrentVolume()}}
+{\footnotesize\ttfamily unsigned Shipping\+::get\+Current\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns \mbox{\hyperlink{class_shipping}{Shipping}} current volume supported. 
+
+\begin{DoxyReturn}{Returns}
+current\+Volume parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shipping_a16e20ae74b6805433779e455666f32b0}\label{class_shipping_a16e20ae74b6805433779e455666f32b0}} 
+\index{Shipping@{Shipping}!getCurrentWeight@{getCurrentWeight}}
+\index{getCurrentWeight@{getCurrentWeight}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{getCurrentWeight()}{getCurrentWeight()}}
+{\footnotesize\ttfamily unsigned Shipping\+::get\+Current\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns \mbox{\hyperlink{class_shipping}{Shipping}} current weight supported. 
+
+\begin{DoxyReturn}{Returns}
+current\+Weight parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shipping_a4d3b7d1ae1ab0fc1ae94f4238b586d83}\label{class_shipping_a4d3b7d1ae1ab0fc1ae94f4238b586d83}} 
+\index{Shipping@{Shipping}!getID@{getID}}
+\index{getID@{getID}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily unsigned Shipping\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns \mbox{\hyperlink{class_shipping}{Shipping}} id. 
+
+\begin{DoxyReturn}{Returns}
+id parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shipping_ab4e198f003e3bc39a7631ce9fc19b431}\label{class_shipping_ab4e198f003e3bc39a7631ce9fc19b431}} 
+\index{Shipping@{Shipping}!getMaxVolume@{getMaxVolume}}
+\index{getMaxVolume@{getMaxVolume}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{getMaxVolume()}{getMaxVolume()}}
+{\footnotesize\ttfamily unsigned Shipping\+::get\+Max\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns \mbox{\hyperlink{class_shipping}{Shipping}} maximum weight supported. 
+
+\begin{DoxyReturn}{Returns}
+max\+Weight parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shipping_a45ac2cd2616121da939fd14ab233cf13}\label{class_shipping_a45ac2cd2616121da939fd14ab233cf13}} 
+\index{Shipping@{Shipping}!getMaxWeight@{getMaxWeight}}
+\index{getMaxWeight@{getMaxWeight}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{getMaxWeight()}{getMaxWeight()}}
+{\footnotesize\ttfamily unsigned Shipping\+::get\+Max\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns \mbox{\hyperlink{class_shipping}{Shipping}} maximum volume supported. 
+
+\begin{DoxyReturn}{Returns}
+max\+Volume parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shipping_a03a713d473c5f4cf3a622c0092eda1c1}\label{class_shipping_a03a713d473c5f4cf3a622c0092eda1c1}} 
+\index{Shipping@{Shipping}!getPackages@{getPackages}}
+\index{getPackages@{getPackages}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{getPackages()}{getPackages()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_package}{Package}} $>$ Shipping\+::get\+Packages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns \mbox{\hyperlink{class_shipping}{Shipping}} packages. 
+
+\begin{DoxyReturn}{Returns}
+packages parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shipping_a21af4afa67c52810224f73e07c04c307}\label{class_shipping_a21af4afa67c52810224f73e07c04c307}} 
+\index{Shipping@{Shipping}!getPackagesID@{getPackagesID}}
+\index{getPackagesID@{getPackagesID}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{getPackagesID()}{getPackagesID()}}
+{\footnotesize\ttfamily vector$<$ unsigned $>$ Shipping\+::get\+Packages\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns \mbox{\hyperlink{class_shipping}{Shipping}} packages ids. 
+
+\begin{DoxyReturn}{Returns}
+packages parameter objects ids 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shipping_a63a5ab1dd01029685147b1c6e794376a}\label{class_shipping_a63a5ab1dd01029685147b1c6e794376a}} 
+\index{Shipping@{Shipping}!getProfit@{getProfit}}
+\index{getProfit@{getProfit}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{getProfit()}{getProfit()}}
+{\footnotesize\ttfamily int Shipping\+::get\+Profit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns \mbox{\hyperlink{class_shipping}{Shipping}} profit. 
+
+\begin{DoxyReturn}{Returns}
+profit parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shipping_aaf166f9cca2a60544f8f7051f087a8c1}\label{class_shipping_aaf166f9cca2a60544f8f7051f087a8c1}} 
+\index{Shipping@{Shipping}!getShippingSize@{getShippingSize}}
+\index{getShippingSize@{getShippingSize}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{getShippingSize()}{getShippingSize()}}
+{\footnotesize\ttfamily unsigned Shipping\+::get\+Shipping\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns \mbox{\hyperlink{class_shipping}{Shipping}} size. 
+
+\begin{DoxyReturn}{Returns}
+packages parameter size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shipping_aafb97690cc2bbd71b1d9b3d9dd805134}\label{class_shipping_aafb97690cc2bbd71b1d9b3d9dd805134}} 
+\index{Shipping@{Shipping}!isFull@{isFull}}
+\index{isFull@{isFull}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{isFull()}{isFull()}}
+{\footnotesize\ttfamily bool Shipping\+::is\+Full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Tells if \mbox{\hyperlink{class_shipping}{Shipping}} is full. 
+
+\begin{DoxyReturn}{Returns}
+true if full or false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shipping_a7022e6d75bdae36885b363924769eefa}\label{class_shipping_a7022e6d75bdae36885b363924769eefa}} 
+\index{Shipping@{Shipping}!pushPackage@{pushPackage}}
+\index{pushPackage@{pushPackage}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{pushPackage()}{pushPackage()}}
+{\footnotesize\ttfamily void Shipping\+::push\+Package (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_package}{Package}} \&}]{package }\end{DoxyParamCaption})}
+
+
+
+Adds a package to packages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em package} & \mbox{\hyperlink{class_package}{Package}} object passed by reference \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shipping_aece6115fbd5ab9a00d87447380c9a1aa}\label{class_shipping_aece6115fbd5ab9a00d87447380c9a1aa}} 
+\index{Shipping@{Shipping}!removePackage@{removePackage}}
+\index{removePackage@{removePackage}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{removePackage()}{removePackage()}}
+{\footnotesize\ttfamily void Shipping\+::remove\+Package (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_package}{Package}} \&}]{a\+Package }\end{DoxyParamCaption})}
+
+
+
+Removes a package from packages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em package} & \mbox{\hyperlink{class_package}{Package}} object passed by reference \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shipping_a10ee1ac6203d455a119a0edee5cc2c5e}\label{class_shipping_a10ee1ac6203d455a119a0edee5cc2c5e}} 
+\index{Shipping@{Shipping}!setCurrentVolume@{setCurrentVolume}}
+\index{setCurrentVolume@{setCurrentVolume}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{setCurrentVolume()}{setCurrentVolume()}}
+{\footnotesize\ttfamily void Shipping\+::set\+Current\+Volume (\begin{DoxyParamCaption}\item[{unsigned}]{volume }\end{DoxyParamCaption})}
+
+
+
+Sets \mbox{\hyperlink{class_shipping}{Shipping}} current\+Volume. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & Value to be added to \mbox{\hyperlink{class_shipping}{Shipping}} current\+Volume \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shipping_a8bd86c0ce5defa6b5171668116328a04}\label{class_shipping_a8bd86c0ce5defa6b5171668116328a04}} 
+\index{Shipping@{Shipping}!setCurrentWeight@{setCurrentWeight}}
+\index{setCurrentWeight@{setCurrentWeight}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{setCurrentWeight()}{setCurrentWeight()}}
+{\footnotesize\ttfamily void Shipping\+::set\+Current\+Weight (\begin{DoxyParamCaption}\item[{unsigned}]{weight }\end{DoxyParamCaption})}
+
+
+
+Sets \mbox{\hyperlink{class_shipping}{Shipping}} current\+Weight. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weight} & Value to be added to \mbox{\hyperlink{class_shipping}{Shipping}} current\+Weight \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shipping_a1db15cfd122a8fafda7d0a3bd1e75664}\label{class_shipping_a1db15cfd122a8fafda7d0a3bd1e75664}} 
+\index{Shipping@{Shipping}!setProfit@{setProfit}}
+\index{setProfit@{setProfit}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{setProfit()}{setProfit()}}
+{\footnotesize\ttfamily void Shipping\+::set\+Profit (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets \mbox{\hyperlink{class_shipping}{Shipping}} profit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value to be added to \mbox{\hyperlink{class_shipping}{Shipping}} profit \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_shipping_ac842299810d5c9cea19e6a0f69c52721}\label{class_shipping_ac842299810d5c9cea19e6a0f69c52721}} 
+\index{Shipping@{Shipping}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Shipping@{Shipping}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_shipping}{Shipping}} \&}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Operator to print \mbox{\hyperlink{class_shipping}{Shipping}} object in the correct format 
+\begin{DoxyParams}{Parameters}
+{\em os} & stream where \mbox{\hyperlink{class_shipping}{Shipping}} will be printed \\
+\hline
+{\em p} & \mbox{\hyperlink{class_shipping}{Shipping}} object passed by reference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ostream with \mbox{\hyperlink{class_shipping}{Shipping}} printed 
+\end{DoxyReturn}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

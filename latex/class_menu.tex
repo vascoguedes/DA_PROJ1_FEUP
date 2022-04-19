@@ -10,21 +10,23 @@ Inheritance diagram for Menu\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_menu_aabbf80101737306387cfe702f3dd36cd}{Menu}} (\mbox{\hyperlink{class_app}{App}} \&app)
-\item 
-virtual \mbox{\hyperlink{class_menu_a831387f51358cfb88cd018e1777bc980}{$\sim$\+Menu}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Class constructor with an application object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a831387f51358cfb88cd018e1777bc980}\label{class_menu_a831387f51358cfb88cd018e1777bc980}} 
+virtual {\bfseries $\sim$\+Menu} ()
+\begin{DoxyCompactList}\small\item\em Class destructor to clear the object in memory. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_menu_a94b92b5dc7993422a01de6f37848551e}{display}} ()=0
-\item 
+\begin{DoxyCompactList}\small\item\em Displays the menu in the terminal. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_menu}{Menu}} $\ast$ \mbox{\hyperlink{class_menu_a88f07c80050dafb1c4bb05891c7830cc}{next\+Menu}} ()=0
-\item 
+\begin{DoxyCompactList}\small\item\em Gets a menu pointer to the next menu after this one. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_menu_a6e291e64d873000550cee5c9c8125c63}{read\+Int}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Reads an integer number input from the terminal. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_menu_a99c6220a96985db06f83dff14495ea9d}{read\+Str}} ()
-\item 
-void \mbox{\hyperlink{class_menu_a4b72967237b116b96d894038e66ff290}{wait\+For\+Key}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Reads a string input from the terminal. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a4b72967237b116b96d894038e66ff290}\label{class_menu_a4b72967237b116b96d894038e66ff290}} 
+void {\bfseries wait\+For\+Key} ()
+\begin{DoxyCompactList}\small\item\em Waits for enter key to be pressed. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_menu}{Menu}} $\ast$ \mbox{\hyperlink{class_menu_a346361534eaaddd48af187579ca296c2}{invalid\+Input}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em If there was an invalid input prints a message and returns a pointer the a current menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -40,18 +42,16 @@ void \mbox{\hyperlink{class_menu_a4b72967237b116b96d894038e66ff290}{wait\+For\+K
 \doxysubsubsection{\texorpdfstring{Menu()}{Menu()}}
 {\footnotesize\ttfamily Menu\+::\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app}{App}} \&}]{app }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
-Class constructor with an application object 
+
+
+Class constructor with an application object. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em app} & application object passed by reference \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_menu_a831387f51358cfb88cd018e1777bc980}\label{class_menu_a831387f51358cfb88cd018e1777bc980}} 
-\index{Menu@{Menu}!````~Menu@{$\sim$Menu}}
-\index{````~Menu@{$\sim$Menu}!Menu@{Menu}}
-\doxysubsubsection{\texorpdfstring{$\sim$Menu()}{~Menu()}}
-{\footnotesize\ttfamily Menu\+::$\sim$\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
 
-Class destructor to clear the object in memory 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_menu_a94b92b5dc7993422a01de6f37848551e}\label{class_menu_a94b92b5dc7993422a01de6f37848551e}} 
@@ -60,7 +60,11 @@ Class destructor to clear the object in memory
 \doxysubsubsection{\texorpdfstring{display()}{display()}}
 {\footnotesize\ttfamily virtual void Menu\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-Displays the menu in the terminal 
+
+
+Displays the menu in the terminal. 
+
+
 
 Implemented in \mbox{\hyperlink{class_main_menu_a1b531d98ccd8f877ea0f1c5e1544e0fa}{Main\+Menu}}, \mbox{\hyperlink{class_options_menu_aee81ed88fe487bab3b8ffaed56fe57d9}{Options\+Menu}}, \mbox{\hyperlink{class_scenery1_a10d6c27a58d790a885dcbb71eb37ba0b}{Scenery1}}, \mbox{\hyperlink{class_scenery2_a37131c574f00554f37b65aa19b82db13}{Scenery2}}, and \mbox{\hyperlink{class_scenery3_a0b3f06d918bcaa1e13da346162751697}{Scenery3}}.
 
@@ -70,7 +74,11 @@ Implemented in \mbox{\hyperlink{class_main_menu_a1b531d98ccd8f877ea0f1c5e1544e0f
 \doxysubsubsection{\texorpdfstring{invalidInput()}{invalidInput()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_menu}{Menu}} $\ast$ Menu\+::invalid\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-If there was an invalid input prints a message and returns a pointer the a current menu \begin{DoxyReturn}{Returns}
+
+
+If there was an invalid input prints a message and returns a pointer the a current menu. 
+
+\begin{DoxyReturn}{Returns}
 menu pointer 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_menu_a88f07c80050dafb1c4bb05891c7830cc}\label{class_menu_a88f07c80050dafb1c4bb05891c7830cc}} 
@@ -79,7 +87,11 @@ menu pointer
 \doxysubsubsection{\texorpdfstring{nextMenu()}{nextMenu()}}
 {\footnotesize\ttfamily virtual \mbox{\hyperlink{class_menu}{Menu}} $\ast$ Menu\+::next\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-Gets a menu pointer to the next menu after this one \begin{DoxyReturn}{Returns}
+
+
+Gets a menu pointer to the next menu after this one. 
+
+\begin{DoxyReturn}{Returns}
 menu pointer 
 \end{DoxyReturn}
 
@@ -92,7 +104,11 @@ Implemented in \mbox{\hyperlink{class_main_menu_a732a021e2136269b2d04983f9acdb46
 \doxysubsubsection{\texorpdfstring{readInt()}{readInt()}}
 {\footnotesize\ttfamily int Menu\+::read\+Int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Reads an integer number input from the terminal \begin{DoxyReturn}{Returns}
+
+
+Reads an integer number input from the terminal. 
+
+\begin{DoxyReturn}{Returns}
 integer number read 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_menu_a99c6220a96985db06f83dff14495ea9d}\label{class_menu_a99c6220a96985db06f83dff14495ea9d}} 
@@ -101,16 +117,14 @@ integer number read
 \doxysubsubsection{\texorpdfstring{readStr()}{readStr()}}
 {\footnotesize\ttfamily std\+::string Menu\+::read\+Str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Reads a string input from the terminal \begin{DoxyReturn}{Returns}
+
+
+Reads a string input from the terminal. 
+
+\begin{DoxyReturn}{Returns}
 string read 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_menu_a4b72967237b116b96d894038e66ff290}\label{class_menu_a4b72967237b116b96d894038e66ff290}} 
-\index{Menu@{Menu}!waitForKey@{waitForKey}}
-\index{waitForKey@{waitForKey}!Menu@{Menu}}
-\doxysubsubsection{\texorpdfstring{waitForKey()}{waitForKey()}}
-{\footnotesize\ttfamily void Menu\+::wait\+For\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Waits for enter key to be pressed 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

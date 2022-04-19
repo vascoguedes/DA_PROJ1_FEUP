@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['package_0',['Package',['../class_package.html',1,'']]],
-  ['printcouriers_1',['printCouriers',['../class_app.html#a2fefa23db02bbff3527ebb9dc8dd703c',1,'App']]],
-  ['printpackages_2',['printPackages',['../class_app.html#af1fabaa1859926ce2e041b980d0d4864',1,'App']]],
-  ['printshipments_3',['printShipments',['../class_app.html#a6644b793f7014d429eab174e2439e126',1,'App']]]
+  ['operator_3c_3c_0',['operator&lt;&lt;',['../class_courier.html#a3b83367d7eb452df9282b699d2af6d78',1,'Courier::operator&lt;&lt;()'],['../class_shipping.html#ac842299810d5c9cea19e6a0f69c52721',1,'Shipping::operator&lt;&lt;()']]],
+  ['operator_3d_3d_1',['operator==',['../class_package.html#ae2656219ba0a71f698dd377b4203f018',1,'Package']]],
+  ['optionsmenu_2',['OptionsMenu',['../class_options_menu.html',1,'']]]
 ];

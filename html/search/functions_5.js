@@ -1,4 +1,21 @@
 var searchData=
 [
-  ['invalidinput_0',['invalidInput',['../class_menu.html#a346361534eaaddd48af187579ca296c2',1,'Menu']]]
+  ['getassignedvalue_0',['getAssignedValue',['../class_package.html#a024e94e2e60bb4f3f7a48df5d8043f45',1,'Package']]],
+  ['getcost_1',['getCost',['../class_courier.html#a0e703e25b9295f69d20e3c70568acd0e',1,'Courier::getCost()'],['../class_shipping.html#ac0f7af1796259c9fcc16f92b8e3c0011',1,'Shipping::getCost()']]],
+  ['getcourierfromfiles_2',['getCourierFromFiles',['../class_file_reader.html#abb3c7a5ce6d8a37ba0cb31b7de322821',1,'FileReader']]],
+  ['getcurrentvolume_3',['getCurrentVolume',['../class_shipping.html#ac81e137c43c6d7b2ceacafcfc8f3048a',1,'Shipping']]],
+  ['getcurrentweight_4',['getCurrentWeight',['../class_shipping.html#a16e20ae74b6805433779e455666f32b0',1,'Shipping']]],
+  ['getdayspast_5',['getDaysPast',['../class_package.html#a18036a36caa47ba42ff4dd0d46cb592e',1,'Package']]],
+  ['getduration_6',['getDuration',['../class_package.html#a8c433650faee26e06900cf6ce8213896',1,'Package']]],
+  ['getid_7',['getID',['../class_courier.html#a35e43427bf149a0c7caf6584bb595169',1,'Courier::getID()'],['../class_package.html#a59b524095c38fbfc61cc11c8c115d845',1,'Package::getID()'],['../class_shipping.html#a4d3b7d1ae1ab0fc1ae94f4238b586d83',1,'Shipping::getID()']]],
+  ['getmaxvolume_8',['getMaxVolume',['../class_courier.html#a6fa7c6318bfd28cdaaaef9a0a56bf3ff',1,'Courier::getMaxVolume()'],['../class_shipping.html#ab4e198f003e3bc39a7631ce9fc19b431',1,'Shipping::getMaxVolume()']]],
+  ['getmaxweight_9',['getMaxWeight',['../class_courier.html#a4ceb000f1a585eba6698132094bbe5b3',1,'Courier::getMaxWeight()'],['../class_shipping.html#a45ac2cd2616121da939fd14ab233cf13',1,'Shipping::getMaxWeight()']]],
+  ['getpackagefromfiles_10',['getPackageFromFiles',['../class_file_reader.html#ad442d910f7662f4dc01511dedc59c48f',1,'FileReader']]],
+  ['getpackages_11',['getPackages',['../class_shipping.html#a03a713d473c5f4cf3a622c0092eda1c1',1,'Shipping']]],
+  ['getpackagesid_12',['getPackagesID',['../class_shipping.html#a21af4afa67c52810224f73e07c04c307',1,'Shipping']]],
+  ['getprofit_13',['getProfit',['../class_shipping.html#a63a5ab1dd01029685147b1c6e794376a',1,'Shipping']]],
+  ['getreward_14',['getReward',['../class_package.html#a9483b99ae8fcdb8891f848cec5022cc2',1,'Package']]],
+  ['getshippingsize_15',['getShippingSize',['../class_shipping.html#aaf166f9cca2a60544f8f7051f087a8c1',1,'Shipping']]],
+  ['getvolume_16',['getVolume',['../class_package.html#a33f63dfee7b5b3536444418121f4c49d',1,'Package']]],
+  ['getweight_17',['getWeight',['../class_package.html#acc0cc1eb5bff7595b42e1c105fcfaa1f',1,'Package']]]
 ];

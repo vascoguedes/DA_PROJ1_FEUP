@@ -23,32 +23,48 @@
 \DoxyCodeLine{22     \textcolor{keywordtype}{bool} is\_full;}
 \DoxyCodeLine{23 }
 \DoxyCodeLine{24 \textcolor{keyword}{public}:}
-\DoxyCodeLine{25     \mbox{\hyperlink{class_shipping}{Shipping}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{unsigned} maxVolume, \textcolor{keywordtype}{unsigned} maxWeight, \textcolor{keywordtype}{unsigned} cost);}
-\DoxyCodeLine{26     \textcolor{keywordtype}{unsigned} getID() \textcolor{keyword}{const};}
-\DoxyCodeLine{27     \textcolor{keywordtype}{unsigned} getCost() \textcolor{keyword}{const};}
-\DoxyCodeLine{28     \textcolor{keywordtype}{unsigned} getMaxVolume() \textcolor{keyword}{const};}
-\DoxyCodeLine{29     \textcolor{keywordtype}{unsigned} getCurrentVolume() \textcolor{keyword}{const};}
-\DoxyCodeLine{30     \textcolor{keywordtype}{unsigned} getMaxWeight() \textcolor{keyword}{const};}
-\DoxyCodeLine{31     \textcolor{keywordtype}{unsigned} getCurrentWeight() \textcolor{keyword}{const};}
-\DoxyCodeLine{32     \textcolor{keywordtype}{unsigned} getShippingSize() \textcolor{keyword}{const};}
-\DoxyCodeLine{33     \textcolor{keywordtype}{int} getProfit() \textcolor{keyword}{const};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{33     \mbox{\hyperlink{class_shipping_ac2450294d87fee98e6455ef337fa3ca0}{Shipping}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{unsigned} maxVolume, \textcolor{keywordtype}{unsigned} maxWeight, \textcolor{keywordtype}{unsigned} cost);}
 \DoxyCodeLine{34 }
-\DoxyCodeLine{35     \textcolor{keywordtype}{void} setCurrentVolume(\textcolor{keywordtype}{unsigned} volume);}
-\DoxyCodeLine{36     \textcolor{keywordtype}{void} setCurrentWeight(\textcolor{keywordtype}{unsigned} weight);}
-\DoxyCodeLine{37     \textcolor{keywordtype}{void} setProfit(\textcolor{keywordtype}{int} value);}
-\DoxyCodeLine{38     \textcolor{keywordtype}{bool} isFull() \textcolor{keyword}{const};}
-\DoxyCodeLine{39     \textcolor{keywordtype}{bool} canFit(\textcolor{keyword}{const} \mbox{\hyperlink{class_package}{Package}}\& \mbox{\hyperlink{class_package}{Package}}) \textcolor{keyword}{const};}
+\DoxyCodeLine{39     \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{class_shipping_a4d3b7d1ae1ab0fc1ae94f4238b586d83}{getID}}() \textcolor{keyword}{const};}
 \DoxyCodeLine{40 }
-\DoxyCodeLine{41     \textcolor{keywordtype}{void} pushPackage(\mbox{\hyperlink{class_package}{Package}}\& package);}
-\DoxyCodeLine{42     \textcolor{keywordtype}{void} removePackage(\mbox{\hyperlink{class_package}{Package}}\& aPackage);}
-\DoxyCodeLine{43     vector<Package> getPackages() \textcolor{keyword}{const};}
-\DoxyCodeLine{44     vector<unsigned> getPackagesID() \textcolor{keyword}{const};}
-\DoxyCodeLine{45     \textcolor{keywordtype}{void} clearPackages();}
+\DoxyCodeLine{45     \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{class_shipping_ac0f7af1796259c9fcc16f92b8e3c0011}{getCost}}() \textcolor{keyword}{const};}
 \DoxyCodeLine{46 }
-\DoxyCodeLine{47     \textcolor{keyword}{friend} std::ostream\& operator<<(std::ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{class_shipping}{Shipping}} \&o);}
-\DoxyCodeLine{48 }
-\DoxyCodeLine{49 \};}
-\DoxyCodeLine{50 }
-\DoxyCodeLine{51 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_PROJ1\_FEUP\_SHIPPING\_H}}
+\DoxyCodeLine{51     \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{class_shipping_ab4e198f003e3bc39a7631ce9fc19b431}{getMaxVolume}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{57     \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{class_shipping_ac81e137c43c6d7b2ceacafcfc8f3048a}{getCurrentVolume}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{63     \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{class_shipping_a45ac2cd2616121da939fd14ab233cf13}{getMaxWeight}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{69     \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{class_shipping_a16e20ae74b6805433779e455666f32b0}{getCurrentWeight}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{75     \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{class_shipping_aaf166f9cca2a60544f8f7051f087a8c1}{getShippingSize}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{81     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_shipping_a63a5ab1dd01029685147b1c6e794376a}{getProfit}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{87     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shipping_a10ee1ac6203d455a119a0edee5cc2c5e}{setCurrentVolume}}(\textcolor{keywordtype}{unsigned} volume);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{93     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shipping_a8bd86c0ce5defa6b5171668116328a04}{setCurrentWeight}}(\textcolor{keywordtype}{unsigned} weight);}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{99     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shipping_a1db15cfd122a8fafda7d0a3bd1e75664}{setProfit}}(\textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{105     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_shipping_aafb97690cc2bbd71b1d9b3d9dd805134}{isFull}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{112     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_shipping_ad9d72a93b957c20ad75f388815483c7d}{canFit}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_package}{Package}}\& package) \textcolor{keyword}{const};}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{118     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shipping_a7022e6d75bdae36885b363924769eefa}{pushPackage}}(\mbox{\hyperlink{class_package}{Package}}\& package);}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{124     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shipping_aece6115fbd5ab9a00d87447380c9a1aa}{removePackage}}(\mbox{\hyperlink{class_package}{Package}}\& aPackage);}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{130     vector<Package> \mbox{\hyperlink{class_shipping_a03a713d473c5f4cf3a622c0092eda1c1}{getPackages}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{136     vector<unsigned> \mbox{\hyperlink{class_shipping_a21af4afa67c52810224f73e07c04c307}{getPackagesID}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{137     \textcolor{keywordtype}{void} clearPackages();}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{145     \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{class_shipping_ac842299810d5c9cea19e6a0f69c52721}{operator<<}}(std::ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{class_shipping}{Shipping}} \&o);}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147 \};}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_PROJ1\_FEUP\_SHIPPING\_H}}
 
 \end{DoxyCode}

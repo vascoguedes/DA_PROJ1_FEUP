@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['menu_0',['Menu',['../class_menu.html#aabbf80101737306387cfe702f3dd36cd',1,'Menu']]]
+  ['knapsackalgorithm_0',['knapSackAlgorithm',['../class_app.html#af6b1aacacd653e00bd4c0094296f2ac4',1,'App']]]
 ];
