@@ -26,6 +26,11 @@ public:
     void loadData();
 
     /**
+     * Loads more packages into the program
+     */
+    void loadPackages(const string& fileName);
+    /**
+     *
      * @brief Prints to the console the vector of Couriers
      */
     void printCouriers();
