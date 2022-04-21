@@ -192,14 +192,60 @@ void App::sortPackages(int sort_algorithm) {
 }
 
 void App::printCouriers() {
+    if(couriers.empty()) {
+        cout << "No couriers available"<<endl;
+        return;
+    }
     for(const auto& line : couriers) {
         cout << "ID: " << line.getID() << " W: " << line.getMaxWeight() << " V: " << line.getMaxVolume() << " C: " << line.getCost() <<"$"<< endl;
     }
 }
 
 void App::printPackages() {
+    if(packages.empty()) {
+        cout << "No packages available"<<endl;
+        return;
+    }
     for(const auto& line : packages) {
         cout << line.getID() << " W: " << line.getWeight() <<" V: " <<  line.getVolume() << " R: " << line.getReward() << "$ D: " << line.getDuration() <<" s"<<endl;
+    }
+}
+
+void App::printShipments(int scenery) {
+    if(shipments.empty()) {
+        cout << "No shipments in place"<<endl;
+        return;
+    }
+    if(scenery == 1 || scenery == 2) {
+        int package_size = 0;
+        for(const auto& itr : shipments) {
+            package_size += itr.getShippingSize();
+            cout << "Courier ID: " << itr.getID() << endl;
+            cout << "Shipped packages: " << itr.getShippingSize() << endl;
+            cout << itr.getCurrentVolume() << " / " << itr.getMaxVolume() << " || ";
+            cout << itr.getCurrentWeight() << " / " << itr.getMaxWeight();
+            if(scenery == 2) cout << " || "<< itr.getProfit();
+            cout << endl;
+        }
+        cout << endl << "Amount of shipped packages:" << package_size << endl;
+        cout << "Amount of couriers used:" << shipments.size() << endl;
+    }
+    else if(scenery == 3) {
+        cout << "Express Packages:\n";
+        int count = 0;
+        int daysPast = 0;
+        cout << "Day " << daysPast + 1 << ":" << endl;
+        for(const Package &package : expressPackages){
+            if(daysPast != package.getDaysPast()) {
+                daysPast++;
+                cout << "Day " << daysPast + 1 << ":" << endl;
+            }
+            count++;
+            cout << count << "\370: " << package << endl;
+        }
+    }
+    else {
+        cout << "Scenary " << scenery << " is not implemented." << endl;
     }
 }
 
@@ -223,6 +269,24 @@ void App::writeShipments(int scenery) {
             file << "\n";
         }
         file.close();
+
+        vector<int> rem;
+        int pos = -1;
+        for(auto &package : packages) {
+            pos++;
+            for(auto&shipping : shipments) {
+                for(auto &aux : shipping.getPackages()) {
+                    if(aux.getID() == package.getID()) {
+                        rem.push_back(pos);
+                    }
+                }
+            }
+        }
+        reverse(rem.begin(), rem.end());
+        for(auto aux: rem) {
+            packages.erase(packages.begin() + aux);
+        }
+        unloadShipments();
     }
     else if(scenery == 2) {
         int shipped = 0;
@@ -247,6 +311,25 @@ void App::writeShipments(int scenery) {
             file << "\n";
         }
         file.close();
+
+        vector<int> rem;
+        int pos = -1;
+        for(auto &package : packages) {
+            pos++;
+            for(auto&shipping : shipments) {
+                for(auto &aux : shipping.getPackages()) {
+                    if(aux.getID() == package.getID()) {
+                        rem.push_back(pos);
+                    }
+                }
+            }
+        }
+        reverse(rem.begin(), rem.end());
+        for(auto aux: rem) {
+            packages.erase(packages.begin() + aux);
+        }
+        unloadShipments();
+
     }
     else if(scenery == 3) {
         fstream file;
@@ -283,40 +366,6 @@ void App::writeShipments(int scenery) {
 
 void App::unloadShipments() {
     shipments.clear();
-}
-
-void App::printShipments(int scenery) {
-    if(scenery == 0 || scenery == 1) {
-        int package_size = 0;
-        for(const auto& itr : shipments) {
-            package_size += itr.getShippingSize();
-            cout << "Courier ID: " << itr.getID() << endl;
-            cout << "Shipped packages: " << itr.getShippingSize() << endl;
-            cout << itr.getCurrentVolume() << " / " << itr.getMaxVolume() << " || ";
-            cout << itr.getCurrentWeight() << " / " << itr.getMaxWeight();
-            if(scenery == 2) cout << " || "<< itr.getProfit();
-            cout << endl;
-        }
-        cout << endl << "Amount of shipped packages:" << package_size << endl;
-        cout << "Amount of couriers used:" << shipments.size() << endl;
-    }
-    else if(scenery == 3) {
-        cout << "Express Packages:\n";
-        int count = 0;
-        int daysPast = 0;
-        cout << "Day " << daysPast + 1 << ":" << endl;
-        for(const Package &package : expressPackages){
-            if(daysPast != package.getDaysPast()) {
-                daysPast++;
-                cout << "Day " << daysPast + 1 << ":" << endl;
-            }
-            count++;
-            cout << count << "\370: " << package << endl;
-        }
-    }
-    else {
-        cout << "Scenary " << scenery << " is not implemented." << endl;
-    }
 }
 
 /******* SCENERY 1 FUNCTIONS *******/
