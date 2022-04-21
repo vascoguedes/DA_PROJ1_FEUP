@@ -51,6 +51,7 @@ void MainMenu::display(){
     cout << "2 - Scenery 2" << endl;
     cout << "3 - Scenery 3" << endl;
     cout << "4 - Insert Packages" << endl;
+    cout << "5 - Options" << endl;
     cout << "0 - Exit" << endl;
     cout << endl;
 }
@@ -61,9 +62,11 @@ Menu *MainMenu::nextMenu() {
         case 2: return new Scenery2(app);
         case 3: return new Scenery3(app);
         case 4:
-            cout << "Insert file name" << endl;
+            cout << "Add the text file in \"dataFiles/import/\" folder" << endl;
+            cout << "Insert file name";
             app.loadPackages(readStr());
             return this;
+        case 5: return new OptionsMenu(app);
         case 0: return nullptr;
         default: return invalidInput();
     }
@@ -76,20 +79,14 @@ OptionsMenu::OptionsMenu(App &app) : Menu(app) {
 void OptionsMenu::display() {
     cout << endl;
     cout << "Options Menu:" << endl;
-    cout << "1 - Option 1" << endl;
-    cout << "2 - Option 2" << endl;
+    cout << "    Whenever executing scenery 1 or scenery 2, by default, the previous shipment vector will be erased. If you wish to save your results" << endl;
+    cout << R"(    Choose the "Export Data" in order to see the results according to the scenery, which will be saved in the "dataFiles/export/" folder )" << endl;
     cout << "0 - Exit" << endl;
     cout << endl;
 }
 
 Menu *OptionsMenu::nextMenu() {
     switch (readInt()) {
-        case 1: {
-            return this;
-        }
-        case 2:{
-            return this;
-        }
         case 0: return nullptr;
         default: return invalidInput();
     }
@@ -103,11 +100,13 @@ Scenery1::Scenery1(App &app) : Menu(app) {
 void Scenery1::display() {
     cout << endl;
     cout << "Options Menu:" << endl;
-    cout << "1 - Execute" << endl;
-    cout << "2 - Show Couriers" << endl;
-    cout << "3 - Show Packages" << endl;
-    cout << "4 - Show shipments" << endl;
-    cout << "5 - Export Data" << endl;
+    cout << "1 - Execute with Knapsack Algorithm (slowest but better results)" << endl;
+    cout << "2 - Execute with BestFit Algorithm (fastest but worse results)" << endl;
+    cout << "3 - Show Couriers" << endl;
+    cout << "4 - Show Packages" << endl;
+    cout << "5 - Show shipments" << endl;
+    cout << "6 - Unload shipments" << endl;
+    cout << "7 - Export Data" << endl;
     cout << "0 - Exit" << endl;
     cout << endl;
 }
@@ -115,22 +114,32 @@ void Scenery1::display() {
 Menu *Scenery1::nextMenu() {
     switch (readInt()) {
         case 1: {
-            cout << "Couriers needed: " << app.scenery1() <<endl;
+            int res = app.scenery1(true);
+            cout << "Couriers needed: " << res <<endl;
             return this;
         }
         case 2: {
-            app.printCouriers();
+            int res = app.scenery1(false);
+            cout << "Couriers needed: " << res <<endl;
             return this;
         }
         case 3: {
-            app.printPackages();
+            app.printCouriers();
             return this;
         }
         case 4: {
+            app.printPackages();
+            return this;
+        }
+        case 5: {
             app.printShipments(1);
             return this;
         }
-        case 5:{
+        case 6: {
+            app.unloadShipments();
+            return this;
+        }
+        case 7:{
             cout << "Exporting data..." << endl;
             app.writeShipments(1);
             cout << "Data exported successfully" << endl;
@@ -161,12 +170,12 @@ void Scenery2::display() {
 Menu *Scenery2::nextMenu() {
     switch (readInt()) {
         case 1: {
-            int res =app.scenery2(1);
+            int res =app.scenery2(true);
             cout << "Profit from the shipment: " << res << endl;
             return this;
         }
         case 2: {
-            int res =app.scenery2(0);
+            int res =app.scenery2(false);
             cout << "Profit from the shipment: " << res << endl;
             return this;
         }

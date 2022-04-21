@@ -5,6 +5,10 @@
 #include "Shipping.h"
 #include "map"
 
+/**
+ * @brief Contains the main functionalities of the program
+ */
+
 class App{
 private:
     FileReader fileReader;
@@ -21,12 +25,12 @@ public:
     App();
 
     /**
-     * Loads all storage files data into the program
+     * @brief Loads all storage files data into the program
      */
     void loadData();
 
     /**
-     * Loads more packages into the program
+     * @briefLoads more packages into the program
      */
     void loadPackages(const string& fileName);
     /**
@@ -66,9 +70,10 @@ public:
 
     /**
      * @brief Sorts with a Knapsack algorithm a shipment vector that contains the packages in each courier
+     * @param knapsack If true, Knapsack algorithm will be used. If false, Best-Fit will be used
      * @return Amount of Couriers used for all packages
      */
-    int scenery1();
+    int scenery1(bool knapsack);
 
     /**
      * @brief Fills the shipment vector with a Best-Fit algorithm

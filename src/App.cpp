@@ -7,7 +7,6 @@
 App::App() = default;
 
 void App::loadData(){
-
     for(Courier courier : *fileReader.getCourierFromFiles(filepath + "carrinhas.txt")){
         couriers.push_back(courier);
     }
@@ -19,7 +18,7 @@ void App::loadData(){
 void App::loadPackages(const string& fileName) {
 
     try {
-        for(Package package : *fileReader.getPackageFromFiles(filepath + fileName)){
+        for(Package package : *fileReader.getPackageFromFiles(filepath + "import/" + fileName)){
             packages.push_back(package);
         }
     } catch (const std::exception& e) {
@@ -111,12 +110,29 @@ void App::sortCouriers(int sort_algorithm) {
                 return weight_v1 > weight_v2;
             });
             break;
+        case 8:
+            sort(couriers.begin(), couriers.end(), [](Courier& i1, Courier& i2) {
+                double weight_v1, weight_v2;
+                weight_v1 = i1.getMaxWeight()*i1.getMaxVolume();
+                weight_v2 = i2.getMaxWeight()*i2.getMaxVolume();
+
+                return weight_v1 > weight_v2;
+            });
+            break;
+        case 9:
+            sort(couriers.begin(), couriers.end(), [](Courier& i1, Courier& i2) {
+                double weight_v1, weight_v2;
+                weight_v1 = (double)i1.getMaxWeight()*(double)i1.getMaxVolume();
+                weight_v1 /= (double)i1.getCost();
+                weight_v2 = (double)i2.getMaxWeight()*(double)i2.getMaxVolume();
+                weight_v2 /= (double)i2.getCost();
+
+                return weight_v1 > weight_v2;
+            });
+            break;
         default:
             sort(couriers.begin(), couriers.end(), []( Courier& i1, Courier& i2) {
-                long weight_v1, weight_v2;
-                weight_v1 = sqrt(pow(i1.getMaxVolume(), 2) + pow(i1.getMaxWeight(), 2));
-                weight_v2 = sqrt(pow(i2.getMaxVolume(), 2) + pow(i2.getMaxWeight(), 2));
-                return weight_v1 > weight_v2;
+                return i1.getID() < i2.getID();
             });
     }
 }
@@ -159,25 +175,31 @@ void App::sortPackages(int sort_algorithm) {
                 return weight_v1 < weight_v2;
             });
             break;
+        case 4:
+            sort(packages.begin(), packages.end(), []( Package& i1, Package& i2){
+                double weight_v1, weight_v2;
+                weight_v1 = i1.getVolume() * i1.getWeight();
+                weight_v2 = i2.getVolume() * i2.getWeight();
+
+                return weight_v1 > weight_v2;
+            });
+            break;
         default:
             sort(packages.begin(), packages.end(), []( Package& i1, Package& i2) {
-                long weight_v1, weight_v2;
-                weight_v1 = sqrt(pow(i1.getVolume(), 2) + pow(i1.getWeight(), 2));
-                weight_v2 = sqrt(pow(i2.getVolume(), 2) + pow(i2.getWeight(), 2));
-                return weight_v1 < weight_v2;
+                return i1.getID() < i2.getID();
             });
     }
 }
 
 void App::printCouriers() {
-    for(auto line : couriers) {
-        cout << line.getMaxWeight() << " " << line.getMaxVolume() << " " << line.getCost() << endl;
+    for(const auto& line : couriers) {
+        cout << "ID: " << line.getID() << " W: " << line.getMaxWeight() << " V: " << line.getMaxVolume() << " C: " << line.getCost() <<"$"<< endl;
     }
 }
 
 void App::printPackages() {
     for(const auto& line : packages) {
-        cout << line.getWeight() <<" " <<  line.getVolume() << " " << line.getReward() << " " << line.getDuration() << endl;
+        cout << line.getID() << " W: " << line.getWeight() <<" V: " <<  line.getVolume() << " R: " << line.getReward() << "$ D: " << line.getDuration() <<" s"<<endl;
     }
 }
 
@@ -191,7 +213,8 @@ void App::writeShipments(int scenery) {
             exit(1);
         }
         file << "Shipment size: " << shipments.size() << "\n";
-        for(const auto& shipping : shipments){
+        for(auto& shipping : shipments){
+            shipping.sortPackages();
             file << "Courier:" << shipping << " Carried packages: " << shipping.getShippingSize() << "\n";
             file << "Packages:\n";
             for(const Package &package : shipping.getPackages()){
@@ -213,12 +236,13 @@ void App::writeShipments(int scenery) {
             exit(1);
         }
         file << "Shipment size: " << shipments.size() << "\n";
-        for(const auto& shipping : shipments){
+        for( auto& shipping : shipments){
+            shipping.sortPackages();
             file << "Efficiency: " << 100*shipped/packages.size() << "%" << "\n";
-            file << "Courier:" << shipping << " Cost: " << shipping.getCost() << " Profit: " <<shipping.getProfit() << "\n";
+            file << "Courier:" << shipping << " Cost: " << shipping.getCost() << " Profit: " <<shipping.getProfit() << "$\n";
             file << "Packages:\n";
             for(const Package &package : shipping.getPackages()){
-                file<< "->" << package << " Reward: "<< package.getReward() << "\n";
+                file<< "->" << package << " Reward: "<< package.getReward() << "$\n";
             }
             file << "\n";
         }
@@ -330,38 +354,56 @@ vector<int> knapSackScenery1( Courier& courier, vector<Package> packages) {
     return ret;
 }
 
-int App::scenery1() {
+int App::scenery1(bool knapsack) {
     if(packages.empty() || couriers.empty()) {
         cout << "Packages/Couriers vectors is/are empty" << endl;
     }
 
-    for (Package &aPackage: packages) {
-        aPackage.setAssignedValue(false);
-    }
     unloadShipments();
-    sortCouriers(1);
-    sortPackages(2);
+    if(knapsack) {
+        sortCouriers(1);
+        //sortPackages(2);
 
-    vector<Package> aux_packages = packages;
+        vector<Package> aux_packages = packages;
 
-    for(auto courier: couriers) {
-        auto sort = knapSackScenery1(courier, aux_packages);
+        for(auto courier: couriers) {
+            if(aux_packages.empty()) break;
+            auto sort = knapSackScenery1(courier, aux_packages);
 
-        if(sort.empty()) continue;
-        shipments.emplace_back(Shipping(courier.getID(), courier.getMaxVolume(), courier.getMaxWeight(), courier.getCost()));
+            if(sort.empty()) continue;
+            shipments.emplace_back(Shipping(courier.getID(), courier.getMaxVolume(), courier.getMaxWeight(), courier.getCost()));
 
-        for(auto each: sort)
-            shipments.back().pushPackage(aux_packages.at(each));
+            for(auto each: sort)
+                shipments.back().pushPackage(aux_packages.at(each));
 
-        for(auto each: sort)
-            aux_packages.erase(aux_packages.begin() + each);
+            for(auto each: sort)
+                aux_packages.erase(aux_packages.begin() + each);
+        }
+    }
+    else {
+        sortPackages(4);
+        vector<Shipping> aux;
+        int min_courier_size = (int)couriers.size() + 1, best_cou_sorter = 0;
+        vector<int> sorters = {1,4,8};
+        for(auto i : sorters) {
+            sortCouriers(i);
+            unloadShipments();
+            bestFitAlgorithm();
+            int courier_size = (int)shipments.size();
+            if(courier_size <= min_courier_size) {
+                min_courier_size = courier_size;
+                best_cou_sorter = i;
+                aux = shipments;
+            }
+        }
+        shipments = aux;
     }
 
-    packages = aux_packages;
-    
+    /*
     for (Package & aPackage: packages) {
         aPackage.increaseDaysPast();
     }
+     */
 
     return shipments.size();
 }
@@ -464,34 +506,30 @@ int App::scenery2(bool knapsack_algorithm) {
     if(packages.empty() || couriers.empty()) {
         cout << "Packages/Couriers vectors is/are empty" << endl;
     }
+    sortPackages(3);
 
     if(knapsack_algorithm) {
-        sortPackages(3);
         sortCouriers(3);
         unloadShipments();
         knapSackAlgorithm();
     } else {
-        int max_profit = 0, best_cou_sorter = 0, best_pack_sorter = 0;
-        for(int k = 1; k <= 3; k++) {
-            for(int i = 1; i <= 7; i++) {
-                sortCouriers(i);
-                sortPackages(k);
-                unloadShipments();
-                bestFitAlgorithm();
-                int profit = sortProfits();
-                if(profit > max_profit) {
-                    max_profit = profit;
-                    best_cou_sorter = i;
-                    best_pack_sorter = k;
-                }
+        vector<int> sorters = {3,5,9};
+        vector<Shipping> aux;
+        int max_profit = 0;
+        for(auto i : sorters) {
+            sortCouriers(i);
+            unloadShipments();
+            bestFitAlgorithm();
+            int profit = sortProfits();
+            if(profit > max_profit) {
+                max_profit = profit;
+                aux = shipments;
             }
         }
-        sortCouriers(best_cou_sorter);
-        sortPackages(best_pack_sorter);
-        unloadShipments();
-        bestFitAlgorithm();
+        shipments = aux;
 
 
+        /*
         for (const Shipping& shipping: shipments)
             for (const Package& aPackage: shipping.getPackages())
                 for (auto it = packages.begin(); it < packages.end(); it++)
@@ -499,11 +537,14 @@ int App::scenery2(bool knapsack_algorithm) {
                         packages.erase(it);
                         it--;
                     }
+        */
     }
-    
+
+    /*
     for (Package & aPackage: packages) {
         aPackage.increaseDaysPast();
     }
+     */
 
     return sortProfits();
 }

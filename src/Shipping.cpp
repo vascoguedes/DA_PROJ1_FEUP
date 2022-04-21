@@ -53,12 +53,6 @@ void Shipping::setProfit(int value) {
     profit += value;
 }
 
-bool Shipping::isFull() const {
-    if(currentVolume >= maxVolume || currentWeight >= maxWeight)
-        return true;
-    else return false;
-}
-
 unsigned Shipping::getShippingSize() const{
     return packages.size();
 }
@@ -72,32 +66,15 @@ void Shipping::pushPackage( Package &packag) {
 
 }
 
+void Shipping::sortPackages() {
+    sort(packages.begin(), packages.end(), []( Package& i1, Package& i2) {
+        return i1.getID() < i2.getID();
+    });
+}
+
 vector<Package> Shipping::getPackages() const {
     return packages;
 }
-
-bool Shipping::canFit(const Package& package1) const {
-    return ((maxVolume - currentVolume) >= package1.getVolume()) && ((maxWeight - currentWeight) >= package1.getWeight());
-}
-
-void Shipping::removePackage(Package &aPackage) {
-    for (int i = 0; i < packages.size(); ++i) {
-        if (packages[i].getID() == aPackage.getID()) {
-            packages.erase(packages.begin() + i);
-            break;
-        }
-    }
-    aPackage.setAssignedValue(false);
-    setCurrentVolume(-aPackage.getVolume());
-    setCurrentWeight(-aPackage.getWeight());
-}
-
-void Shipping::clearPackages() {
-    packages = {};
-    setCurrentVolume(-currentVolume);
-    setCurrentWeight(-currentWeight);
-}
-
 
 vector<unsigned> Shipping::getPackagesID() const {
     vector<unsigned> ret;

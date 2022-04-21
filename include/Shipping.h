@@ -4,6 +4,7 @@
 
 #include <vector>
 #include "Package.h"
+#include <algorithm>
 
 using namespace std;
 
@@ -99,29 +100,15 @@ public:
     void setProfit(int value);
 
     /**
-     * @brief Tells if Shipping is full
-     * @return true if full or false otherwise
-     */
-    bool isFull() const;
-
-    /**
-     * @brief Tells if package can fit in Shipping
-     * @param package Package object passed by reference
-     * @return true if it fits or false otherwise
-     */
-    bool canFit(const Package& package) const;
-
-    /**
      * @brief Adds a package to packages
      * @param package Package object passed by reference
      */
     void pushPackage(Package& package);
 
     /**
-     * @brief Removes a package from packages
-     * @param package Package object passed by reference
+     * @brief Sorts Packages by ID
      */
-    void removePackage(Package& aPackage);
+    void sortPackages();
 
     /**
      * @brief Returns Shipping packages
@@ -134,7 +121,6 @@ public:
      * @return packages parameter objects ids
      */
     vector<unsigned> getPackagesID() const;
-    void clearPackages();
 
     /**
      * Operator to print Shipping object in the correct format
