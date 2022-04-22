@@ -51,7 +51,7 @@ void MainMenu::display(){
     cout << "2 - Scenery 2" << endl;
     cout << "3 - Scenery 3" << endl;
     cout << "4 - Insert Packages" << endl;
-    cout << "5 - Options" << endl;
+    cout << "5 - Instructions" << endl;
     cout << "0 - Exit" << endl;
     cout << endl;
 }
@@ -78,9 +78,16 @@ OptionsMenu::OptionsMenu(App &app) : Menu(app) {
 
 void OptionsMenu::display() {
     cout << endl;
-    cout << "Options Menu:" << endl;
-    cout << "    Whenever executing scenery 1 or scenery 2, by default, the previous shipment vector will be erased. If you wish to save your results" << endl;
-    cout << R"(    Choose the "Export Data" in order to see the results according to the scenery, which will be saved in the "dataFiles/export/" folder )" << endl;
+    cout << "Instructions Menu:" << endl << endl;
+    cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
+    cout << R"(*   By default, the files "dataFiles/carrinhas.txt" and "dataFiles/encomendas.txt" load the couriers and the packages vectors, correspondingly  *)" << endl;
+    cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
+    cout << "*   Whenever executing scenery 1 or scenery 2, by default, the previous shipment vector will be erased. If you wish to save your results        *" << endl;
+    cout << R"(*   Choose "Export Data" in order to see the results according to the scenery, which will be saved in the "dataFiles/export/" folder            *)" << endl;
+    cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
+    cout << R"(*   When executing scenery 3, the shipped packages will be erased from the package vector and will be saved up in the expressPackages vector    *)" << endl;
+    cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
+    cout << endl;
     cout << "0 - Exit" << endl;
     cout << endl;
 }
@@ -210,7 +217,7 @@ void Scenery3::display() {
     cout << endl;
     cout << "Options Menu:" << endl;
     cout << "1 - Execute" << endl;
-    cout << "2 - Show Data" << endl;
+    cout << "2 - Print shipments" << endl;
     cout << "3 - Export Data" << endl;
     cout << "0 - Exit" << endl;
     cout << endl;
