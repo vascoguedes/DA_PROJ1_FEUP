@@ -84,8 +84,11 @@ void OptionsMenu::display() {
     cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
     cout << "*   Whenever executing scenery 1 or scenery 2, by default, the previous shipment vector will be erased. If you wish to save your results        *" << endl;
     cout << R"(*   Choose "Export Data" in order to see the results according to the scenery, which will be saved in the "dataFiles/export/" folder            *)" << endl;
+    cout << R"(*   Afterwards, the shipped packages will be removed from the packages vector                                                                   *)" << endl;
     cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
     cout << R"(*   When executing scenery 3, the shipped packages will be erased from the package vector and will be saved up in the expressPackages vector    *)" << endl;
+    cout << R"(*   If you want to check how many days it requires to send all the available packages, run the scenario multiple times until the package        *)" << endl;
+    cout << R"(*   Vector is empty, and print/export afterwards in order to see how many packages were sent each day                                           *)" << endl;
     cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
     cout << endl;
     cout << "0 - Exit" << endl;

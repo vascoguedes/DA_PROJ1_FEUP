@@ -207,16 +207,16 @@ void App::printPackages() {
         return;
     }
     for(const auto& line : packages) {
-        cout << line.getID() << " W: " << line.getWeight() <<" V: " <<  line.getVolume() << " R: " << line.getReward() << "$ D: " << line.getDuration() <<" s"<<endl;
+        cout << line.getID() << " W: " << line.getWeight() <<" V: " <<  line.getVolume() << " R: " << line.getReward() << "$ D: " << line.getDuration() <<"s"<<endl;
     }
 }
 
 void App::printShipments(int scenery) {
-    if(shipments.empty()) {
-        cout << "No shipments in place"<<endl;
-        return;
-    }
     if(scenery == 1 || scenery == 2) {
+        if(shipments.empty()) {
+            cout << "No shipments in place"<<endl;
+            return;
+        }
         int package_size = 0;
         for(const auto& itr : shipments) {
             package_size += itr.getShippingSize();
@@ -238,7 +238,7 @@ void App::printShipments(int scenery) {
         for(const Package &package : expressPackages){
             if(daysPast != package.getDaysPast()) {
                 daysPast++;
-                cout << "Day " << daysPast + 1 << ":" << endl;
+                cout << endl << "Day " << daysPast + 1 << ":" << endl;
             }
             count++;
             cout << count << "\370: " << package << endl;
@@ -548,7 +548,6 @@ void App::knapSackAlgorithm() {
         else
             shipments.erase(shipments.end());
     }
-    packages = aux_packages;
 }
 
 int App::scenery2(bool knapsack_algorithm) {
@@ -576,24 +575,7 @@ int App::scenery2(bool knapsack_algorithm) {
             }
         }
         shipments = aux;
-
-
-        /*
-        for (const Shipping& shipping: shipments)
-            for (const Package& aPackage: shipping.getPackages())
-                for (auto it = packages.begin(); it < packages.end(); it++)
-                    if (aPackage == *it) {
-                        packages.erase(it);
-                        it--;
-                    }
-        */
     }
-
-    /*
-    for (Package & aPackage: packages) {
-        aPackage.increaseDaysPast();
-    }
-     */
 
     return sortProfits();
 }

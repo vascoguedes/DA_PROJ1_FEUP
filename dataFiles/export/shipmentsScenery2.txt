@@ -1,20 +1,21 @@
-Shipment size: 14
-Efficiency: 76%
-Courier:  ID: 15 Volume: 392/394 Weight: 373/379 Cost: 13241 Profit: 61306$
+Shipment size: 15
+Efficiency: 77%
+Courier:  ID: 15 Volume: 394/394 Weight: 379/379 Cost: 13241 Profit: 60355$
 Packages:
+->ID: 19 Volume: 3 Weight: 20 Reward: 1645$
 ->ID: 21 Volume: 10 Weight: 3 Reward: 1886$
 ->ID: 24 Volume: 3 Weight: 13 Reward: 1907$
 ->ID: 33 Volume: 6 Weight: 3 Reward: 1347$
 ->ID: 53 Volume: 3 Weight: 9 Reward: 1558$
 ->ID: 61 Volume: 3 Weight: 7 Reward: 1565$
 ->ID: 67 Volume: 7 Weight: 3 Reward: 1823$
-->ID: 70 Volume: 7 Weight: 20 Reward: 1880$
 ->ID: 93 Volume: 10 Weight: 10 Reward: 1856$
 ->ID: 123 Volume: 6 Weight: 10 Reward: 1572$
+->ID: 133 Volume: 3 Weight: 3 Reward: 575$
 ->ID: 139 Volume: 3 Weight: 10 Reward: 1475$
 ->ID: 143 Volume: 3 Weight: 13 Reward: 1889$
 ->ID: 145 Volume: 7 Weight: 7 Reward: 1524$
-->ID: 149 Volume: 13 Weight: 13 Reward: 1714$
+->ID: 148 Volume: 3 Weight: 3 Reward: 715$
 ->ID: 166 Volume: 10 Weight: 3 Reward: 1641$
 ->ID: 172 Volume: 13 Weight: 10 Reward: 1614$
 ->ID: 193 Volume: 3 Weight: 13 Reward: 1502$
@@ -27,373 +28,382 @@ Packages:
 ->ID: 254 Volume: 19 Weight: 3 Reward: 1982$
 ->ID: 258 Volume: 10 Weight: 6 Reward: 1765$
 ->ID: 262 Volume: 7 Weight: 10 Reward: 1672$
-->ID: 275 Volume: 19 Weight: 9 Reward: 1897$
+->ID: 268 Volume: 26 Weight: 29 Reward: 267$
 ->ID: 282 Volume: 13 Weight: 6 Reward: 1475$
 ->ID: 303 Volume: 6 Weight: 13 Reward: 1713$
+->ID: 304 Volume: 3 Weight: 13 Reward: 1313$
+->ID: 307 Volume: 20 Weight: 3 Reward: 1785$
 ->ID: 314 Volume: 9 Weight: 6 Reward: 1467$
 ->ID: 343 Volume: 3 Weight: 10 Reward: 1791$
 ->ID: 347 Volume: 13 Weight: 6 Reward: 1987$
+->ID: 359 Volume: 3 Weight: 13 Reward: 1306$
 ->ID: 362 Volume: 13 Weight: 6 Reward: 1699$
 ->ID: 373 Volume: 7 Weight: 10 Reward: 1630$
+->ID: 386 Volume: 16 Weight: 3 Reward: 1518$
 ->ID: 387 Volume: 10 Weight: 6 Reward: 1747$
+->ID: 391 Volume: 3 Weight: 3 Reward: 699$
 ->ID: 395 Volume: 6 Weight: 6 Reward: 1058$
 ->ID: 396 Volume: 3 Weight: 3 Reward: 1563$
 ->ID: 419 Volume: 6 Weight: 6 Reward: 1921$
 ->ID: 425 Volume: 19 Weight: 6 Reward: 1813$
 ->ID: 426 Volume: 6 Weight: 3 Reward: 1176$
-->ID: 427 Volume: 13 Weight: 13 Reward: 1679$
 ->ID: 430 Volume: 7 Weight: 3 Reward: 1607$
 ->ID: 431 Volume: 13 Weight: 9 Reward: 1857$
-->ID: 442 Volume: 13 Weight: 16 Reward: 1894$
-->ID: 448 Volume: 13 Weight: 13 Reward: 1710$
 
-Efficiency: 76%
-Courier:  ID: 0 Volume: 342/391 Weight: 394/395 Cost: 13796 Profit: 34684$
+Efficiency: 77%
+Courier:  ID: 0 Volume: 391/391 Weight: 395/395 Cost: 13796 Profit: 33791$
 Packages:
-->ID: 6 Volume: 19 Weight: 16 Reward: 1967$
 ->ID: 14 Volume: 9 Weight: 9 Reward: 1137$
-->ID: 19 Volume: 3 Weight: 20 Reward: 1645$
+->ID: 17 Volume: 3 Weight: 19 Reward: 1432$
 ->ID: 45 Volume: 6 Weight: 19 Reward: 1591$
-->ID: 48 Volume: 16 Weight: 13 Reward: 1718$
 ->ID: 57 Volume: 16 Weight: 10 Reward: 1508$
-->ID: 76 Volume: 13 Weight: 20 Reward: 1925$
-->ID: 81 Volume: 19 Weight: 13 Reward: 1784$
+->ID: 66 Volume: 16 Weight: 6 Reward: 1332$
+->ID: 70 Volume: 7 Weight: 20 Reward: 1880$
+->ID: 74 Volume: 25 Weight: 28 Reward: 221$
+->ID: 116 Volume: 6 Weight: 3 Reward: 615$
 ->ID: 127 Volume: 10 Weight: 10 Reward: 1285$
-->ID: 133 Volume: 3 Weight: 3 Reward: 575$
+->ID: 137 Volume: 3 Weight: 22 Reward: 1662$
 ->ID: 146 Volume: 19 Weight: 13 Reward: 1904$
-->ID: 148 Volume: 3 Weight: 3 Reward: 715$
+->ID: 149 Volume: 13 Weight: 13 Reward: 1714$
 ->ID: 152 Volume: 3 Weight: 16 Reward: 1456$
 ->ID: 186 Volume: 6 Weight: 13 Reward: 1201$
+->ID: 209 Volume: 22 Weight: 3 Reward: 1492$
 ->ID: 221 Volume: 3 Weight: 13 Reward: 1210$
 ->ID: 233 Volume: 9 Weight: 13 Reward: 1442$
 ->ID: 251 Volume: 13 Weight: 16 Reward: 1838$
 ->ID: 259 Volume: 3 Weight: 10 Reward: 984$
 ->ID: 267 Volume: 6 Weight: 6 Reward: 779$
-->ID: 304 Volume: 3 Weight: 13 Reward: 1313$
-->ID: 307 Volume: 20 Weight: 3 Reward: 1785$
+->ID: 272 Volume: 22 Weight: 9 Reward: 1805$
+->ID: 275 Volume: 19 Weight: 9 Reward: 1897$
+->ID: 296 Volume: 28 Weight: 6 Reward: 1953$
 ->ID: 323 Volume: 19 Weight: 3 Reward: 1547$
 ->ID: 357 Volume: 19 Weight: 13 Reward: 1875$
-->ID: 359 Volume: 3 Weight: 13 Reward: 1306$
-->ID: 361 Volume: 13 Weight: 20 Reward: 1951$
-->ID: 379 Volume: 13 Weight: 16 Reward: 1785$
-->ID: 386 Volume: 16 Weight: 3 Reward: 1518$
-->ID: 391 Volume: 3 Weight: 3 Reward: 699$
-->ID: 400 Volume: 7 Weight: 13 Reward: 1210$
-->ID: 414 Volume: 22 Weight: 10 Reward: 1848$
+->ID: 378 Volume: 22 Weight: 3 Reward: 1565$
 ->ID: 415 Volume: 3 Weight: 16 Reward: 1391$
+->ID: 427 Volume: 13 Weight: 13 Reward: 1679$
 ->ID: 435 Volume: 19 Weight: 10 Reward: 1820$
 ->ID: 437 Volume: 3 Weight: 22 Reward: 1768$
+->ID: 442 Volume: 13 Weight: 16 Reward: 1894$
+->ID: 448 Volume: 13 Weight: 13 Reward: 1710$
 
-Efficiency: 76%
-Courier:  ID: 36 Volume: 368/370 Weight: 355/366 Cost: 13618 Profit: 26607$
+Efficiency: 77%
+Courier:  ID: 36 Volume: 370/370 Weight: 366/366 Cost: 13618 Profit: 25475$
 Packages:
 ->ID: 3 Volume: 6 Weight: 26 Reward: 1991$
-->ID: 17 Volume: 3 Weight: 19 Reward: 1432$
-->ID: 66 Volume: 16 Weight: 6 Reward: 1332$
+->ID: 6 Volume: 19 Weight: 16 Reward: 1967$
+->ID: 48 Volume: 16 Weight: 13 Reward: 1718$
+->ID: 76 Volume: 13 Weight: 20 Reward: 1925$
+->ID: 81 Volume: 19 Weight: 13 Reward: 1784$
 ->ID: 100 Volume: 20 Weight: 10 Reward: 1663$
 ->ID: 103 Volume: 16 Weight: 10 Reward: 1309$
 ->ID: 114 Volume: 19 Weight: 13 Reward: 1688$
-->ID: 116 Volume: 6 Weight: 3 Reward: 615$
-->ID: 131 Volume: 9 Weight: 6 Reward: 748$
-->ID: 137 Volume: 3 Weight: 22 Reward: 1662$
 ->ID: 155 Volume: 22 Weight: 13 Reward: 1897$
 ->ID: 161 Volume: 16 Weight: 19 Reward: 1873$
 ->ID: 165 Volume: 6 Weight: 6 Reward: 631$
 ->ID: 175 Volume: 20 Weight: 10 Reward: 1569$
 ->ID: 196 Volume: 3 Weight: 20 Reward: 1434$
-->ID: 198 Volume: 16 Weight: 13 Reward: 1477$
 ->ID: 228 Volume: 16 Weight: 6 Reward: 1188$
+->ID: 257 Volume: 28 Weight: 22 Reward: 330$
 ->ID: 261 Volume: 3 Weight: 3 Reward: 355$
 ->ID: 265 Volume: 7 Weight: 20 Reward: 1577$
-->ID: 272 Volume: 22 Weight: 9 Reward: 1805$
-->ID: 305 Volume: 16 Weight: 16 Reward: 1633$
 ->ID: 310 Volume: 7 Weight: 7 Reward: 828$
 ->ID: 321 Volume: 10 Weight: 22 Reward: 1694$
 ->ID: 324 Volume: 13 Weight: 6 Reward: 1062$
-->ID: 327 Volume: 19 Weight: 19 Reward: 1990$
-->ID: 333 Volume: 19 Weight: 19 Reward: 1956$
 ->ID: 346 Volume: 10 Weight: 13 Reward: 1315$
-->ID: 378 Volume: 22 Weight: 3 Reward: 1565$
-->ID: 421 Volume: 23 Weight: 16 Reward: 1936$
+->ID: 361 Volume: 13 Weight: 20 Reward: 1951$
+->ID: 379 Volume: 13 Weight: 16 Reward: 1785$
+->ID: 388 Volume: 23 Weight: 3 Reward: 1396$
+->ID: 400 Volume: 7 Weight: 13 Reward: 1210$
+->ID: 414 Volume: 22 Weight: 10 Reward: 1848$
+->ID: 438 Volume: 3 Weight: 16 Reward: 1105$
 
-Efficiency: 76%
-Courier:  ID: 24 Volume: 360/398 Weight: 377/378 Cost: 15048 Profit: 20988$
+Efficiency: 77%
+Courier:  ID: 40 Volume: 328/328 Weight: 398/398 Cost: 13956 Profit: 20489$
 Packages:
 ->ID: 13 Volume: 20 Weight: 13 Reward: 1542$
+->ID: 16 Volume: 3 Weight: 23 Reward: 1410$
 ->ID: 25 Volume: 23 Weight: 16 Reward: 1918$
-->ID: 27 Volume: 6 Weight: 6 Reward: 564$
-->ID: 37 Volume: 7 Weight: 13 Reward: 898$
-->ID: 46 Volume: 3 Weight: 10 Reward: 579$
 ->ID: 49 Volume: 3 Weight: 20 Reward: 1263$
 ->ID: 72 Volume: 26 Weight: 6 Reward: 1627$
 ->ID: 77 Volume: 6 Weight: 28 Reward: 1820$
 ->ID: 86 Volume: 19 Weight: 6 Reward: 1204$
 ->ID: 98 Volume: 22 Weight: 16 Reward: 1819$
+->ID: 131 Volume: 9 Weight: 6 Reward: 748$
+->ID: 140 Volume: 6 Weight: 3 Reward: 453$
+->ID: 144 Volume: 6 Weight: 29 Reward: 1800$
+->ID: 147 Volume: 6 Weight: 29 Reward: 1859$
+->ID: 153 Volume: 13 Weight: 3 Reward: 795$
+->ID: 198 Volume: 16 Weight: 13 Reward: 1477$
+->ID: 235 Volume: 10 Weight: 16 Reward: 1202$
+->ID: 239 Volume: 6 Weight: 19 Reward: 1243$
+->ID: 299 Volume: 19 Weight: 28 Reward: 213$
+->ID: 305 Volume: 16 Weight: 16 Reward: 1633$
+->ID: 327 Volume: 19 Weight: 19 Reward: 1990$
+->ID: 333 Volume: 19 Weight: 19 Reward: 1956$
+->ID: 398 Volume: 6 Weight: 19 Reward: 1185$
+->ID: 410 Volume: 22 Weight: 9 Reward: 1509$
+->ID: 421 Volume: 23 Weight: 16 Reward: 1936$
+->ID: 433 Volume: 10 Weight: 26 Reward: 1843$
+
+Efficiency: 77%
+Courier:  ID: 24 Volume: 398/398 Weight: 378/378 Cost: 15048 Profit: 17576$
+Packages:
+->ID: 27 Volume: 6 Weight: 6 Reward: 564$
+->ID: 34 Volume: 29 Weight: 20 Reward: 1991$
+->ID: 35 Volume: 25 Weight: 19 Reward: 1889$
+->ID: 37 Volume: 7 Weight: 13 Reward: 898$
+->ID: 40 Volume: 7 Weight: 23 Reward: 1303$
+->ID: 69 Volume: 16 Weight: 10 Reward: 1081$
 ->ID: 104 Volume: 9 Weight: 19 Reward: 1281$
 ->ID: 106 Volume: 10 Weight: 3 Reward: 547$
 ->ID: 120 Volume: 19 Weight: 13 Reward: 1537$
-->ID: 140 Volume: 6 Weight: 3 Reward: 453$
-->ID: 153 Volume: 13 Weight: 3 Reward: 795$
 ->ID: 171 Volume: 6 Weight: 16 Reward: 1023$
-->ID: 209 Volume: 22 Weight: 3 Reward: 1492$
-->ID: 229 Volume: 13 Weight: 23 Reward: 1714$
-->ID: 232 Volume: 7 Weight: 7 Reward: 501$
-->ID: 235 Volume: 10 Weight: 16 Reward: 1202$
-->ID: 239 Volume: 6 Weight: 19 Reward: 1243$
-->ID: 296 Volume: 28 Weight: 6 Reward: 1953$
-->ID: 354 Volume: 19 Weight: 22 Reward: 1897$
-->ID: 394 Volume: 3 Weight: 13 Reward: 751$
-->ID: 410 Volume: 22 Weight: 9 Reward: 1509$
-->ID: 411 Volume: 6 Weight: 10 Reward: 713$
-->ID: 433 Volume: 10 Weight: 26 Reward: 1843$
-->ID: 434 Volume: 6 Weight: 6 Reward: 442$
-->ID: 436 Volume: 7 Weight: 10 Reward: 801$
-->ID: 438 Volume: 3 Weight: 16 Reward: 1105$
-
-Efficiency: 76%
-Courier:  ID: 40 Volume: 326/328 Weight: 374/398 Cost: 13956 Profit: 16559$
-Packages:
-->ID: 16 Volume: 3 Weight: 23 Reward: 1410$
-->ID: 35 Volume: 25 Weight: 19 Reward: 1889$
-->ID: 56 Volume: 13 Weight: 9 Reward: 820$
-->ID: 69 Volume: 16 Weight: 10 Reward: 1081$
-->ID: 96 Volume: 19 Weight: 22 Reward: 1719$
-->ID: 97 Volume: 3 Weight: 13 Reward: 633$
-->ID: 107 Volume: 16 Weight: 22 Reward: 1579$
-->ID: 144 Volume: 6 Weight: 29 Reward: 1800$
-->ID: 147 Volume: 6 Weight: 29 Reward: 1859$
-->ID: 154 Volume: 13 Weight: 13 Reward: 1008$
-->ID: 177 Volume: 10 Weight: 19 Reward: 1278$
+->ID: 182 Volume: 9 Weight: 25 Reward: 1529$
 ->ID: 183 Volume: 22 Weight: 16 Reward: 1598$
 ->ID: 185 Volume: 19 Weight: 22 Reward: 1804$
-->ID: 212 Volume: 3 Weight: 13 Reward: 685$
+->ID: 229 Volume: 13 Weight: 23 Reward: 1714$
 ->ID: 230 Volume: 13 Weight: 3 Reward: 699$
-->ID: 253 Volume: 7 Weight: 13 Reward: 734$
 ->ID: 283 Volume: 7 Weight: 20 Reward: 1241$
 ->ID: 298 Volume: 13 Weight: 3 Reward: 690$
+->ID: 311 Volume: 28 Weight: 6 Reward: 1636$
 ->ID: 326 Volume: 19 Weight: 16 Reward: 1489$
-->ID: 351 Volume: 10 Weight: 6 Reward: 542$
-->ID: 355 Volume: 13 Weight: 13 Reward: 967$
-->ID: 388 Volume: 23 Weight: 3 Reward: 1396$
-->ID: 393 Volume: 6 Weight: 10 Reward: 465$
-->ID: 398 Volume: 6 Weight: 19 Reward: 1185$
+->ID: 354 Volume: 19 Weight: 22 Reward: 1897$
+->ID: 358 Volume: 29 Weight: 10 Reward: 1657$
+->ID: 394 Volume: 3 Weight: 13 Reward: 751$
+->ID: 407 Volume: 22 Weight: 28 Reward: 347$
+->ID: 411 Volume: 6 Weight: 10 Reward: 713$
+->ID: 436 Volume: 7 Weight: 10 Reward: 801$
 ->ID: 439 Volume: 16 Weight: 3 Reward: 836$
 ->ID: 447 Volume: 19 Weight: 6 Reward: 1108$
 
-Efficiency: 76%
-Courier:  ID: 18 Volume: 256/397 Weight: 321/321 Cost: 13931 Profit: 9459$
+Efficiency: 77%
+Courier:  ID: 18 Volume: 397/397 Weight: 321/321 Cost: 13931 Profit: 13187$
 Packages:
 ->ID: 1 Volume: 16 Weight: 13 Reward: 1121$
 ->ID: 20 Volume: 13 Weight: 3 Reward: 621$
-->ID: 40 Volume: 7 Weight: 23 Reward: 1303$
-->ID: 84 Volume: 10 Weight: 10 Reward: 588$
-->ID: 91 Volume: 13 Weight: 10 Reward: 738$
-->ID: 160 Volume: 16 Weight: 26 Reward: 1789$
-->ID: 173 Volume: 3 Weight: 19 Reward: 952$
-->ID: 182 Volume: 9 Weight: 25 Reward: 1529$
-->ID: 184 Volume: 20 Weight: 26 Reward: 1863$
-->ID: 213 Volume: 22 Weight: 19 Reward: 1628$
-->ID: 284 Volume: 16 Weight: 28 Reward: 1863$
-->ID: 311 Volume: 28 Weight: 6 Reward: 1636$
-->ID: 322 Volume: 13 Weight: 26 Reward: 1639$
-->ID: 329 Volume: 16 Weight: 3 Reward: 704$
-->ID: 338 Volume: 6 Weight: 19 Reward: 996$
-->ID: 371 Volume: 19 Weight: 16 Reward: 1351$
-->ID: 392 Volume: 3 Weight: 13 Reward: 530$
-->ID: 409 Volume: 23 Weight: 20 Reward: 1786$
-->ID: 443 Volume: 3 Weight: 16 Reward: 753$
-
-Efficiency: 76%
-Courier:  ID: 21 Volume: 381/394 Weight: 351/351 Cost: 15473 Profit: 11792$
-Packages:
-->ID: 34 Volume: 29 Weight: 20 Reward: 1991$
-->ID: 36 Volume: 3 Weight: 13 Reward: 472$
-->ID: 42 Volume: 19 Weight: 19 Reward: 1437$
-->ID: 71 Volume: 16 Weight: 28 Reward: 1821$
-->ID: 87 Volume: 13 Weight: 3 Reward: 466$
+->ID: 38 Volume: 19 Weight: 3 Reward: 762$
+->ID: 46 Volume: 3 Weight: 10 Reward: 579$
 ->ID: 89 Volume: 19 Weight: 9 Reward: 1059$
-->ID: 102 Volume: 16 Weight: 6 Reward: 755$
+->ID: 96 Volume: 19 Weight: 22 Reward: 1719$
+->ID: 107 Volume: 16 Weight: 22 Reward: 1579$
 ->ID: 122 Volume: 25 Weight: 19 Reward: 1753$
-->ID: 125 Volume: 13 Weight: 25 Reward: 1467$
-->ID: 197 Volume: 13 Weight: 3 Reward: 455$
+->ID: 142 Volume: 29 Weight: 10 Reward: 1463$
+->ID: 160 Volume: 16 Weight: 26 Reward: 1789$
+->ID: 177 Volume: 10 Weight: 19 Reward: 1278$
+->ID: 213 Volume: 22 Weight: 19 Reward: 1628$
 ->ID: 222 Volume: 16 Weight: 29 Reward: 1883$
 ->ID: 225 Volume: 19 Weight: 3 Reward: 784$
-->ID: 244 Volume: 23 Weight: 26 Reward: 1913$
-->ID: 247 Volume: 7 Weight: 16 Reward: 789$
-->ID: 280 Volume: 29 Weight: 20 Reward: 1972$
-->ID: 281 Volume: 9 Weight: 16 Reward: 814$
-->ID: 285 Volume: 22 Weight: 10 Reward: 1233$
-->ID: 290 Volume: 19 Weight: 16 Reward: 1319$
-->ID: 312 Volume: 3 Weight: 19 Reward: 901$
-->ID: 341 Volume: 9 Weight: 9 Reward: 427$
-->ID: 358 Volume: 29 Weight: 10 Reward: 1657$
-->ID: 380 Volume: 13 Weight: 6 Reward: 580$
-->ID: 382 Volume: 7 Weight: 16 Reward: 764$
-->ID: 441 Volume: 10 Weight: 10 Reward: 553$
-
-Efficiency: 76%
-Courier:  ID: 34 Volume: 300/310 Weight: 381/387 Cost: 14105 Profit: 9159$
-Packages:
-->ID: 0 Volume: 3 Weight: 19 Reward: 754$
-->ID: 4 Volume: 16 Weight: 26 Reward: 1590$
-->ID: 15 Volume: 6 Weight: 26 Reward: 1291$
-->ID: 38 Volume: 19 Weight: 3 Reward: 762$
-->ID: 39 Volume: 16 Weight: 19 Reward: 1193$
-->ID: 64 Volume: 23 Weight: 20 Reward: 1536$
-->ID: 129 Volume: 16 Weight: 29 Reward: 1739$
-->ID: 240 Volume: 3 Weight: 22 Reward: 940$
-->ID: 260 Volume: 6 Weight: 16 Reward: 618$
-->ID: 273 Volume: 6 Weight: 16 Reward: 647$
-->ID: 288 Volume: 13 Weight: 10 Reward: 629$
-->ID: 292 Volume: 20 Weight: 16 Reward: 1200$
-->ID: 315 Volume: 3 Weight: 13 Reward: 355$
-->ID: 316 Volume: 20 Weight: 23 Reward: 1551$
-->ID: 325 Volume: 20 Weight: 7 Reward: 894$
-->ID: 337 Volume: 20 Weight: 13 Reward: 1054$
-->ID: 344 Volume: 19 Weight: 13 Reward: 1040$
-->ID: 366 Volume: 19 Weight: 22 Reward: 1440$
-->ID: 397 Volume: 10 Weight: 23 Reward: 1205$
-->ID: 405 Volume: 13 Weight: 10 Reward: 606$
-->ID: 418 Volume: 16 Weight: 29 Reward: 1730$
-->ID: 422 Volume: 13 Weight: 6 Reward: 490$
-
-Efficiency: 76%
-Courier:  ID: 12 Volume: 356/366 Weight: 371/375 Cost: 15556 Profit: 8548$
-Packages:
-->ID: 9 Volume: 13 Weight: 29 Reward: 1511$
-->ID: 11 Volume: 25 Weight: 13 Reward: 1251$
-->ID: 23 Volume: 3 Weight: 16 Reward: 501$
-->ID: 73 Volume: 13 Weight: 10 Reward: 483$
-->ID: 83 Volume: 25 Weight: 28 Reward: 1909$
-->ID: 94 Volume: 7 Weight: 26 Reward: 1166$
-->ID: 108 Volume: 16 Weight: 29 Reward: 1694$
-->ID: 124 Volume: 10 Weight: 26 Reward: 1229$
-->ID: 128 Volume: 9 Weight: 19 Reward: 775$
-->ID: 141 Volume: 22 Weight: 16 Reward: 1175$
-->ID: 142 Volume: 29 Weight: 10 Reward: 1463$
-->ID: 150 Volume: 22 Weight: 10 Reward: 1079$
-->ID: 159 Volume: 6 Weight: 26 Reward: 1143$
-->ID: 192 Volume: 13 Weight: 3 Reward: 203$
-->ID: 199 Volume: 26 Weight: 20 Reward: 1645$
-->ID: 226 Volume: 10 Weight: 29 Reward: 1488$
 ->ID: 237 Volume: 26 Weight: 6 Reward: 1156$
-->ID: 271 Volume: 7 Weight: 26 Reward: 1257$
-->ID: 279 Volume: 16 Weight: 3 Reward: 477$
-->ID: 320 Volume: 19 Weight: 3 Reward: 638$
-->ID: 330 Volume: 16 Weight: 16 Reward: 878$
+->ID: 280 Volume: 29 Weight: 20 Reward: 1972$
+->ID: 285 Volume: 22 Weight: 10 Reward: 1233$
+->ID: 322 Volume: 13 Weight: 26 Reward: 1639$
+->ID: 329 Volume: 16 Weight: 3 Reward: 704$
+->ID: 409 Volume: 23 Weight: 20 Reward: 1786$
+->ID: 417 Volume: 26 Weight: 29 Reward: 610$
+
+Efficiency: 77%
+Courier:  ID: 14 Volume: 365/365 Weight: 301/301 Cost: 13406 Profit: 10070$
+Packages:
+->ID: 42 Volume: 19 Weight: 19 Reward: 1437$
+->ID: 56 Volume: 13 Weight: 9 Reward: 820$
+->ID: 63 Volume: 29 Weight: 29 Reward: 763$
+->ID: 68 Volume: 28 Weight: 6 Reward: 1065$
+->ID: 71 Volume: 16 Weight: 28 Reward: 1821$
+->ID: 134 Volume: 28 Weight: 9 Reward: 1185$
+->ID: 150 Volume: 22 Weight: 10 Reward: 1079$
+->ID: 154 Volume: 13 Weight: 13 Reward: 1008$
+->ID: 184 Volume: 20 Weight: 26 Reward: 1863$
+->ID: 199 Volume: 26 Weight: 20 Reward: 1645$
+->ID: 212 Volume: 3 Weight: 13 Reward: 685$
+->ID: 232 Volume: 7 Weight: 7 Reward: 501$
+->ID: 244 Volume: 23 Weight: 26 Reward: 1913$
+->ID: 284 Volume: 16 Weight: 28 Reward: 1863$
+->ID: 290 Volume: 19 Weight: 16 Reward: 1319$
+->ID: 332 Volume: 28 Weight: 6 Reward: 1208$
+->ID: 355 Volume: 13 Weight: 13 Reward: 967$
+->ID: 371 Volume: 19 Weight: 16 Reward: 1351$
 ->ID: 406 Volume: 23 Weight: 7 Reward: 983$
 
-Efficiency: 76%
-Courier:  ID: 26 Volume: 289/355 Weight: 321/322 Cost: 13718 Profit: 4988$
+Efficiency: 77%
+Courier:  ID: 34 Volume: 310/310 Weight: 387/387 Cost: 14105 Profit: 10112$
 Packages:
-->ID: 8 Volume: 3 Weight: 19 Reward: 585$
-->ID: 12 Volume: 26 Weight: 22 Reward: 1628$
-->ID: 31 Volume: 16 Weight: 13 Reward: 707$
-->ID: 51 Volume: 3 Weight: 19 Reward: 600$
-->ID: 54 Volume: 26 Weight: 26 Reward: 1790$
-->ID: 92 Volume: 9 Weight: 22 Reward: 909$
-->ID: 121 Volume: 13 Weight: 26 Reward: 1253$
-->ID: 169 Volume: 16 Weight: 29 Reward: 1593$
-->ID: 190 Volume: 10 Weight: 13 Reward: 419$
-->ID: 219 Volume: 26 Weight: 13 Reward: 1295$
+->ID: 4 Volume: 16 Weight: 26 Reward: 1590$
+->ID: 11 Volume: 25 Weight: 13 Reward: 1251$
+->ID: 64 Volume: 23 Weight: 20 Reward: 1536$
+->ID: 83 Volume: 25 Weight: 28 Reward: 1909$
+->ID: 102 Volume: 16 Weight: 6 Reward: 755$
+->ID: 108 Volume: 16 Weight: 29 Reward: 1694$
+->ID: 125 Volume: 13 Weight: 25 Reward: 1467$
+->ID: 129 Volume: 16 Weight: 29 Reward: 1739$
+->ID: 173 Volume: 3 Weight: 19 Reward: 952$
+->ID: 179 Volume: 25 Weight: 25 Reward: 371$
 ->ID: 223 Volume: 29 Weight: 20 Reward: 1704$
-->ID: 255 Volume: 19 Weight: 22 Reward: 1260$
-->ID: 291 Volume: 19 Weight: 16 Reward: 1012$
-->ID: 295 Volume: 10 Weight: 13 Reward: 414$
-->ID: 317 Volume: 22 Weight: 28 Reward: 1717$
-->ID: 342 Volume: 19 Weight: 13 Reward: 884$
-->ID: 370 Volume: 23 Weight: 7 Reward: 936$
+->ID: 312 Volume: 3 Weight: 19 Reward: 901$
+->ID: 316 Volume: 20 Weight: 23 Reward: 1551$
+->ID: 325 Volume: 20 Weight: 7 Reward: 894$
+->ID: 338 Volume: 6 Weight: 19 Reward: 996$
+->ID: 351 Volume: 10 Weight: 6 Reward: 542$
+->ID: 366 Volume: 19 Weight: 22 Reward: 1440$
+->ID: 418 Volume: 16 Weight: 29 Reward: 1730$
+->ID: 434 Volume: 6 Weight: 6 Reward: 442$
+->ID: 443 Volume: 3 Weight: 16 Reward: 753$
 
-Efficiency: 76%
-Courier:  ID: 14 Volume: 340/365 Weight: 301/301 Cost: 13406 Profit: 4432$
+Efficiency: 77%
+Courier:  ID: 26 Volume: 354/355 Weight: 322/322 Cost: 13718 Profit: 7756$
 Packages:
-->ID: 110 Volume: 6 Weight: 22 Reward: 794$
-->ID: 136 Volume: 16 Weight: 13 Reward: 654$
-->ID: 168 Volume: 26 Weight: 16 Reward: 1296$
+->ID: 12 Volume: 26 Weight: 22 Reward: 1628$
+->ID: 15 Volume: 6 Weight: 26 Reward: 1291$
+->ID: 54 Volume: 26 Weight: 26 Reward: 1790$
+->ID: 87 Volume: 13 Weight: 3 Reward: 466$
+->ID: 91 Volume: 13 Weight: 10 Reward: 738$
+->ID: 97 Volume: 3 Weight: 13 Reward: 633$
 ->ID: 178 Volume: 23 Weight: 29 Reward: 1789$
-->ID: 201 Volume: 16 Weight: 13 Reward: 671$
-->ID: 202 Volume: 23 Weight: 26 Reward: 1594$
-->ID: 203 Volume: 13 Weight: 6 Reward: 223$
-->ID: 208 Volume: 7 Weight: 23 Reward: 907$
-->ID: 231 Volume: 26 Weight: 19 Reward: 1397$
-->ID: 246 Volume: 10 Weight: 13 Reward: 347$
-->ID: 270 Volume: 16 Weight: 3 Reward: 279$
-->ID: 286 Volume: 20 Weight: 13 Reward: 848$
-->ID: 332 Volume: 28 Weight: 6 Reward: 1208$
-->ID: 335 Volume: 19 Weight: 3 Reward: 522$
-->ID: 384 Volume: 10 Weight: 19 Reward: 709$
-->ID: 402 Volume: 16 Weight: 16 Reward: 772$
-->ID: 404 Volume: 19 Weight: 22 Reward: 1200$
+->ID: 219 Volume: 26 Weight: 13 Reward: 1295$
+->ID: 226 Volume: 10 Weight: 29 Reward: 1488$
+->ID: 253 Volume: 7 Weight: 13 Reward: 734$
+->ID: 289 Volume: 29 Weight: 16 Reward: 1442$
+->ID: 292 Volume: 20 Weight: 16 Reward: 1200$
+->ID: 320 Volume: 19 Weight: 3 Reward: 638$
+->ID: 337 Volume: 20 Weight: 13 Reward: 1054$
+->ID: 344 Volume: 19 Weight: 13 Reward: 1040$
+->ID: 370 Volume: 23 Weight: 7 Reward: 936$
+->ID: 380 Volume: 13 Weight: 6 Reward: 580$
+->ID: 397 Volume: 10 Weight: 23 Reward: 1205$
 ->ID: 429 Volume: 26 Weight: 16 Reward: 1303$
+->ID: 440 Volume: 22 Weight: 25 Reward: 224$
+
+Efficiency: 77%
+Courier:  ID: 33 Volume: 308/308 Weight: 371/371 Cost: 13865 Profit: 7386$
+Packages:
+->ID: 9 Volume: 13 Weight: 29 Reward: 1511$
+->ID: 39 Volume: 16 Weight: 19 Reward: 1193$
+->ID: 80 Volume: 25 Weight: 28 Reward: 521$
+->ID: 94 Volume: 7 Weight: 26 Reward: 1166$
+->ID: 141 Volume: 22 Weight: 16 Reward: 1175$
+->ID: 157 Volume: 29 Weight: 26 Reward: 1724$
+->ID: 159 Volume: 6 Weight: 26 Reward: 1143$
+->ID: 168 Volume: 26 Weight: 16 Reward: 1296$
+->ID: 169 Volume: 16 Weight: 29 Reward: 1593$
+->ID: 170 Volume: 25 Weight: 16 Reward: 1200$
+->ID: 197 Volume: 13 Weight: 3 Reward: 455$
+->ID: 202 Volume: 23 Weight: 26 Reward: 1594$
+->ID: 231 Volume: 26 Weight: 19 Reward: 1397$
+->ID: 240 Volume: 3 Weight: 22 Reward: 940$
+->ID: 271 Volume: 7 Weight: 26 Reward: 1257$
+->ID: 317 Volume: 22 Weight: 28 Reward: 1717$
+->ID: 444 Volume: 29 Weight: 16 Reward: 1369$
+
+Efficiency: 77%
+Courier:  ID: 21 Volume: 394/394 Weight: 351/351 Cost: 15473 Profit: 5480$
+Packages:
+->ID: 58 Volume: 23 Weight: 26 Reward: 1520$
+->ID: 75 Volume: 26 Weight: 26 Reward: 496$
+->ID: 99 Volume: 26 Weight: 22 Reward: 1487$
+->ID: 109 Volume: 26 Weight: 7 Reward: 738$
+->ID: 124 Volume: 10 Weight: 26 Reward: 1229$
+->ID: 211 Volume: 23 Weight: 23 Reward: 1382$
+->ID: 247 Volume: 7 Weight: 16 Reward: 789$
+->ID: 255 Volume: 19 Weight: 22 Reward: 1260$
+->ID: 279 Volume: 16 Weight: 3 Reward: 477$
+->ID: 281 Volume: 9 Weight: 16 Reward: 814$
+->ID: 288 Volume: 13 Weight: 10 Reward: 629$
+->ID: 291 Volume: 19 Weight: 16 Reward: 1012$
+->ID: 335 Volume: 19 Weight: 3 Reward: 522$
+->ID: 342 Volume: 19 Weight: 13 Reward: 884$
+->ID: 350 Volume: 22 Weight: 6 Reward: 683$
+->ID: 367 Volume: 23 Weight: 23 Reward: 1366$
+->ID: 369 Volume: 26 Weight: 6 Reward: 774$
+->ID: 390 Volume: 26 Weight: 22 Reward: 1513$
+->ID: 392 Volume: 3 Weight: 13 Reward: 530$
+->ID: 432 Volume: 19 Weight: 29 Reward: 1523$
 ->ID: 445 Volume: 20 Weight: 23 Reward: 1325$
 
-Efficiency: 76%
-Courier:  ID: 11 Volume: 390/393 Weight: 371/377 Cost: 16543 Profit: 3933$
+Efficiency: 77%
+Courier:  ID: 37 Volume: 253/253 Weight: 386/386 Cost: 13481 Profit: 4369$
 Packages:
-->ID: 18 Volume: 22 Weight: 16 Reward: 982$
+->ID: 0 Volume: 3 Weight: 19 Reward: 754$
 ->ID: 47 Volume: 19 Weight: 25 Reward: 1263$
-->ID: 58 Volume: 23 Weight: 26 Reward: 1520$
-->ID: 99 Volume: 26 Weight: 22 Reward: 1487$
-->ID: 134 Volume: 28 Weight: 9 Reward: 1185$
-->ID: 135 Volume: 6 Weight: 19 Reward: 486$
-->ID: 138 Volume: 16 Weight: 3 Reward: 262$
-->ID: 164 Volume: 3 Weight: 16 Reward: 220$
-->ID: 167 Volume: 9 Weight: 13 Reward: 211$
-->ID: 170 Volume: 25 Weight: 16 Reward: 1200$
-->ID: 211 Volume: 23 Weight: 23 Reward: 1382$
-->ID: 214 Volume: 20 Weight: 23 Reward: 1236$
-->ID: 289 Volume: 29 Weight: 16 Reward: 1442$
-->ID: 319 Volume: 13 Weight: 23 Reward: 916$
-->ID: 345 Volume: 6 Weight: 22 Reward: 666$
-->ID: 350 Volume: 22 Weight: 6 Reward: 683$
-->ID: 353 Volume: 16 Weight: 16 Reward: 706$
-->ID: 360 Volume: 16 Weight: 3 Reward: 227$
-->ID: 367 Volume: 23 Weight: 23 Reward: 1366$
-->ID: 390 Volume: 26 Weight: 22 Reward: 1513$
-->ID: 432 Volume: 19 Weight: 29 Reward: 1523$
-
-Efficiency: 76%
-Courier:  ID: 33 Volume: 301/308 Weight: 371/371 Cost: 13865 Profit: 3828$
-Packages:
-->ID: 44 Volume: 19 Weight: 19 Reward: 873$
-->ID: 60 Volume: 26 Weight: 22 Reward: 1348$
-->ID: 68 Volume: 28 Weight: 6 Reward: 1065$
-->ID: 82 Volume: 16 Weight: 20 Reward: 816$
-->ID: 126 Volume: 13 Weight: 26 Reward: 1073$
-->ID: 157 Volume: 29 Weight: 26 Reward: 1724$
+->ID: 84 Volume: 10 Weight: 10 Reward: 588$
+->ID: 92 Volume: 9 Weight: 22 Reward: 909$
+->ID: 110 Volume: 6 Weight: 22 Reward: 794$
+->ID: 121 Volume: 13 Weight: 26 Reward: 1253$
+->ID: 162 Volume: 26 Weight: 19 Reward: 244$
 ->ID: 181 Volume: 13 Weight: 29 Reward: 1255$
 ->ID: 188 Volume: 25 Weight: 22 Reward: 1331$
-->ID: 207 Volume: 16 Weight: 10 Reward: 396$
-->ID: 248 Volume: 9 Weight: 25 Reward: 849$
-->ID: 249 Volume: 6 Weight: 22 Reward: 597$
-->ID: 313 Volume: 20 Weight: 16 Reward: 823$
-->ID: 401 Volume: 6 Weight: 19 Reward: 406$
-->ID: 403 Volume: 3 Weight: 23 Reward: 697$
-->ID: 412 Volume: 20 Weight: 16 Reward: 851$
+->ID: 191 Volume: 25 Weight: 28 Reward: 1521$
+->ID: 208 Volume: 7 Weight: 23 Reward: 907$
+->ID: 214 Volume: 20 Weight: 23 Reward: 1236$
+->ID: 273 Volume: 6 Weight: 16 Reward: 647$
+->ID: 381 Volume: 22 Weight: 29 Reward: 1500$
+->ID: 382 Volume: 7 Weight: 16 Reward: 764$
+->ID: 404 Volume: 19 Weight: 22 Reward: 1200$
+->ID: 422 Volume: 13 Weight: 6 Reward: 490$
 ->ID: 423 Volume: 10 Weight: 29 Reward: 1194$
-->ID: 444 Volume: 29 Weight: 16 Reward: 1369$
+
+Efficiency: 77%
+Courier:  ID: 1 Volume: 325/325 Weight: 316/316 Cost: 13378 Profit: 3070$
+Packages:
+->ID: 2 Volume: 25 Weight: 28 Reward: 1370$
+->ID: 18 Volume: 22 Weight: 16 Reward: 982$
+->ID: 36 Volume: 3 Weight: 13 Reward: 472$
+->ID: 60 Volume: 26 Weight: 22 Reward: 1348$
+->ID: 115 Volume: 29 Weight: 26 Reward: 719$
+->ID: 128 Volume: 9 Weight: 19 Reward: 775$
+->ID: 176 Volume: 22 Weight: 25 Reward: 1227$
+->ID: 238 Volume: 29 Weight: 13 Reward: 1014$
+->ID: 300 Volume: 22 Weight: 29 Reward: 1448$
+->ID: 328 Volume: 29 Weight: 26 Reward: 1522$
+->ID: 330 Volume: 16 Weight: 16 Reward: 878$
+->ID: 368 Volume: 28 Weight: 19 Reward: 1240$
+->ID: 375 Volume: 29 Weight: 19 Reward: 1268$
+->ID: 405 Volume: 13 Weight: 10 Reward: 606$
+->ID: 441 Volume: 10 Weight: 10 Reward: 553$
 ->ID: 446 Volume: 13 Weight: 25 Reward: 1026$
 
-Efficiency: 76%
-Courier:  ID: 22 Volume: 336/336 Weight: 333/345 Cost: 14342 Profit: 292$
+Efficiency: 77%
+Courier:  ID: 12 Volume: 366/366 Weight: 375/375 Cost: 15556 Profit: 2024$
 Packages:
-->ID: 7 Volume: 16 Weight: 13 Reward: 367$
-->ID: 10 Volume: 23 Weight: 16 Reward: 868$
-->ID: 29 Volume: 13 Weight: 22 Reward: 590$
-->ID: 59 Volume: 22 Weight: 13 Reward: 667$
-->ID: 88 Volume: 7 Weight: 20 Reward: 412$
-->ID: 90 Volume: 22 Weight: 3 Reward: 480$
-->ID: 132 Volume: 22 Weight: 13 Reward: 709$
-->ID: 176 Volume: 22 Weight: 25 Reward: 1227$
-->ID: 187 Volume: 20 Weight: 7 Reward: 386$
-->ID: 191 Volume: 25 Weight: 28 Reward: 1521$
-->ID: 216 Volume: 6 Weight: 22 Reward: 562$
-->ID: 250 Volume: 3 Weight: 23 Reward: 571$
+->ID: 23 Volume: 3 Weight: 16 Reward: 501$
+->ID: 30 Volume: 29 Weight: 16 Reward: 1051$
+->ID: 31 Volume: 16 Weight: 13 Reward: 707$
+->ID: 43 Volume: 29 Weight: 20 Reward: 1160$
+->ID: 51 Volume: 3 Weight: 19 Reward: 600$
+->ID: 95 Volume: 25 Weight: 6 Reward: 653$
+->ID: 126 Volume: 13 Weight: 26 Reward: 1073$
+->ID: 156 Volume: 29 Weight: 22 Reward: 561$
+->ID: 201 Volume: 16 Weight: 13 Reward: 671$
 ->ID: 256 Volume: 10 Weight: 29 Reward: 1065$
-->ID: 294 Volume: 19 Weight: 6 Reward: 324$
-->ID: 300 Volume: 22 Weight: 29 Reward: 1448$
-->ID: 369 Volume: 26 Weight: 6 Reward: 774$
-->ID: 381 Volume: 22 Weight: 29 Reward: 1500$
-->ID: 385 Volume: 20 Weight: 13 Reward: 636$
-->ID: 408 Volume: 16 Weight: 16 Reward: 527$
+->ID: 260 Volume: 6 Weight: 16 Reward: 618$
+->ID: 286 Volume: 20 Weight: 13 Reward: 848$
+->ID: 297 Volume: 16 Weight: 29 Reward: 1142$
+->ID: 313 Volume: 20 Weight: 16 Reward: 823$
+->ID: 336 Volume: 26 Weight: 26 Reward: 1261$
+->ID: 341 Volume: 9 Weight: 9 Reward: 427$
+->ID: 393 Volume: 6 Weight: 10 Reward: 465$
+->ID: 402 Volume: 16 Weight: 16 Reward: 772$
+->ID: 412 Volume: 20 Weight: 16 Reward: 851$
+->ID: 416 Volume: 28 Weight: 22 Reward: 1166$
+->ID: 420 Volume: 26 Weight: 22 Reward: 1165$
+
+Efficiency: 77%
+Courier:  ID: 22 Volume: 336/336 Weight: 345/345 Cost: 14342 Profit: 532$
+Packages:
+->ID: 10 Volume: 23 Weight: 16 Reward: 868$
+->ID: 44 Volume: 19 Weight: 19 Reward: 873$
+->ID: 73 Volume: 13 Weight: 10 Reward: 483$
+->ID: 82 Volume: 16 Weight: 20 Reward: 816$
+->ID: 85 Volume: 26 Weight: 29 Reward: 1233$
+->ID: 90 Volume: 22 Weight: 3 Reward: 480$
+->ID: 101 Volume: 25 Weight: 6 Reward: 647$
+->ID: 136 Volume: 16 Weight: 13 Reward: 654$
+->ID: 248 Volume: 9 Weight: 25 Reward: 849$
+->ID: 264 Volume: 26 Weight: 26 Reward: 1170$
+->ID: 309 Volume: 16 Weight: 29 Reward: 1083$
+->ID: 319 Volume: 13 Weight: 23 Reward: 916$
+->ID: 349 Volume: 29 Weight: 23 Reward: 1148$
+->ID: 372 Volume: 19 Weight: 26 Reward: 309$
+->ID: 376 Volume: 23 Weight: 29 Reward: 1232$
+->ID: 384 Volume: 10 Weight: 19 Reward: 709$
+->ID: 403 Volume: 3 Weight: 23 Reward: 697$
+->ID: 428 Volume: 28 Weight: 6 Reward: 707$
 
